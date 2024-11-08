@@ -1,11 +1,8 @@
 using Godot;
 using System;
 
-public partial class card_base : Node
+public partial class QuitButton : Button
 {
-	public string name;
-	public int price;
-	
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
@@ -16,7 +13,8 @@ public partial class card_base : Node
 	{
 	}
 	
-	public void Get() {}
-	
-	public virtual void Activate() {}
+	public void _on_pressed()
+	{
+		GetTree().Quit();
+	}
 }
