@@ -11,16 +11,16 @@
       "RelativeMoniker": "D:0:0:{79F3927B-6DB1-46B5-8E3C-8ADB40EC5B89}|BigCity.csproj|solutionrelative:scripts\\graphics.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{79F3927B-6DB1-46B5-8E3C-8ADB40EC5B89}|BigCity.csproj|c:\\users\\neil\\documents\\bigcity\\scripts\\playgamebutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{79F3927B-6DB1-46B5-8E3C-8ADB40EC5B89}|BigCity.csproj|solutionrelative:scripts\\playgamebutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{79F3927B-6DB1-46B5-8E3C-8ADB40EC5B89}|BigCity.csproj|c:\\users\\neil\\documents\\bigcity\\scripts\\globals.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{79F3927B-6DB1-46B5-8E3C-8ADB40EC5B89}|BigCity.csproj|solutionrelative:scripts\\globals.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{79F3927B-6DB1-46B5-8E3C-8ADB40EC5B89}|BigCity.csproj|c:\\users\\neil\\documents\\bigcity\\scripts\\optionsbutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{79F3927B-6DB1-46B5-8E3C-8ADB40EC5B89}|BigCity.csproj|solutionrelative:scripts\\optionsbutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79F3927B-6DB1-46B5-8E3C-8ADB40EC5B89}|BigCity.csproj|c:\\users\\neil\\documents\\bigcity\\scripts\\playgamebutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{79F3927B-6DB1-46B5-8E3C-8ADB40EC5B89}|BigCity.csproj|solutionrelative:scripts\\playgamebutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{79F3927B-6DB1-46B5-8E3C-8ADB40EC5B89}|BigCity.csproj|c:\\users\\neil\\documents\\bigcity\\scripts\\quitbutton.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -52,7 +52,7 @@
               "RelativeDocumentMoniker": "scripts\\Graphics.cs",
               "ToolTip": "C:\\Users\\Neil\\Documents\\bigCity\\scripts\\Graphics.cs",
               "RelativeToolTip": "scripts\\Graphics.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAqAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-12T15:09:52.643Z",
               "EditorCaption": ""
@@ -63,16 +63,16 @@
               "Title": "OptionsMenuScript.cs",
               "DocumentMoniker": "C:\\Users\\Neil\\Documents\\bigCity\\scripts\\UserInterface\\OptionsMenuScript.cs",
               "RelativeDocumentMoniker": "scripts\\UserInterface\\OptionsMenuScript.cs",
-              "ToolTip": "C:\\Users\\Neil\\Documents\\bigCity\\scripts\\UserInterface\\OptionsMenuScript.cs",
-              "RelativeToolTip": "scripts\\UserInterface\\OptionsMenuScript.cs",
-              "ViewState": "AgIAAC8AAAAAAAAAAAAawDsAAAAAAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\Neil\\Documents\\bigCity\\scripts\\UserInterface\\OptionsMenuScript.cs*",
+              "RelativeToolTip": "scripts\\UserInterface\\OptionsMenuScript.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-12T12:30:22.152Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "Globals.cs",
               "DocumentMoniker": "C:\\Users\\Neil\\Documents\\bigCity\\scripts\\Globals.cs",
               "RelativeDocumentMoniker": "scripts\\Globals.cs",
@@ -85,7 +85,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "OptionsButton.cs",
               "DocumentMoniker": "C:\\Users\\Neil\\Documents\\bigCity\\scripts\\OptionsButton.cs",
               "RelativeDocumentMoniker": "scripts\\OptionsButton.cs",
@@ -110,16 +110,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "PlayGameButton.cs",
               "DocumentMoniker": "C:\\Users\\Neil\\Documents\\bigCity\\scripts\\PlayGameButton.cs",
               "RelativeDocumentMoniker": "scripts\\PlayGameButton.cs",
               "ToolTip": "C:\\Users\\Neil\\Documents\\bigCity\\scripts\\PlayGameButton.cs",
               "RelativeToolTip": "scripts\\PlayGameButton.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAACAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-12T09:16:23.581Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-12T09:16:23.581Z"
             }
           ]
         }

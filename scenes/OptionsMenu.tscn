@@ -1,4 +1,8 @@
-[gd_scene format=3 uid="uid://c3gav1s35n5hl"]
+[gd_scene load_steps=4 format=3 uid="uid://c3gav1s35n5hl"]
+
+[ext_resource type="LabelSettings" uid="uid://d3crlwoj205ce" path="res://labelSettings/optionsLabelSetting.tres" id="1_hygof"]
+[ext_resource type="LabelSettings" uid="uid://cuoxlnxs71sok" path="res://labelSettings/creditsLabelSetting.tres" id="2_dhfjc"]
+[ext_resource type="Script" path="res://scripts/UserInterface/OptionsMenuScript.cs" id="3_safun"]
 
 [node name="OptionsMenu" type="Control"]
 layout_mode = 3
@@ -7,3 +11,149 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("3_safun")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0555556
+anchor_top = 0.0987654
+anchor_right = 0.944444
+anchor_bottom = 0.888889
+metadata/_edit_use_anchors_ = true
+
+[node name="btn_exit" type="Button" parent="Panel"]
+layout_mode = 0
+anchor_left = 0.960938
+anchor_right = 1.0
+anchor_bottom = 0.078125
+offset_left = -6.10352e-05
+offset_right = -6.10352e-05
+text = "X"
+flat = true
+metadata/_edit_use_anchors_ = true
+
+[node name="label_titleOptions" type="Label" parent="Panel"]
+layout_mode = 0
+anchor_left = 0.015625
+anchor_top = 0.03125
+anchor_right = 0.146484
+anchor_bottom = 0.126953
+offset_right = -72.0
+offset_bottom = -26.0
+text = "Options :"
+label_settings = ExtResource("1_hygof")
+metadata/_edit_use_anchors_ = true
+
+[node name="CreditsLabel" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.015625
+anchor_top = 0.886719
+anchor_right = 0.984375
+anchor_bottom = 0.982422
+text = "Credits :
+Gameplay & Logic : Gabriel Denivelle / Gameplay: Corentin Jouan / UI & 2D : Neil Augereau / Tech Art & 3D : Niels Juguet"
+label_settings = ExtResource("2_dhfjc")
+vertical_alignment = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="hSlider_globalVolume" type="HSlider" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0546875
+anchor_top = 0.1875
+anchor_right = 0.296875
+anchor_bottom = 0.275391
+value = 100.0
+rounded = true
+metadata/_edit_use_anchors_ = true
+
+[node name="label_globalVolume" type="Label" parent="Panel/hSlider_globalVolume"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = -0.155556
+anchor_right = 0.455645
+anchor_bottom = 0.355555
+text = "Global Volume"
+metadata/_edit_use_anchors_ = true
+
+[node name="hSlider_musicVolume" type="HSlider" parent="Panel"]
+layout_mode = 0
+anchor_left = 0.382813
+anchor_top = 0.214844
+anchor_right = 0.625
+anchor_bottom = 0.246094
+value = 100.0
+metadata/_edit_use_anchors_ = true
+
+[node name="label_musicVolume" type="Label" parent="Panel/hSlider_musicVolume"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = -1.4375
+anchor_right = 0.455645
+text = "Music Volume"
+metadata/_edit_use_anchors_ = true
+
+[node name="hSlider_soundVolume" type="HSlider" parent="Panel"]
+layout_mode = 0
+anchor_left = 0.710938
+anchor_top = 0.214844
+anchor_right = 0.953125
+anchor_bottom = 0.246094
+value = 100.0
+metadata/_edit_use_anchors_ = true
+
+[node name="label_soundVolume" type="Label" parent="Panel/hSlider_soundVolume"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = -1.4375
+anchor_right = 0.455645
+text = "Sound Volume"
+metadata/_edit_use_anchors_ = true
+
+[node name="HSeparator" type="HSeparator" parent="Panel"]
+layout_mode = 0
+anchor_left = 0.03125
+anchor_top = 0.3125
+anchor_right = 0.96875
+anchor_bottom = 0.34375
+metadata/_edit_use_anchors_ = true
+
+[node name="optionBtn_shadowQuality" type="OptionButton" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0546875
+anchor_top = 0.4375
+anchor_right = 0.289063
+anchor_bottom = 0.5
+metadata/_edit_use_anchors_ = true
+
+[node name="label_shadowQuality" type="Label" parent="Panel/optionBtn_shadowQuality"]
+layout_mode = 0
+anchor_top = -1.0
+anchor_right = 0.508333
+anchor_bottom = -0.28125
+text = "Shadow Quality"
+metadata/_edit_use_anchors_ = true
+
+[node name="chkBox_toggleShadow" type="CheckBox" parent="Panel"]
+layout_mode = 0
+anchor_left = 0.0546875
+anchor_top = 0.5625
+anchor_right = 0.195313
+anchor_bottom = 0.623047
+text = "Toggle Shadow"
+metadata/_edit_use_anchors_ = true
+
+[node name="chkBox_toggleSsao" type="CheckBox" parent="Panel"]
+layout_mode = 0
+offset_right = 24.0
+offset_bottom = 24.0
+
+[connection signal="pressed" from="Panel/btn_exit" to="." method="_on_btn_exit_pressed"]
+[connection signal="value_changed" from="Panel/hSlider_globalVolume" to="." method="_on_h_slider_global_volume_value_changed"]
+[connection signal="value_changed" from="Panel/hSlider_musicVolume" to="." method="_on_h_slider_music_volume_value_changed"]
+[connection signal="value_changed" from="Panel/hSlider_soundVolume" to="." method="_on_h_slider_sound_volume_value_changed"]
+[connection signal="item_selected" from="Panel/optionBtn_shadowQuality" to="." method="_on_option_btn_shadow_quality_item_selected"]
+[connection signal="toggled" from="Panel/chkBox_toggleShadow" to="." method="_on_chk_box_toggle_shadow_toggled"]
