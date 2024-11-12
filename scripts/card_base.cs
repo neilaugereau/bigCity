@@ -19,5 +19,5 @@ public partial class card_base : Node
 	{
 	}
 	
-	public virtual void Activate() {}
+	public virtual void Activate(Game game) {}
 }
