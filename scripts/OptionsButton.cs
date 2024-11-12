@@ -15,6 +15,6 @@ public partial class OptionsButton : Button
 	
 	public void _on_pressed()
 	{
-		GetTree().ChangeScene("res://scenes/OptionsMenu.tscn");
+		GetTree().ChangeSceneToFile("res://scenes/OptionsMenu.tscn");
 	}
 }

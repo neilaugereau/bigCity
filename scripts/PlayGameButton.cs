@@ -15,6 +15,6 @@ public partial class PlayGameButton : Button
 	
 	public void _on_play_game_button_pressed()
 	{
-		//GetTree.Change("res://scenes/game.tscn");
+		GetTree().ChangeSceneToFile("res://scenes/game.tscn");
 	}
 }
