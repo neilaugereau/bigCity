@@ -3,7 +3,10 @@ using System;
 
 public partial class Game : Node
 {
-	// Called when the node enters the scene tree for the first time.
+	public player mainPlayer { get; private set; }
+	public player Enemy { get; private set; }
+	
+	
 	public override void _Ready()
 	{
 	}
