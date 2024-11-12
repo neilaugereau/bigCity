@@ -3,8 +3,11 @@ using System;
 
 public partial class card_base : Node
 {
-	public string name;
-	public int price
+	public ECardType Type{get;protected set;}
+	public string Name{get;protected set;}
+	public string Price{get;protected set;}
+	public Mesh BuildingMesh{get;protected set;}
+	public Color CardColor{get;protected set;}
 	
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
@@ -15,8 +18,6 @@ public partial class card_base : Node
 	public override void _Process(double delta)
 	{
 	}
-	
-	public void Get() {}
 	
 	public virtual void Activate() {}
 }
