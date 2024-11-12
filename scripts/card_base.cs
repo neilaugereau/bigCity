@@ -5,6 +5,7 @@ public partial class card_base : Node
 {
 	public ECardType Type{get;protected set;}
 	public string Name{get;protected set;}
+	public string EffectDescription{get; protected set;}
 	public string Price{get;protected set;}
 	public Mesh BuildingMesh{get;protected set;}
 	public Color CardColor{get;protected set;}
