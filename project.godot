@@ -11,9 +11,14 @@ config_version=5
 [application]
 
 config/name="BigCity"
+run/main_scene="res://scenes/MainMenu.tscn"
 config/features=PackedStringArray("4.3", "C#", "Forward Plus")
 config/icon="res://icon.svg"
 
 [dotnet]
 
 project/assembly_name="BigCity"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/multimesh_scatter/plugin.cfg")
