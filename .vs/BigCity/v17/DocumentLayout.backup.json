@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\Neil\\Documents\\bigCity\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Neil\\Documents\\bigCity\\scripts\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:scripts\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{79F3927B-6DB1-46B5-8E3C-8ADB40EC5B89}|BigCity.csproj|c:\\users\\neil\\documents\\bigcity\\scripts\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{79F3927B-6DB1-46B5-8E3C-8ADB40EC5B89}|BigCity.csproj|solutionrelative:scripts\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -32,7 +32,7 @@
               "RelativeDocumentMoniker": "scripts\\player.cs",
               "ToolTip": "C:\\Users\\Neil\\Documents\\bigCity\\scripts\\player.cs",
               "RelativeToolTip": "scripts\\player.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAACAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-13T08:24:14.866Z",
               "EditorCaption": ""
