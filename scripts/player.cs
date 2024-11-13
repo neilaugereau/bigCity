@@ -5,6 +5,8 @@ using System.Collections.Generic;
 public partial class player : Node
 {
 	Game game;
+
+	public Money money;
 	
 	private Godot.Collections.Dictionary<ECardType, Godot.Collections.Array<card_base>> buildings = new() {
 		{ECardType.Monument, new Godot.Collections.Array<card_base>()},
