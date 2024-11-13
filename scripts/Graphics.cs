@@ -7,4 +7,8 @@ public partial class Graphics : Node
 	public static DirectionalLight3D light;
 	public static int lightModeIndex = 2;
 	public static bool lightIsEnabled = true;
+
+	public static int resolutionIndex = 0;
+	public static bool fullscreenEnabled = false;
+	public static bool vsyncEnabled = true;
 }
