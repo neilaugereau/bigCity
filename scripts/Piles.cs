@@ -1,8 +1,9 @@
+using Godot;
 using System.Collections.Generic;
 namespace BigCity.scripts;
 
 
-public class Piles<T> where T : card_base, new()
+public partial class Piles<T> : Node where T : card_base, new()
 {
 	public int number;
 

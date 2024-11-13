@@ -1,3 +1,4 @@
+using BigCity.scripts;
 using Godot;
 using System;
 using System.Collections.Generic;
@@ -5,7 +6,7 @@ public partial class player : Node
 {
 	Game game;
 	
-	private var buildings = Godot.Collections.Dictionary {
+	private Godot.Collections.Dictionary<ECardType, Godot.Collections.Array<card_base>> buildings = new() {
 		{ECardType.Monument, new Godot.Collections.Array<card_base>()},
 		{ECardType.Special, new Godot.Collections.Array<card_base>()},
 		{ECardType.Red, new Godot.Collections.Array<card_base>()},
@@ -16,18 +17,13 @@ public partial class player : Node
 	public void ExecuteCardSpecial(ECardType type)
 	{
 		foreach(var card in buildings[type])
-			card.Activate(game);
+			card.Activate(game, this);
 	}
 	
-	public void DrawCard(Piles stack)
+	public void DrawCard<T>(Piles<T> stack) where T : card_base, new()
 	{
 		var card = stack.GetCards();
 		
 		buildings[card.Type].Add(card);
-	}
-	
-	public player() : base()
-	{
-		buildings = new List<card_base>();
 	}
 }
