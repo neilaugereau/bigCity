@@ -23,16 +23,6 @@ anchor_right = 0.527778
 anchor_bottom = 0.888889
 metadata/_edit_use_anchors_ = true
 
-[node name="btn_exit" type="Button" parent="Panel"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.926471
-anchor_right = 1.0
-anchor_bottom = 0.078125
-text = "X"
-flat = true
-metadata/_edit_use_anchors_ = true
-
 [node name="label_titleOptions" type="Label" parent="Panel"]
 layout_mode = 0
 anchor_left = 0.015625
@@ -298,7 +288,18 @@ label_settings = ExtResource("4_ql7ot")
 vertical_alignment = 1
 metadata/_edit_use_anchors_ = true
 
-[connection signal="pressed" from="Panel/btn_exit" to="." method="_on_btn_exit_pressed"]
+[node name="btn_exit" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.319444
+anchor_top = 0.91358
+anchor_right = 0.680556
+anchor_bottom = 0.975309
+grow_horizontal = 2
+grow_vertical = 0
+text = "Save changes"
+metadata/_edit_use_anchors_ = true
+
 [connection signal="value_changed" from="Panel/hSlider_globalVolume" to="." method="_on_h_slider_global_volume_value_changed"]
 [connection signal="value_changed" from="Panel/hSlider_musicVolume" to="." method="_on_h_slider_music_volume_value_changed"]
 [connection signal="value_changed" from="Panel/hSlider_soundVolume" to="." method="_on_h_slider_sound_volume_value_changed"]
@@ -309,3 +310,4 @@ metadata/_edit_use_anchors_ = true
 [connection signal="toggled" from="Panel/chkBox_fullscreen" to="." method="_on_chk_box_fullscreen_toggled"]
 [connection signal="toggled" from="Panel/chkBox_vsync" to="." method="_on_chk_box_vsync_toggled"]
 [connection signal="item_selected" from="Panel/optionBtn_language" to="." method="_on_option_btn_language_item_selected"]
+[connection signal="pressed" from="btn_exit" to="." method="_on_btn_exit_pressed"]
