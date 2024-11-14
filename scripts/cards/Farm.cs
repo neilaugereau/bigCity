@@ -2,14 +2,14 @@ using Godot;
 using System;
 using BigCity.scripts.cards;
 
-public partial class WheatField : BlueCard
+public partial class Farm: BlueCard
 {
-	public WheatField() : base(1)
+	public Farm() : base(1)
 	{
 		Type = ECardType.Blue;
-		Name = "Wheat Field";
+		Name = "Farm";
 		EffectDescription = "During anyone's turn, recieve a coin from the bank.";
-		Price = 1;
+		Price = 2;
 		
 	}
 	
