@@ -18,10 +18,24 @@ public partial class OptionsMenuScript : Node
         this.GetNode<OptionButton>("Panel/optionBtn_shadowQuality").Selected = Graphics.lightModeIndex;
 
         this.GetNode<CheckBox>("Panel/chkBox_toggleShadow").ButtonPressed = Graphics.lightIsEnabled;
+        this.GetNode<CheckBox>("Panel/chkBox_toggleSsao").ButtonPressed = Graphics.ssaoIsEnabled;
+
+        this.GetNode<OptionButton>("Panel/optionBtn_changeResolution").AddItem("Default", 0);
+        this.GetNode<OptionButton>("Panel/optionBtn_changeResolution").AddItem("720p", 1);
+        this.GetNode<OptionButton>("Panel/optionBtn_changeResolution").AddItem("1080p", 2);
+        this.GetNode<OptionButton>("Panel/optionBtn_changeResolution").AddItem("1440p", 2);
+        this.GetNode<OptionButton>("Panel/optionBtn_changeResolution").AddItem("4k", 2);
+        this.GetNode<OptionButton>("Panel/optionBtn_changeResolution").Selected = Graphics.resolutionIndex;
+
+        this.GetNode<CheckBox>("Panel/chkBox_fullscreen").ButtonPressed = Graphics.fullscreenIsEnabled;
+        this.GetNode<CheckBox>("Panel/chkBox_toggleVsync").ButtonPressed = Graphics.vsyncIsEnabled;
+
+        this.GetNode<OptionButton>("Panel/optionBtn_chooseLanguage").AddItem("English", 0);
+        this.GetNode<OptionButton>("Panel/optionBtn_chooseLanguage").Selected = Graphics.languageIndex;
     }
 
-	// Called every frame. 'delta' is the elapsed time since the previous frame.
-	public override void _Process(double delta)
+    // Called every frame. 'delta' is the elapsed time since the previous frame.
+    public override void _Process(double delta)
 	{
 	}
     public void _on_btn_exit_pressed()
@@ -68,5 +82,66 @@ public partial class OptionsMenuScript : Node
     public void _on_chk_box_toggle_shadow_toggled(bool toggled_on)
     {
         Graphics.lightIsEnabled = toggled_on;
+        Graphics.light.ShadowEnabled = toggled_on;
+    }
+
+    public void _on_chk_box_toggle_ssao_toggled(bool toggled_on)
+    {
+        Graphics.ssaoIsEnabled = toggled_on;
+        Graphics.worldEnvironment.Environment.SsaoEnabled = toggled_on;
+    }
+
+    public void _on_option_btn_change_resolution_item_selected(int index)
+    {
+        Graphics.resolutionIndex = index;
+        switch (index)
+        {
+            case 1:
+                DisplayServer.WindowSetSize(new Vector2I(1280, 720));
+                break;
+            case 2:
+                DisplayServer.WindowSetSize(new Vector2I(1920, 1080));
+                break;
+            case 3:
+                DisplayServer.WindowSetSize(new Vector2I(2560, 1440));
+                break;
+            case 4:
+                DisplayServer.WindowSetSize(new Vector2I(3840, 2160));
+                break;
+            default:
+                DisplayServer.WindowSetSize(new Vector2I(1152, 648));
+                break;
+        }
+    }
+
+    public void _on_chk_box_fullscreen_toggled(bool toggled_on)
+    {
+        Graphics.fullscreenIsEnabled = toggled_on;
+        if (toggled_on)
+        {
+            DisplayServer.WindowSetMode(DisplayServer.WindowMode.Fullscreen);
+        }
+        else
+        {
+            DisplayServer.WindowSetMode(DisplayServer.WindowMode.Windowed);
+        }
+    }
+
+    public void _on_chk_box_toggle_vsync_toggled(bool toggled_on)
+    {
+        Graphics.vsyncIsEnabled = toggled_on;
+        if (toggled_on)
+        {
+            DisplayServer.WindowSetVsyncMode(DisplayServer.VSyncMode.Enabled);
+        }
+        else
+        {
+            DisplayServer.WindowSetVsyncMode(DisplayServer.VSyncMode.Disabled);
+        }
+    }
+
+    public void _on_option_btn_choose_language_toggled(int index)
+    {
+
     }
 }
