@@ -4,7 +4,11 @@ using System;
 using System.Collections.Generic;
 public partial class player : Node
 {
+	public Controller playerController {  get; private set; }
+
 	Game game;
+
+	public Money money;
 	
 	private Godot.Collections.Dictionary<ECardType, Godot.Collections.Array<card_base>> buildings = new() {
 		{ECardType.Monument, new Godot.Collections.Array<card_base>()},
@@ -14,6 +18,8 @@ public partial class player : Node
 		{ECardType.Blue, new Godot.Collections.Array<card_base>()},
 	};
 	
+	
+
 	public void ExecuteCardSpecial(ECardType type)
 	{
 		foreach(var card in buildings[type])
