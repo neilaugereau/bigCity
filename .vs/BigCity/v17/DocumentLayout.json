@@ -1,14 +1,42 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Neil\\Documents\\bigCity\\",
+  "WorkspaceRootPath": "D:\\gabri\\Projets\\Jeux\\bigCity\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{79F3927B-6DB1-46B5-8E3C-8ADB40EC5B89}|BigCity.csproj|c:\\users\\neil\\documents\\bigcity\\scripts\\card_base.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{79F3927B-6DB1-46B5-8E3C-8ADB40EC5B89}|BigCity.csproj|d:\\gabri\\projets\\jeux\\bigcity\\scripts\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{79F3927B-6DB1-46B5-8E3C-8ADB40EC5B89}|BigCity.csproj|solutionrelative:scripts\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79F3927B-6DB1-46B5-8E3C-8ADB40EC5B89}|BigCity.csproj|d:\\gabri\\projets\\jeux\\bigcity\\scripts\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{79F3927B-6DB1-46B5-8E3C-8ADB40EC5B89}|BigCity.csproj|solutionrelative:scripts\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79F3927B-6DB1-46B5-8E3C-8ADB40EC5B89}|BigCity.csproj|d:\\gabri\\projets\\jeux\\bigcity\\scripts\\controller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{79F3927B-6DB1-46B5-8E3C-8ADB40EC5B89}|BigCity.csproj|solutionrelative:scripts\\controller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79F3927B-6DB1-46B5-8E3C-8ADB40EC5B89}|BigCity.csproj|d:\\gabri\\projets\\jeux\\bigcity\\scripts\\card_base.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{79F3927B-6DB1-46B5-8E3C-8ADB40EC5B89}|BigCity.csproj|solutionrelative:scripts\\card_base.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{79F3927B-6DB1-46B5-8E3C-8ADB40EC5B89}|BigCity.csproj|c:\\users\\neil\\documents\\bigcity\\scripts\\cards\\wheatfield.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{79F3927B-6DB1-46B5-8E3C-8ADB40EC5B89}|BigCity.csproj|d:\\gabri\\projets\\jeux\\bigcity\\scripts\\piles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{79F3927B-6DB1-46B5-8E3C-8ADB40EC5B89}|BigCity.csproj|solutionrelative:scripts\\piles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79F3927B-6DB1-46B5-8E3C-8ADB40EC5B89}|BigCity.csproj|d:\\gabri\\projets\\jeux\\bigcity\\scripts\\cardinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{79F3927B-6DB1-46B5-8E3C-8ADB40EC5B89}|BigCity.csproj|solutionrelative:scripts\\cardinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79F3927B-6DB1-46B5-8E3C-8ADB40EC5B89}|BigCity.csproj|d:\\gabri\\projets\\jeux\\bigcity\\scripts\\cards\\wheatfield.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{79F3927B-6DB1-46B5-8E3C-8ADB40EC5B89}|BigCity.csproj|solutionrelative:scripts\\cards\\wheatfield.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79F3927B-6DB1-46B5-8E3C-8ADB40EC5B89}|BigCity.csproj|d:\\gabri\\projets\\jeux\\bigcity\\scripts\\dice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{79F3927B-6DB1-46B5-8E3C-8ADB40EC5B89}|BigCity.csproj|solutionrelative:scripts\\dice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79F3927B-6DB1-46B5-8E3C-8ADB40EC5B89}|BigCity.csproj|d:\\gabri\\projets\\jeux\\bigcity\\scripts\\card_type.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{79F3927B-6DB1-46B5-8E3C-8ADB40EC5B89}|BigCity.csproj|solutionrelative:scripts\\card_type.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,41 +46,128 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "card_base.cs",
-              "DocumentMoniker": "C:\\Users\\Neil\\Documents\\bigCity\\scripts\\card_base.cs",
-              "RelativeDocumentMoniker": "scripts\\card_base.cs",
-              "ToolTip": "C:\\Users\\Neil\\Documents\\bigCity\\scripts\\card_base.cs",
-              "RelativeToolTip": "scripts\\card_base.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAPAAAAAAAAAA==",
+              "Title": "Game.cs",
+              "DocumentMoniker": "D:\\gabri\\Projets\\Jeux\\bigCity\\scripts\\Game.cs",
+              "RelativeDocumentMoniker": "scripts\\Game.cs",
+              "ToolTip": "D:\\gabri\\Projets\\Jeux\\bigCity\\scripts\\Game.cs",
+              "RelativeToolTip": "scripts\\Game.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAmwA0AAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-13T08:55:42.877Z",
+              "WhenOpened": "2024-11-13T10:32:34.316Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Piles.cs",
+              "DocumentMoniker": "D:\\gabri\\Projets\\Jeux\\bigCity\\scripts\\Piles.cs",
+              "RelativeDocumentMoniker": "scripts\\Piles.cs",
+              "ToolTip": "D:\\gabri\\Projets\\Jeux\\bigCity\\scripts\\Piles.cs",
+              "RelativeToolTip": "scripts\\Piles.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-13T08:30:00.649Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "WheatField.cs",
+              "DocumentMoniker": "D:\\gabri\\Projets\\Jeux\\bigCity\\scripts\\cards\\WheatField.cs",
+              "RelativeDocumentMoniker": "scripts\\cards\\WheatField.cs",
+              "ToolTip": "D:\\gabri\\Projets\\Jeux\\bigCity\\scripts\\cards\\WheatField.cs",
+              "RelativeToolTip": "scripts\\cards\\WheatField.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-13T08:55:44.539Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Controller.cs",
+              "DocumentMoniker": "D:\\gabri\\Projets\\Jeux\\bigCity\\scripts\\Controller.cs",
+              "RelativeDocumentMoniker": "scripts\\Controller.cs",
+              "ToolTip": "D:\\gabri\\Projets\\Jeux\\bigCity\\scripts\\Controller.cs",
+              "RelativeToolTip": "scripts\\Controller.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-13T08:40:59.475Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "cardInfo.cs",
+              "DocumentMoniker": "D:\\gabri\\Projets\\Jeux\\bigCity\\scripts\\cardInfo.cs",
+              "RelativeDocumentMoniker": "scripts\\cardInfo.cs",
+              "ToolTip": "D:\\gabri\\Projets\\Jeux\\bigCity\\scripts\\cardInfo.cs",
+              "RelativeToolTip": "scripts\\cardInfo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-13T08:40:56.747Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "card_base.cs",
+              "DocumentMoniker": "D:\\gabri\\Projets\\Jeux\\bigCity\\scripts\\card_base.cs",
+              "RelativeDocumentMoniker": "scripts\\card_base.cs",
+              "ToolTip": "D:\\gabri\\Projets\\Jeux\\bigCity\\scripts\\card_base.cs",
+              "RelativeToolTip": "scripts\\card_base.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAkwBUAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-13T08:40:52.901Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "WheatField.cs",
-              "DocumentMoniker": "C:\\Users\\Neil\\Documents\\bigCity\\scripts\\cards\\WheatField.cs",
-              "RelativeDocumentMoniker": "scripts\\cards\\WheatField.cs",
-              "ToolTip": "C:\\Users\\Neil\\Documents\\bigCity\\scripts\\cards\\WheatField.cs",
-              "RelativeToolTip": "scripts\\cards\\WheatField.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAKAAAAAAAAAA==",
+              "Title": "player.cs",
+              "DocumentMoniker": "D:\\gabri\\Projets\\Jeux\\bigCity\\scripts\\player.cs",
+              "RelativeDocumentMoniker": "scripts\\player.cs",
+              "ToolTip": "D:\\gabri\\Projets\\Jeux\\bigCity\\scripts\\player.cs",
+              "RelativeToolTip": "scripts\\player.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAwA0AAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-13T08:54:51.971Z",
+              "WhenOpened": "2024-11-13T08:28:05.602Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Dice.cs",
+              "DocumentMoniker": "D:\\gabri\\Projets\\Jeux\\bigCity\\scripts\\Dice.cs",
+              "RelativeDocumentMoniker": "scripts\\Dice.cs",
+              "ToolTip": "D:\\gabri\\Projets\\Jeux\\bigCity\\scripts\\Dice.cs",
+              "RelativeToolTip": "scripts\\Dice.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-13T08:41:00.487Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "card_type.cs",
+              "DocumentMoniker": "D:\\gabri\\Projets\\Jeux\\bigCity\\scripts\\card_type.cs",
+              "RelativeDocumentMoniker": "scripts\\card_type.cs",
+              "ToolTip": "D:\\gabri\\Projets\\Jeux\\bigCity\\scripts\\card_type.cs",
+              "RelativeToolTip": "scripts\\card_type.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-13T08:40:54.345Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             }
           ]
         }

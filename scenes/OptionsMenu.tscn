@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://c3gav1s35n5hl"]
 
-[ext_resource type="LabelSettings" uid="uid://d3crlwoj205ce" path="res://labelSettings/optionsLabelSetting.tres" id="1_hygof"]
+[ext_resource type="LabelSettings" path="res://labelSettings/optionsLabelSetting.tres" id="1_hygof"]
 [ext_resource type="LabelSettings" uid="uid://cuoxlnxs71sok" path="res://labelSettings/creditsLabelSetting.tres" id="2_dhfjc"]
 [ext_resource type="Script" path="res://scripts/UserInterface/OptionsMenuScript.cs" id="3_safun"]
 
