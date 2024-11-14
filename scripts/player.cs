@@ -7,8 +7,6 @@ public partial class player : Node
 	public Controller playerController {  get; private set; }
 
 	Game game;
-
-	public Money money;
 	
 	private Godot.Collections.Dictionary<ECardType, Godot.Collections.Array<card_base>> buildings = new() {
 		{ECardType.Monument, new Godot.Collections.Array<card_base>()},

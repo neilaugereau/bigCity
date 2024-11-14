@@ -18,23 +18,10 @@ public partial class OptionsMenuScript : Node
         this.GetNode<OptionButton>("Panel/optionBtn_shadowQuality").Selected = Graphics.lightModeIndex;
 
         this.GetNode<CheckBox>("Panel/chkBox_toggleShadow").ButtonPressed = Graphics.lightIsEnabled;
-
-        this.GetNode<OptionButton>("Panel/optionBtn_ChangeResolution").AddItem("Default", 0);
-        this.GetNode<OptionButton>("Panel/optionBtn_ChangeResolution").AddItem("720p", 1);
-        this.GetNode<OptionButton>("Panel/optionBtn_ChangeResolution").AddItem("1080p", 2);
-        this.GetNode<OptionButton>("Panel/optionBtn_ChangeResolution").AddItem("1440p", 3);
-        this.GetNode<OptionButton>("Panel/optionBtn_ChangeResolution").AddItem("4k", 4);
-        this.GetNode<OptionButton>("Panel/optionBtn_ChangeResolution").Selected = Graphics.resolutionIndex;
-
-        this.GetNode<CheckBox>("Panel/chkBox_fullscreen").ButtonPressed = Graphics.fullscreenEnabled;
-        this.GetNode<CheckBox>("Panel/chkBox_vsync").ButtonPressed = Graphics.vsyncEnabled;
-
-        this.GetNode<OptionButton>("Panel/optionBtn_language").AddItem("English", 0);
-        this.GetNode<OptionButton>("Panel/optionBtn_language").Selected = Globals.languageIndex;
     }
 
-    // Called every frame. 'delta' is the elapsed time since the previous frame.
-    public override void _Process(double delta)
+	// Called every frame. 'delta' is the elapsed time since the previous frame.
+	public override void _Process(double delta)
 	{
 	}
     public void _on_btn_exit_pressed()
@@ -81,65 +68,5 @@ public partial class OptionsMenuScript : Node
     public void _on_chk_box_toggle_shadow_toggled(bool toggled_on)
     {
         Graphics.lightIsEnabled = toggled_on;
-    }
-
-    public void _on_chk_box_toggle_ssao_toggled(bool toggled_on)
-    {
-        Graphics.worldEnvironment.Environment.SsaoEnabled = toggled_on;
-    }
-
-    public void _on_option_btn_change_resolution_item_selected(int index)
-    {
-        Graphics.resolutionIndex = index;
-        switch (index)
-        {
-            case 1:
-                GetWindow().Size = new Vector2I(1280, 720);
-                break;
-            case 2:
-                GetWindow().Size = new Vector2I(1920, 1080);
-                break;
-            case 3:
-                GetWindow().Size = new Vector2I(2560, 1440);
-                break;
-            case 4:
-                GetWindow().Size = new Vector2I(3840, 2160);
-                break;
-            default:
-                GetWindow().Size = new Vector2I(1152, 648);
-                break;
-        }
-    }
-
-    public void _on_chk_box_fullscreen_toggled(bool toggled_on)
-    {
-        Graphics.fullscreenEnabled = toggled_on;
-        if (toggled_on)
-        {
-            DisplayServer.WindowSetMode(DisplayServer.WindowMode.Fullscreen);
-        }
-        else
-        {
-            DisplayServer.WindowSetMode(DisplayServer.WindowMode.Windowed);
-        }
-       
-    }
-
-    public void _on_chk_box_vsync_toggled(bool toggled_on)
-    {
-        Graphics.vsyncEnabled = toggled_on;
-        if (toggled_on)
-        {
-            DisplayServer.WindowSetVsyncMode(DisplayServer.VSyncMode.Enabled);
-        }
-        else
-        {
-            DisplayServer.WindowSetVsyncMode(DisplayServer.VSyncMode.Disabled);
-        }
-    }
-
-    public void _on_option_btn_language_item_selected(int index)
-    {
-        Globals.languageIndex = index;
     }
 }
