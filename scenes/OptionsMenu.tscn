@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://c3gav1s35n5hl"]
 
-[ext_resource type="LabelSettings" path="res://labelSettings/optionsLabelSetting.tres" id="1_hygof"]
+[ext_resource type="LabelSettings" uid="uid://d3crlwoj205ce" path="res://labelSettings/optionsLabelSetting.tres" id="1_hygof"]
 [ext_resource type="LabelSettings" uid="uid://cuoxlnxs71sok" path="res://labelSettings/creditsLabelSetting.tres" id="2_dhfjc"]
 [ext_resource type="Script" path="res://scripts/UserInterface/OptionsMenuScript.cs" id="3_safun"]
 
@@ -157,7 +157,3 @@ offset_bottom = 24.0
 [connection signal="item_selected" from="Panel/optionBtn_shadowQuality" to="." method="_on_option_btn_shadow_quality_item_selected"]
 [connection signal="toggled" from="Panel/chkBox_toggleShadow" to="." method="_on_chk_box_toggle_shadow_toggled"]
 [connection signal="toggled" from="Panel/chkBox_toggleSsao" to="." method="_on_chk_box_toggle_ssao_toggled"]
-[connection signal="item_selected" from="Panel/optionBtn_ChangeResolution" to="." method="_on_option_btn_change_resolution_item_selected"]
-[connection signal="toggled" from="Panel/chkBox_fullscreen" to="." method="_on_chk_box_fullscreen_toggled"]
-[connection signal="toggled" from="Panel/chkBox_vsync" to="." method="_on_chk_box_vsync_toggled"]
-[connection signal="item_selected" from="Panel/optionBtn_language" to="." method="_on_option_btn_language_item_selected"]

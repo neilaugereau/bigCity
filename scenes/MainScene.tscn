@@ -1,0 +1,42 @@
+[gd_scene load_steps=8 format=3 uid="uid://cera5wmfb7mom"]
+
+[ext_resource type="Script" path="res://scripts/Dice.cs" id="1_a50x7"]
+[ext_resource type="PackedScene" uid="uid://b5gb3jh1ok56o" path="res://diceRgb.tscn" id="1_wxys1"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_yylce"]
+size = Vector2(60, 60)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hm6sm"]
+
+[sub_resource type="PhysicalSkyMaterial" id="PhysicalSkyMaterial_nll7p"]
+
+[sub_resource type="Sky" id="Sky_jt2mw"]
+sky_material = SubResource("PhysicalSkyMaterial_nll7p")
+
+[sub_resource type="Environment" id="Environment_k5f1k"]
+background_mode = 2
+sky = SubResource("Sky_jt2mw")
+
+[node name="MainScene" type="Node3D"]
+script = ExtResource("1_a50x7")
+objectToSpawn = ExtResource("1_wxys1")
+
+[node name="Plane" type="RigidBody3D" parent="."]
+gravity_scale = 0.0
+freeze = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Plane"]
+mesh = SubResource("PlaneMesh_yylce")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Plane"]
+transform = Transform3D(20, 0, 0, 0, 1, 0, 0, 0, 20, 0, 0, 0)
+shape = SubResource("BoxShape3D_hm6sm")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.910337, 0.413867, 0, -0.413867, 0.910337, -9.50933, 45.8277, 108.989)
+light_color = Color(0.823529, 0.819608, 0.67451, 1)
+light_energy = 2.145
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.987472, 0.157796, 0, -0.157796, 0.987472, 0, 8.54424, 15.0232)
+environment = SubResource("Environment_k5f1k")
