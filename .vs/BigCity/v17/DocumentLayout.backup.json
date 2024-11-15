@@ -7,6 +7,14 @@
       "RelativeMoniker": "D:0:0:{79F3927B-6DB1-46B5-8E3C-8ADB40EC5B89}|BigCity.csproj|solutionrelative:scripts\\userinterface\\optionsmenuscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{79F3927B-6DB1-46B5-8E3C-8ADB40EC5B89}|BigCity.csproj|c:\\users\\neil\\documents\\bigcity\\scripts\\graphics.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{79F3927B-6DB1-46B5-8E3C-8ADB40EC5B89}|BigCity.csproj|solutionrelative:scripts\\graphics.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79F3927B-6DB1-46B5-8E3C-8ADB40EC5B89}|BigCity.csproj|c:\\users\\neil\\documents\\bigcity\\scripts\\globals.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{79F3927B-6DB1-46B5-8E3C-8ADB40EC5B89}|BigCity.csproj|solutionrelative:scripts\\globals.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{79F3927B-6DB1-46B5-8E3C-8ADB40EC5B89}|BigCity.csproj|c:\\users\\neil\\documents\\bigcity\\scripts\\card_base.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{79F3927B-6DB1-46B5-8E3C-8ADB40EC5B89}|BigCity.csproj|solutionrelative:scripts\\card_base.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -22,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,20 +42,44 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Globals.cs",
+              "DocumentMoniker": "C:\\Users\\Neil\\Documents\\bigCity\\scripts\\Globals.cs",
+              "RelativeDocumentMoniker": "scripts\\Globals.cs",
+              "ToolTip": "C:\\Users\\Neil\\Documents\\bigCity\\scripts\\Globals.cs",
+              "RelativeToolTip": "scripts\\Globals.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-13T10:21:44.984Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Graphics.cs",
+              "DocumentMoniker": "C:\\Users\\Neil\\Documents\\bigCity\\scripts\\Graphics.cs",
+              "RelativeDocumentMoniker": "scripts\\Graphics.cs",
+              "ToolTip": "C:\\Users\\Neil\\Documents\\bigCity\\scripts\\Graphics.cs",
+              "RelativeToolTip": "scripts\\Graphics.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-13T09:08:46.763Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
               "Title": "OptionsMenuScript.cs",
               "DocumentMoniker": "C:\\Users\\Neil\\Documents\\bigCity\\scripts\\UserInterface\\OptionsMenuScript.cs",
               "RelativeDocumentMoniker": "scripts\\UserInterface\\OptionsMenuScript.cs",
               "ToolTip": "C:\\Users\\Neil\\Documents\\bigCity\\scripts\\UserInterface\\OptionsMenuScript.cs",
               "RelativeToolTip": "scripts\\UserInterface\\OptionsMenuScript.cs",
-              "ViewState": "AgIAADkAAAAAAAAAAAASwEoAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAEQAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-13T09:03:17.365Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "card_base.cs",
               "DocumentMoniker": "C:\\Users\\Neil\\Documents\\bigCity\\scripts\\card_base.cs",
               "RelativeDocumentMoniker": "scripts\\card_base.cs",
@@ -55,12 +87,11 @@
               "RelativeToolTip": "scripts\\card_base.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-13T08:55:42.877Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-13T08:55:42.877Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "WheatField.cs",
               "DocumentMoniker": "C:\\Users\\Neil\\Documents\\bigCity\\scripts\\cards\\WheatField.cs",
               "RelativeDocumentMoniker": "scripts\\cards\\WheatField.cs",
