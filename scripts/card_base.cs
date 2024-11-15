@@ -9,6 +9,15 @@ public partial class card_base : Node
 	public int Price{get;protected set;}
 	public Mesh BuildingMesh{get;protected set;}
 	
+	public card_base(ECardType type, string name, string effectDesc, int price, Mesh mesh)
+	{
+		Type = type;
+		CardName = name;
+		EffectDescription = effectDesc;
+		Price = price;
+		BuildingMesh = mesh;
+	}
+	
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
