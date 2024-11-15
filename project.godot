@@ -20,10 +20,18 @@ config/icon="res://icon.svg"
 Globals="*res://scripts/Globals.cs"
 Graphics="*res://scripts/Graphics.cs"
 
+[display]
+
+window/size/resizable=false
+
 [dotnet]
 
 project/assembly_name="BigCity"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/multimesh_scatter/plugin.cfg")
+enabled=PackedStringArray()
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0
