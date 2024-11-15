@@ -1,10 +1,12 @@
-[gd_scene load_steps=6 format=3 uid="uid://c3gav1s35n5hl"]
+[gd_scene load_steps=8 format=3 uid="uid://c3gav1s35n5hl"]
 
-[ext_resource type="LabelSettings" uid="uid://d3crlwoj205ce" path="res://labelSettings/optionsLabelSetting.tres" id="1_hygof"]
-[ext_resource type="LabelSettings" uid="uid://cuoxlnxs71sok" path="res://labelSettings/creditsLabelSetting.tres" id="2_dhfjc"]
+[ext_resource type="Theme" uid="uid://d36g08s6peeqh" path="res://UI/default_theme.tres" id="1_3nek7"]
+[ext_resource type="LabelSettings" uid="uid://d3crlwoj205ce" path="res://UI/labelSettings/optionsLabelSetting.tres" id="1_hygof"]
+[ext_resource type="LabelSettings" uid="uid://cuoxlnxs71sok" path="res://UI/labelSettings/creditsLabelSetting.tres" id="2_dhfjc"]
+[ext_resource type="LabelSettings" uid="uid://x7g01mihjwkf" path="res://UI/labelSettings/textLabelSettings.tres" id="3_8cfm0"]
 [ext_resource type="Script" path="res://scripts/UserInterface/OptionsMenuScript.cs" id="3_safun"]
-[ext_resource type="LabelSettings" uid="uid://qdogld2vldba" path="res://labelSettings/titleCreditsLabelSettings.tres" id="4_88mw7"]
-[ext_resource type="LabelSettings" uid="uid://ccmt3l21rcuj7" path="res://labelSettings/keybindingsLabelSetting.tres" id="4_xw1fc"]
+[ext_resource type="LabelSettings" uid="uid://qdogld2vldba" path="res://UI/labelSettings/titleCreditsLabelSettings.tres" id="4_88mw7"]
+[ext_resource type="LabelSettings" uid="uid://ccmt3l21rcuj7" path="res://UI/labelSettings/keybindingsLabelSetting.tres" id="4_xw1fc"]
 
 [node name="OptionsMenu" type="Control"]
 layout_mode = 3
@@ -13,6 +15,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("1_3nek7")
 script = ExtResource("3_safun")
 
 [node name="Panel" type="Panel" parent="."]
@@ -25,13 +28,12 @@ anchor_bottom = 0.888889
 metadata/_edit_use_anchors_ = true
 
 [node name="label_titleOptions" type="Label" parent="Panel"]
-layout_mode = 0
-anchor_left = 0.015625
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0263157
 anchor_top = 0.03125
-anchor_right = 0.265625
+anchor_right = 0.276316
 anchor_bottom = 0.126953
-offset_right = -144.438
-offset_bottom = -26.0001
 text = "Options :"
 label_settings = ExtResource("1_hygof")
 metadata/_edit_use_anchors_ = true
@@ -55,6 +57,7 @@ anchor_right = 0.767402
 anchor_bottom = 0.355555
 offset_right = -45.9063
 text = "Global Volume"
+label_settings = ExtResource("3_8cfm0")
 metadata/_edit_use_anchors_ = true
 
 [node name="hSlider_musicVolume" type="HSlider" parent="Panel"]
@@ -73,6 +76,7 @@ anchor_top = -1.4375
 anchor_right = 0.740239
 offset_right = -41.9064
 text = "Music Volume"
+label_settings = ExtResource("3_8cfm0")
 metadata/_edit_use_anchors_ = true
 
 [node name="hSlider_soundVolume" type="HSlider" parent="Panel"]
@@ -91,6 +95,7 @@ anchor_top = -1.4375
 anchor_right = 0.760613
 offset_right = -44.9064
 text = "Sound Volume"
+label_settings = ExtResource("3_8cfm0")
 metadata/_edit_use_anchors_ = true
 
 [node name="HSeparator" type="HSeparator" parent="Panel"]
@@ -109,6 +114,7 @@ anchor_left = 0.0526315
 anchor_top = 0.421875
 anchor_right = 0.287007
 anchor_bottom = 0.484375
+tooltip_text = "Allow the user to choose the light quality for more performance ! "
 metadata/_edit_use_anchors_ = true
 
 [node name="label_shadowQuality" type="Label" parent="Panel/optionBtn_shadowQuality"]
@@ -118,6 +124,7 @@ anchor_right = 0.856139
 anchor_bottom = -0.28125
 offset_right = -49.5625
 text = "Shadow Quality"
+label_settings = ExtResource("3_8cfm0")
 metadata/_edit_use_anchors_ = true
 
 [node name="chkBox_toggleShadow" type="CheckBox" parent="Panel"]
@@ -166,6 +173,7 @@ anchor_right = 1.01754
 anchor_bottom = -0.28125
 offset_right = -81.9062
 text = "Change Resolution"
+label_settings = ExtResource("3_8cfm0")
 metadata/_edit_use_anchors_ = true
 
 [node name="chkBox_fullscreen" type="CheckBox" parent="Panel"]
@@ -215,6 +223,7 @@ anchor_bottom = -0.28125
 offset_right = -49.9062
 offset_bottom = 1.14441e-05
 text = "Choose Language"
+label_settings = ExtResource("3_8cfm0")
 metadata/_edit_use_anchors_ = true
 
 [node name="Panel2" type="Panel" parent="."]
