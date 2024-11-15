@@ -1,6 +1,6 @@
 using Godot;
 using System;
-
+/*
 public partial class WheatField : card_base
 {
 	public WheatField()
@@ -11,5 +11,4 @@ public partial class WheatField : card_base
 		Price = 1;
 	}
 	
-	
-}
+}*/

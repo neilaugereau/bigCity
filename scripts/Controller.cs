@@ -9,7 +9,7 @@ public partial class Controller : Node
     public Controller(player owner, Game game)
     {
         this.owner = owner;
-        this.game =  game;
+        this.game = game;
 
     }
 

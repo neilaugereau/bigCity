@@ -34,9 +34,9 @@ public partial class DiceColliision : RigidBody3D
 		if (accumulatedTime >= 2f)
 		{
 			
-			GD.Print(this.RotationDegrees);
+			//GD.Print(this.RotationDegrees);
 			accumulatedTime = 0.0f;
-			GD.Print($"La valeur de dé est {Throw(this.RotationDegrees)}");
+			//GD.Print($"La valeur de dé est {Throw(this.RotationDegrees)}");
 			
 		}
 		
