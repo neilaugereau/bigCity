@@ -1,0 +1,100 @@
+[gd_scene load_steps=12 format=3 uid="uid://c47obbku8n21h"]
+
+[ext_resource type="Texture2D" uid="uid://c8ka60lh65wbe" path="res://assets/game/cards/card_bg.png" id="1_fta5c"]
+[ext_resource type="Shader" path="res://assets/game/cards/colorize_shader.gdshader" id="2_xma45"]
+[ext_resource type="Texture2D" uid="uid://bmr4odc0gpxym" path="res://assets/game/cards/card_overlay.png" id="3_lx4hr"]
+[ext_resource type="Texture2D" uid="uid://bhqg3li6shoec" path="res://assets/game/cards/coin.png" id="4_tcrsf"]
+[ext_resource type="FontFile" uid="uid://p5hflavolk8j" path="res://assets/fonts/Futura Bold.otf" id="5_wwlgv"]
+[ext_resource type="Texture2D" uid="uid://bla5kbgyrs6t6" path="res://assets/game/cards/cup.png" id="6_ee1ym"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_e1jvl"]
+shader = ExtResource("2_xma45")
+shader_parameter/color = Color(0.49, 0.49, 0.49, 1)
+
+[sub_resource type="Theme" id="Theme_la17q"]
+default_font = ExtResource("5_wwlgv")
+default_font_size = 600
+
+[sub_resource type="Theme" id="Theme_owaw2"]
+default_font = ExtResource("5_wwlgv")
+default_font_size = 250
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qdbd2"]
+shader = ExtResource("2_xma45")
+shader_parameter/color = Color(0.490196, 0.490196, 0.490196, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_yikl6"]
+
+[node name="CardRenderer" type="Node2D"]
+
+[node name="Background" type="Sprite2D" parent="."]
+texture = ExtResource("1_fta5c")
+
+[node name="Overlay" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_e1jvl")
+texture = ExtResource("3_lx4hr")
+
+[node name="Coin" type="Sprite2D" parent="."]
+position = Vector2(-1438, 2206)
+texture = ExtResource("4_tcrsf")
+
+[node name="CoinLabel" type="RichTextLabel" parent="."]
+offset_left = -1093.0
+offset_top = 1941.0
+offset_right = -207.0
+offset_bottom = 2593.0
+theme = SubResource("Theme_la17q")
+text = "0"
+fit_content = true
+
+[node name="DiceLabel" type="RichTextLabel" parent="."]
+offset_left = -1791.0
+offset_top = -2454.0
+offset_right = 1776.0
+offset_bottom = -1636.0
+theme = SubResource("Theme_la17q")
+bbcode_enabled = true
+text = "[center]0"
+fit_content = true
+
+[node name="NameLabel" type="RichTextLabel" parent="."]
+clip_contents = false
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -972.0
+offset_top = -1550.0
+offset_right = 1036.0
+offset_bottom = -732.0
+grow_horizontal = 2
+theme = SubResource("Theme_la17q")
+bbcode_enabled = true
+text = "[center]Name"
+fit_content = true
+autowrap_mode = 2
+
+[node name="DescriptionLabel" type="RichTextLabel" parent="."]
+clip_contents = false
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -1787.0
+offset_top = 634.0
+offset_right = 1782.0
+offset_bottom = 1841.0
+grow_horizontal = 2
+theme = SubResource("Theme_owaw2")
+bbcode_enabled = true
+text = "[center]Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+autowrap_mode = 2
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
+material = SubResource("ShaderMaterial_qdbd2")
+position = Vector2(-1219, -1303)
+scale = Vector2(494.374, 494.374)
+mesh = SubResource("SphereMesh_yikl6")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-1201, -1298)
+scale = Vector2(0.714854, 0.714854)
+texture = ExtResource("6_ee1ym")

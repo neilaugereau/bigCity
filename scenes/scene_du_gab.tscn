@@ -1,10 +1,16 @@
-[gd_scene load_steps=2 format=3 uid="uid://cjdsyrx0m7jbt"]
+[gd_scene load_steps=4 format=3 uid="uid://cjdsyrx0m7jbt"]
 
-[ext_resource type="Texture2D" uid="uid://c7ttqmb7kcmht" path="res://new_mesh_texture_test.tres" id="1_l3foq"]
+[ext_resource type="Shader" path="res://assets/game/cards/colorize_shader.gdshader" id="1_8nsbf"]
+[ext_resource type="Texture2D" uid="uid://bmr4odc0gpxym" path="res://assets/game/cards/card_overlay.png" id="2_bthnp"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_vptko"]
+shader = ExtResource("1_8nsbf")
+shader_parameter/color = Color(0.67, 0.407583, 0.335, 1)
 
 [node name="Node3D" type="Node3D"]
 
 [node name="TextureRect" type="TextureRect" parent="."]
+material = SubResource("ShaderMaterial_vptko")
 offset_right = 40.0
 offset_bottom = 40.0
-texture = ExtResource("1_l3foq")
+texture = ExtResource("2_bthnp")
