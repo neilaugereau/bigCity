@@ -19,8 +19,6 @@ public partial class Dice : Node
         {
          	firstRigidBody.Position = new Vector3(0, 5, 0);  
         }
-        
-		
 	}
 
 	public int ThrowDice()
