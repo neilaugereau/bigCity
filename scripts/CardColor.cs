@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-public enum ECardType
+public enum ECardColor
 {
 	Monument,
 	Special,

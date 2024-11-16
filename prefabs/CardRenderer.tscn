@@ -9,7 +9,7 @@
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_e1jvl"]
 shader = ExtResource("2_xma45")
-shader_parameter/color = Color(0.49, 0.49, 0.49, 1)
+shader_parameter/color = Color(0.39, 0.39, 0.39, 1)
 
 [sub_resource type="Theme" id="Theme_la17q"]
 default_font = ExtResource("5_wwlgv")

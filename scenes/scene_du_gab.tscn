@@ -5,7 +5,7 @@
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_vptko"]
 shader = ExtResource("1_8nsbf")
-shader_parameter/color = Color(0.67, 0.407583, 0.335, 1)
+shader_parameter/color = Color(1, 0.25, 0.25, 1)
 
 [node name="Node3D" type="Node3D"]
 

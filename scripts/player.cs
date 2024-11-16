@@ -8,23 +8,23 @@ public partial class player : Node
 
 	Game game;
 	
-	private Godot.Collections.Dictionary<ECardType, Godot.Collections.Array<card_base>> buildings = new() {
-		{ECardType.Monument, new Godot.Collections.Array<card_base>()},
-		{ECardType.Special, new Godot.Collections.Array<card_base>()},
-		{ECardType.Red, new Godot.Collections.Array<card_base>()},
-		{ECardType.Green, new Godot.Collections.Array<card_base>()},
-		{ECardType.Blue, new Godot.Collections.Array<card_base>()},
+	private Godot.Collections.Dictionary<ECardColor, Godot.Collections.Array<Card>> buildings = new() {
+		{ECardColor.Monument, new Godot.Collections.Array<Card>()},
+		{ECardColor.Special, new Godot.Collections.Array<Card>()},
+		{ECardColor.Red, new Godot.Collections.Array<Card>()},
+		{ECardColor.Green, new Godot.Collections.Array<Card>()},
+		{ECardColor.Blue, new Godot.Collections.Array<Card>()},
 	};
 	
 	
 
-	public void ExecuteCardSpecial(ECardType type)
+	public void ExecuteCardSpecial(ECardColor type)
 	{
 		foreach(var card in buildings[type])
-			card.Activate(game, this);
+			card.OnActivate(game, this);
 	}
 	
-	public void DrawCard<T>(Piles<T> stack) where T : card_base, new()
+	public void DrawCard(Piles stack)
 	{
 		var card = stack.GetCards();
 		

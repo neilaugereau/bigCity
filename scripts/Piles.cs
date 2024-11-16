@@ -3,21 +3,23 @@ using System.Collections.Generic;
 namespace BigCity.scripts;
 
 
-public partial class Piles<T> : Node where T : card_base, new()
+public partial class Piles : Node
 {
+	public Card card
 	public int number;
 
-	public Piles(int _number)
+	public Piles(Card _card,int _number)
 	{
+		card = _card;
 		number = _number;
 	}
 
-	public card_base GetCards()
+	public Card GetCards()
 	{
 		if (number > 0)
 		{
 			number--;
-			return new T(); 
+			return null; 
 		}
 		return null;
 	}
