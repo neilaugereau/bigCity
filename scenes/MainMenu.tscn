@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://bxl24ls54hhpo"]
+[gd_scene load_steps=6 format=3 uid="uid://bxl24ls54hhpo"]
 
+[ext_resource type="Theme" uid="uid://d36g08s6peeqh" path="res://UI/default_theme.tres" id="1_2crcq"]
 [ext_resource type="Script" path="res://scripts/QuitButton.cs" id="1_8ud04"]
-[ext_resource type="LabelSettings" uid="uid://cdctlxit7uhpk" path="res://labelSettings/titleScreenLabel.tres" id="2_4gmg5"]
+[ext_resource type="LabelSettings" uid="uid://cdctlxit7uhpk" path="res://UI/labelSettings/titleScreenLabel.tres" id="2_4gmg5"]
 [ext_resource type="Script" path="res://scripts/OptionsButton.cs" id="2_hre4q"]
 [ext_resource type="Script" path="res://scripts/PlayGameButton.cs" id="2_v8guy"]
 
@@ -12,13 +13,14 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("1_2crcq")
 
 [node name="QuitButton" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.409722
+anchor_left = 0.0555556
 anchor_top = 0.814815
-anchor_right = 0.597222
+anchor_right = 0.243056
 anchor_bottom = 0.890432
 grow_horizontal = 2
 grow_vertical = 2
@@ -29,9 +31,9 @@ metadata/_edit_use_anchors_ = true
 [node name="OptionsButton" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.409722
+anchor_left = 0.0555556
 anchor_top = 0.691358
-anchor_right = 0.597222
+anchor_right = 0.243056
 anchor_bottom = 0.766976
 offset_bottom = 3.05176e-05
 grow_horizontal = 2
@@ -43,9 +45,9 @@ metadata/_edit_use_anchors_ = true
 [node name="PlayGameButton" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.409722
+anchor_left = 0.0555556
 anchor_top = 0.567901
-anchor_right = 0.597222
+anchor_right = 0.243056
 anchor_bottom = 0.643518
 offset_bottom = 3.05176e-05
 grow_horizontal = 2
@@ -57,10 +59,10 @@ metadata/_edit_use_anchors_ = true
 [node name="TitleMainScreen" type="Label" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.368924
-anchor_top = 0.164352
-anchor_right = 0.631076
-anchor_bottom = 0.341821
+anchor_left = -0.0546875
+anchor_top = 0.108796
+anchor_right = 0.414063
+anchor_bottom = 0.414352
 offset_left = 119.0
 offset_top = 41.5
 offset_right = -119.0

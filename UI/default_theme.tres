@@ -1,0 +1,26 @@
+[gd_resource type="Theme" load_steps=5 format=3 uid="uid://d36g08s6peeqh"]
+
+[ext_resource type="StyleBox" uid="uid://b2ptoc0xnxgsn" path="res://UI/styleBox/defaultButtonStyleBoxFlat.tres" id="1_bfdmu"]
+[ext_resource type="StyleBox" uid="uid://cvo6yyaeicmgx" path="res://UI/styleBox/defaultButtonHoverStyleBoxFlat.tres" id="1_hmnpp"]
+[ext_resource type="StyleBox" uid="uid://cqyka34xi3owg" path="res://UI/styleBox/defaultButtonPressedStyleBoxFlat.tres" id="1_pchhv"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rqjbp"]
+bg_color = Color(0.968627, 0.952941, 0.807843, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[resource]
+Button/colors/font_color = Color(0.517647, 0.490196, 0.380392, 1)
+Button/colors/font_focus_color = Color(0.517647, 0.490196, 0.380392, 1)
+Button/colors/font_pressed_color = Color(0.517647, 0.490196, 0.380392, 1)
+Button/styles/hover = ExtResource("1_pchhv")
+Button/styles/normal = ExtResource("1_bfdmu")
+Button/styles/pressed = ExtResource("1_bfdmu")
+CheckBox/styles/hover = ExtResource("1_hmnpp")
+CheckBox/styles/hover_pressed = ExtResource("1_hmnpp")
+CheckButton/styles/hover = ExtResource("1_hmnpp")
+CheckButton/styles/hover_pressed = ExtResource("1_hmnpp")
+Label/colors/font_color = Color(0.517647, 0.490196, 0.380392, 1)
+Panel/styles/panel = SubResource("StyleBoxFlat_rqjbp")

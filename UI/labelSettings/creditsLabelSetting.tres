@@ -3,5 +3,4 @@
 [resource]
 line_spacing = 1.0
 font_size = 22
-shadow_size = 6
-shadow_color = Color(0, 0, 0, 0.705882)
+font_color = Color(0.517647, 0.490196, 0.380392, 1)
