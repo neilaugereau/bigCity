@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://pqh6k3los3o8"]
+
+[ext_resource type="Script" path="res://scripts/CardRender.cs" id="1_ufamy"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_r48wg"]
+
+[node name="CardRender" type="Node3D"]
+script = ExtResource("1_ufamy")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_r48wg")

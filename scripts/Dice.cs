@@ -13,13 +13,13 @@ public partial class Dice : Node
 	public override void _Ready()
 	{
 		base._Ready();
-        Node firstObject = objectToSpawn.Instantiate();
-        AddChild(firstObject); 
-        if (firstObject is RigidBody3D firstRigidBody)
-        {
-         	firstRigidBody.Position = new Vector3(0, 5, 0);  
-        }
-        
+		Node firstObject = objectToSpawn.Instantiate();
+		AddChild(firstObject); 
+		if (firstObject is RigidBody3D firstRigidBody)
+		{
+		 	firstRigidBody.Position = new Vector3(0, 5, 0);  
+		}
+		
 		
 	}
 

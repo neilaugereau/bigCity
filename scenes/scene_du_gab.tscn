@@ -1,3 +1,10 @@
-[gd_scene format=3 uid="uid://cjdsyrx0m7jbt"]
+[gd_scene load_steps=2 format=3 uid="uid://cjdsyrx0m7jbt"]
+
+[ext_resource type="Texture2D" uid="uid://c7ttqmb7kcmht" path="res://new_mesh_texture_test.tres" id="1_l3foq"]
 
 [node name="Node3D" type="Node3D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_l3foq")
