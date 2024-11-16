@@ -15,6 +15,17 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_2crcq")
 
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.00694444
+anchor_top = -0.0123457
+anchor_right = 1.00694
+anchor_bottom = 1.01235
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
 [node name="QuitButton" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = -1
@@ -59,14 +70,10 @@ metadata/_edit_use_anchors_ = true
 [node name="TitleMainScreen" type="Label" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = -0.0546875
-anchor_top = 0.108796
-anchor_right = 0.414063
-anchor_bottom = 0.414352
-offset_left = 119.0
-offset_top = 41.5
-offset_right = -119.0
-offset_bottom = -41.5
+anchor_left = 0.0486111
+anchor_top = 0.185185
+anchor_right = 0.335938
+anchor_bottom = 0.37963
 grow_horizontal = 2
 grow_vertical = 2
 text = "Big City"
