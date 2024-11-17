@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cpaaoluau4fwd"
+path="res://.godot/imported/BCSuperMarket.obj-5793f9379a34089c61285f7cada3edd1.mesh"
+
+[deps]
+
+files=["res://.godot/imported/BCSuperMarket.obj-5793f9379a34089c61285f7cada3edd1.mesh"]
+
+source_file="res://prefabs/assets/BCSuperMarket.obj"
+dest_files=["res://.godot/imported/BCSuperMarket.obj-5793f9379a34089c61285f7cada3edd1.mesh", "res://.godot/imported/BCSuperMarket.obj-5793f9379a34089c61285f7cada3edd1.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dss3rhd8uu7j7"
+path="res://.godot/imported/BCWoodFactory.obj-40ec7424aed6000c1059c9d85f2ef4d9.mesh"
+
+[deps]
+
+files=["res://.godot/imported/BCWoodFactory.obj-40ec7424aed6000c1059c9d85f2ef4d9.mesh"]
+
+source_file="res://prefabs/assets/BCWoodFactory.obj"
+dest_files=["res://.godot/imported/BCWoodFactory.obj-40ec7424aed6000c1059c9d85f2ef4d9.mesh", "res://.godot/imported/BCWoodFactory.obj-40ec7424aed6000c1059c9d85f2ef4d9.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false
