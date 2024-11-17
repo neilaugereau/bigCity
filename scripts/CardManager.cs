@@ -6,16 +6,21 @@ using System.Security.Cryptography.X509Certificates;
 public partial class CardManager : Node2D
 {
     const int COLLISION_MASK_CARD = 1;
+    const int COLLISION_MASK_CARD_SLOT = 2;
 
     private Node2D _cardBeingDragged;
     private Vector2 _screenSize;
-
     private bool isHoveringOnCard;
+    
+    public PlayerHand playerHandReference;
+
     public override void _Ready()
     {
         _screenSize = GetViewportRect().Size;
+        playerHandReference = this.GetNode<PlayerHand>("../PlayerHand");
     }
 
+    /*
     public override void _Input(InputEvent @event)
     {
         if (@event is InputEventMouseButton mouseEvent)
@@ -34,21 +39,37 @@ public partial class CardManager : Node2D
                 else
                 {
                     // Dragged the card when the button is Released
-                    FinishDrag();
+                    if (_cardBeingDragged != null)
+                    {
+                        FinishDrag();
+                    }
                 }
             }
         }
-    }
+    }*/
 
-    private void StartDrag(Node2D card)
+    public void StartDrag(Node2D card)
     {
         _cardBeingDragged = card;
         card.Scale = new Vector2(1,1);
     }
 
-    private void FinishDrag()
+    public void FinishDrag()
     {
         _cardBeingDragged.Scale = new Vector2(1.05f, 1.05f);
+        CardSlot cardSlotFounded = RaycastCheckForCardSlot() as CardSlot;
+        if (cardSlotFounded != null && !cardSlotFounded.cardInSlot)
+        {
+            playerHandReference.removeCardFromHand((Card)_cardBeingDragged);
+            //The card is dropped in a empty card slot
+            _cardBeingDragged.GlobalPosition = cardSlotFounded.GlobalPosition;
+            _cardBeingDragged.GetNode<CollisionShape2D>("Area2D/CollisionShape2D").Disabled = true;
+            cardSlotFounded.cardInSlot = true;
+        }
+        else
+        {
+            playerHandReference.AddCardToHand((Card)_cardBeingDragged);
+        }
         _cardBeingDragged = null;
     }
 
@@ -91,13 +112,32 @@ public partial class CardManager : Node2D
         if(hovered)
         {
             card.Scale = new Vector2(1.08f, 1.08f);
-            card.ZIndex = 1;
+            card.ZIndex = 2;
         }
         else
         {
             card.Scale = new Vector2(1.0f, 1.0f);
-            card.ZIndex = 0;
+            card.ZIndex = 1;
         }
+    }
+
+    private object RaycastCheckForCardSlot()
+    {
+        var spaceState = GetWorld2D().DirectSpaceState;
+
+        var parameters = new PhysicsPointQueryParameters2D
+        {
+            Position = GetGlobalMousePosition(),
+            CollideWithAreas = true,
+            CollisionMask = COLLISION_MASK_CARD_SLOT
+        };
+
+        var results = spaceState.IntersectPoint(parameters);
+        if (results.Count > 0)
+        {
+            return ((Area2D)results[0]["collider"].Obj).GetParent();
+        }
+        return null;
     }
 
     private object RaycastCheckForCard()
