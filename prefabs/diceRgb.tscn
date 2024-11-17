@@ -1,0 +1,24 @@
+[gd_scene load_steps=6 format=3 uid="uid://b5gb3jh1ok56o"]
+
+[ext_resource type="Script" path="res://scripts/Physics/DiceColliision.cs" id="1_1h04s"]
+[ext_resource type="ArrayMesh" uid="uid://bb8p2trejpvq1" path="res://Prefab/dice_obj/dice.obj" id="2_poohs"]
+[ext_resource type="Texture2D" uid="uid://c3w31x642ng76" path="res://Prefab/dice_obj/dice.png" id="3_47dhf"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mqdj3"]
+albedo_texture = ExtResource("3_47dhf")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_yruka"]
+
+[node name="DiceRGB" type="RigidBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, 0)
+script = ExtResource("1_1h04s")
+color = Color(0.516377, 0, 0.174752, 1)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
+mesh = ExtResource("2_poohs")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_mqdj3")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_yruka")
