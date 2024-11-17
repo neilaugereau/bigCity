@@ -6,8 +6,8 @@ public partial class GridSelection : Camera3D
 	[Export]
 	public PackedScene tiles;
 
-	public int Spacement = 5;
-	public Vector2 PlaneSize = new Vector2(60, 60); // A changer en fonction de la taille
+	public int Spacement = 40;
+	public Vector2 PlaneSize = new Vector2(200, 200); // A changer en fonction de la taille
 	public Vector2 tilePose;
 	
 	public Node floatingTile;
@@ -74,6 +74,7 @@ public partial class GridSelection : Camera3D
 	{
 		//GD.Print($"({(positionToMove[0])} ; {(positionToMove[2])})");
 		var building = tiles.Instantiate();
+		((MeshInstance3D)building).Mesh = Globals.Building[E_Building.FARM].BuildingMesh;
 		Globals.gridPositions.Add(tilePose, E_Building.FARM);
 		GetTree().GetRoot().AddChild(building);
 		

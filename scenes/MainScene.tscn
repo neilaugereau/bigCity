@@ -20,6 +20,7 @@ sky = SubResource("Sky_jt2mw")
 [node name="MainScene" type="Node3D"]
 
 [node name="Plane" type="RigidBody3D" parent="."]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0)
 gravity_scale = 0.0
 freeze = true
 
@@ -37,7 +38,7 @@ light_color = Color(0.823529, 0.819608, 0.67451, 1)
 light_energy = 2.145
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(-0.180245, -0.155212, 0.971299, 3.11261e-09, 0.987472, 0.157796, -0.983622, 0.028442, -0.177987, 36.8715, 18.9754, 0.902283)
+transform = Transform3D(0.991998, -0.019922, 0.12467, -0.0636364, 0.773957, 0.630033, -0.10904, -0.632925, 0.766496, 36.8715, 20.5033, 79.539)
 environment = SubResource("Environment_k5f1k")
 script = ExtResource("1_cvahy")
 tiles = ExtResource("4_r1j1n")
