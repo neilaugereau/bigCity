@@ -22,10 +22,6 @@ public partial class GridSelection : Camera3D
 			if (keyEvent.Keycode == Key.Ctrl && keyEvent.Pressed && !keyEvent.Echo)
 				isCtrlPressed = !isCtrlPressed;
 		}
-
-			tilePose = new Vector2(positionToMove[0], positionToMove[2]);
-			if (Math.Abs(positionToMove[0]) != Math.Abs(PlaneSize[0] / 2) &&
-				Math.Abs(positionToMove[2]) != Math.Abs(PlaneSize[1] / 2))
 		if (isCtrlPressed)
 		{
 			PhysicsDirectSpaceState3D spaceState = GetWorld3D().DirectSpaceState;
@@ -46,7 +42,7 @@ public partial class GridSelection : Camera3D
 
 				tilePose = new Vector2(positionToMove[0], positionToMove[2]);
 				if (Math.Abs(positionToMove[0]) != Math.Abs(PlaneSize[0] / 2) &&
-				    Math.Abs(positionToMove[2]) != Math.Abs(PlaneSize[1] / 2))
+					Math.Abs(positionToMove[2]) != Math.Abs(PlaneSize[1] / 2))
 				{
 					if (@event.IsPressed() && @event is InputEventMouseButton)
 					{

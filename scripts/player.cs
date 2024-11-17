@@ -8,26 +8,31 @@ public partial class player : Node
 
 	Game game;
 	
-	private Godot.Collections.Dictionary<ECardColor, Godot.Collections.Array<Card>> buildings = new() {
-		{ECardColor.Monument, new Godot.Collections.Array<Card>()},
-		{ECardColor.Special, new Godot.Collections.Array<Card>()},
-		{ECardColor.Red, new Godot.Collections.Array<Card>()},
-		{ECardColor.Green, new Godot.Collections.Array<Card>()},
-		{ECardColor.Blue, new Godot.Collections.Array<Card>()},
+	private Godot.Collections.Dictionary<ECardType, Godot.Collections.Array<CardBase>> buildings = new() {
+		{ECardType.Agricole, new Godot.Collections.Array<CardBase>()},
+		{ECardType.Farm, new Godot.Collections.Array<CardBase>()},
+		{ECardType.Resources, new Godot.Collections.Array<CardBase>()},
+		{ECardType.Shop, new Godot.Collections.Array<CardBase>()},
+		{ECardType.Factory, new Godot.Collections.Array<CardBase>()},
+		{ECardType.Market, new Godot.Collections.Array<CardBase>()},
+		{ECardType.Restauration, new Godot.Collections.Array<CardBase>()},
+		{ECardType.Special, new Godot.Collections.Array<CardBase>()},
+		{ECardType.Monument, new Godot.Collections.Array<CardBase>()},
 	};
 	
 	
 
-	public void ExecuteCardSpecial(ECardColor type)
+	public void ExecuteCardSpecial(ECardType type, int diceValue)
 	{
 		foreach(var card in buildings[type])
-			card.OnActivate();
+			if(diceValue >= card.DiceRange[0] && diceValue <= card.DiceRange[1])
+				card.OnActivate(new CardActivationEventArgs(game));
 	}
 	
 	public void DrawCard(Piles stack)
 	{
 		var card = stack.GetCards();
 		
-		buildings[card.CardColor].Add(card);
+		buildings[card.CardType].Add(card);
 	}
 }

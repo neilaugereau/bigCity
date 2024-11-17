@@ -3,8 +3,8 @@ using System;
 
 public enum ECardColor
 {
-	Monument,
-	Special,
+	Yellow,
+	Violet,
 	Red,
 	Green,
 	Blue
