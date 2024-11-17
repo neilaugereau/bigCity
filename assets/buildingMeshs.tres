@@ -1,0 +1,6 @@
+[gd_resource type="Resource" script_class="BuildingMeshRes" load_steps=2 format=3 uid="uid://btm3468e7ukn5"]
+
+[ext_resource type="Script" path="res://scripts/BuildingMeshRes.cs" id="1_ok03t"]
+
+[resource]
+script = ExtResource("1_ok03t")
