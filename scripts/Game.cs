@@ -5,36 +5,39 @@ public partial class Game : Node
 {
 	public player mainPlayer { get; private set; }
 	public player Enemy { get; private set; }
-	public player[] allPlayers { get; private set; }
-	
-	public Godot.Collections.Array<DiceC> players { get; private set; }
+	public player[] players { get; private set; }
+	public DiceManager diceManager { get; private set; }
 	public override void _Ready()
 	{
 		mainPlayer = new player();
 		Enemy = new player();
-		allPlayers = new player[] { mainPlayer, Enemy };
+		players = new player[] { mainPlayer, Enemy };
+		diceManager = new DiceManager();
+
+		diceManager.AllDiceLanded += Round;
+		diceManager.ThrowDices(1);
 		base._Ready();
 	}
 
-	public void Round()
+	public void Round(object sender, LandedEventArgs args)
 	{
-		int DiceValue = allPlayers[0].ThrowDice();
-		foreach (player p in allPlayers)
+		foreach (player p in players)
 		{
-			p.ExecuteCardSpecial(ECardType.Farm,DiceValue);
-			p.ExecuteCardSpecial(ECardType.Agricole,DiceValue);
-			p.ExecuteCardSpecial(ECardType.Resources,DiceValue);
+			p.ExecuteCardSpecial(ECardType.Farm,args.Value);
+			p.ExecuteCardSpecial(ECardType.Agricole, args.Value);
+			p.ExecuteCardSpecial(ECardType.Resources, args.Value);
 		}
-		foreach (player p in allPlayers)
+		foreach (player p in players)
 		{
-			if(p== allPlayers[0])
+			if(p== players[0])
 				continue;
-			p.ExecuteCardSpecial(ECardType.Restauration,DiceValue);
+			p.ExecuteCardSpecial(ECardType.Restauration, args.Value);
 		}
-		allPlayers[0].ExecuteCardSpecial(ECardType.Shop,DiceValue);
-		allPlayers[0].ExecuteCardSpecial(ECardType.Factory,DiceValue);
-		allPlayers[0].ExecuteCardSpecial(ECardType.Market,DiceValue);
-		Shift(allPlayers);
+		players[0].ExecuteCardSpecial(ECardType.Shop, args.Value);
+		players[0].ExecuteCardSpecial(ECardType.Factory, args.Value);
+		players[0].ExecuteCardSpecial(ECardType.Market, args.Value);
+		Shift(players);
+		diceManager.ThrowDices(1);
 	}
 	
 	public player[] Shift(player[] playerArray)

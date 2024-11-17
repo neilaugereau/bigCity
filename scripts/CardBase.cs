@@ -1,6 +1,7 @@
 using Godot;
 using System;
 
+
 public class CardActivationEventArgs : EventArgs
 {
 	public Game game { get; set; }
@@ -36,6 +37,8 @@ public partial class CardBase : Node
 	public int Gain = 0;
 	public ECardType CountType;
 	public Mesh BuildingMesh;
+
+	public player owner = null; 
 	
 	public event EventHandler<CardActivationEventArgs> activationEvent;
 	

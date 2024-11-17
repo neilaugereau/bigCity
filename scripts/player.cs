@@ -1,7 +1,6 @@
 using BigCity.scripts;
 using Godot;
-using System;
-using System.Collections.Generic;
+
 public partial class player : Node
 {
 	public Controller playerController {  get; private set; }
