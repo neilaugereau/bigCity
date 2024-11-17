@@ -5,16 +5,16 @@ namespace BigCity.scripts;
 
 public partial class Piles : Node
 {
-	public Card card;
+	public CardBase card;
 	public int number;
 
-	public Piles(Card _card,int _number)
+	public Piles(CardBase _card,int _number)
 	{
 		card = _card;
 		number = _number;
 	}
 
-	public Card GetCards()
+	public CardBase GetCards()
 	{
 		if (number > 0)
 		{
