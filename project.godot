@@ -34,7 +34,7 @@ project/assembly_name="BigCity"
 
 [editor_plugins]
 
-enabled=PackedStringArray()
+enabled=PackedStringArray("res://addons/yamms/plugin.cfg")
 
 [rendering]
 

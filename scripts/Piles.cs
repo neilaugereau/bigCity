@@ -5,21 +5,23 @@ namespace BigCity.scripts;
 
 public partial class Piles : Node
 {
-	public CardBase card;
+	public E_Building card;
 	public int number;
 
-	public Piles(CardBase _card,int _number)
+	public Piles(E_Building _card,int _number)
 	{
 		card = _card;
 		number = _number;
 	}
 
-	public CardBase GetCards()
+	public CardBase GetCards(player owner)
 	{
 		if (number > 0)
 		{
 			number--;
-			return null; 
+			CardBase output = Globals.Building[card];
+			output.owner = owner;
+			return output; 
 		}
 		return null;
 	}

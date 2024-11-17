@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://b5gdhf5md07fi"
+path="res://.godot/imported/BCStade.obj-aa2a4f0dffb6870369d68d263e9b5d05.mesh"
+
+[deps]
+
+files=["res://.godot/imported/BCStade.obj-aa2a4f0dffb6870369d68d263e9b5d05.mesh"]
+
+source_file="res://prefabs/assets/BCStade.obj"
+dest_files=["res://.godot/imported/BCStade.obj-aa2a4f0dffb6870369d68d263e9b5d05.mesh", "res://.godot/imported/BCStade.obj-aa2a4f0dffb6870369d68d263e9b5d05.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

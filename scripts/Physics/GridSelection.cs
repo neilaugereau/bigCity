@@ -74,7 +74,7 @@ public partial class GridSelection : Camera3D
 	{
 		//GD.Print($"({(positionToMove[0])} ; {(positionToMove[2])})");
 		var building = tiles.Instantiate();
-		Globals.gridPositions.Add(tilePose, Globals.E_Building.FARM);
+		Globals.gridPositions.Add(tilePose, E_Building.FARM);
 		GetTree().GetRoot().AddChild(building);
 		
 		if (building is Node3D buildingNode)
