@@ -21,13 +21,13 @@ public partial class player : Node
 	public void ExecuteCardSpecial(ECardColor type)
 	{
 		foreach(var card in buildings[type])
-			card.OnActivate(game, this);
+			card.OnActivate();
 	}
 	
 	public void DrawCard(Piles stack)
 	{
 		var card = stack.GetCards();
 		
-		buildings[card.Type].Add(card);
+		buildings[card.CardColor].Add(card);
 	}
 }

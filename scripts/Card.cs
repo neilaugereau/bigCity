@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-public partial class Card
+public partial class Card : Node
 {
 	public static readonly Color[] CARD_COLORS = new Color[5] {
 		new Color("fcf6a0"),
