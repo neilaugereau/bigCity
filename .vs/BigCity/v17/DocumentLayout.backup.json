@@ -3,12 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\Neil\\Documents\\GitHub\\bigCity\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{79F3927B-6DB1-46B5-8E3C-8ADB40EC5B89}|BigCity.csproj|c:\\users\\neil\\documents\\github\\bigcity\\scripts\\card.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{79F3927B-6DB1-46B5-8E3C-8ADB40EC5B89}|BigCity.csproj|solutionrelative:scripts\\card.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{79F3927B-6DB1-46B5-8E3C-8ADB40EC5B89}|BigCity.csproj|c:\\users\\neil\\documents\\github\\bigcity\\scripts\\globals.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{79F3927B-6DB1-46B5-8E3C-8ADB40EC5B89}|BigCity.csproj|solutionrelative:scripts\\globals.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79F3927B-6DB1-46B5-8E3C-8ADB40EC5B89}|BigCity.csproj|c:\\users\\neil\\documents\\github\\bigcity\\scripts\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{79F3927B-6DB1-46B5-8E3C-8ADB40EC5B89}|BigCity.csproj|solutionrelative:scripts\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{79F3927B-6DB1-46B5-8E3C-8ADB40EC5B89}|BigCity.csproj|c:\\users\\neil\\documents\\github\\bigcity\\scripts\\cardmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{79F3927B-6DB1-46B5-8E3C-8ADB40EC5B89}|BigCity.csproj|solutionrelative:scripts\\cardmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79F3927B-6DB1-46B5-8E3C-8ADB40EC5B89}|BigCity.csproj|c:\\users\\neil\\documents\\github\\bigcity\\scripts\\card.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{79F3927B-6DB1-46B5-8E3C-8ADB40EC5B89}|BigCity.csproj|solutionrelative:scripts\\card.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -30,26 +38,52 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "player.cs",
+              "DocumentMoniker": "C:\\Users\\Neil\\Documents\\GitHub\\bigCity\\scripts\\player.cs",
+              "RelativeDocumentMoniker": "scripts\\player.cs",
+              "ToolTip": "C:\\Users\\Neil\\Documents\\GitHub\\bigCity\\scripts\\player.cs",
+              "RelativeToolTip": "scripts\\player.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-17T12:55:07.679Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Globals.cs",
+              "DocumentMoniker": "C:\\Users\\Neil\\Documents\\GitHub\\bigCity\\scripts\\Globals.cs",
+              "RelativeDocumentMoniker": "scripts\\Globals.cs",
+              "ToolTip": "C:\\Users\\Neil\\Documents\\GitHub\\bigCity\\scripts\\Globals.cs",
+              "RelativeToolTip": "scripts\\Globals.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-17T12:50:18.486Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Card.cs",
               "DocumentMoniker": "C:\\Users\\Neil\\Documents\\GitHub\\bigCity\\scripts\\Card.cs",
               "RelativeDocumentMoniker": "scripts\\Card.cs",
               "ToolTip": "C:\\Users\\Neil\\Documents\\GitHub\\bigCity\\scripts\\Card.cs",
               "RelativeToolTip": "scripts\\Card.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAgwAMAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-17T01:15:00.153Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "CardManager.cs",
               "DocumentMoniker": "C:\\Users\\Neil\\Documents\\GitHub\\bigCity\\scripts\\CardManager.cs",
               "RelativeDocumentMoniker": "scripts\\CardManager.cs",
               "ToolTip": "C:\\Users\\Neil\\Documents\\GitHub\\bigCity\\scripts\\CardManager.cs",
               "RelativeToolTip": "scripts\\CardManager.cs",
-              "ViewState": "AgIAADgAAAAAAAAAAAAgwEoAAAAdAAAAAAAAAA==",
+              "ViewState": "AgIAAHwAAAAAAAAAAAAmwEoAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-16T21:42:34.124Z",
               "EditorCaption": ""

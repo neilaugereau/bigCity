@@ -1,14 +1,13 @@
 using BigCity.scripts;
 using Godot;
-using System;
-using System.Collections.Generic;
+
 public partial class player : Node
 {
 	public Controller playerController {  get; private set; }
-
+	public int money = 0;
 	Game game;
 	
-	private Godot.Collections.Dictionary<ECardType, Godot.Collections.Array<CardBase>> buildings = new() {
+	public Godot.Collections.Dictionary<ECardType, Godot.Collections.Array<CardBase>> buildings = new() {
 		{ECardType.Agricole, new Godot.Collections.Array<CardBase>()},
 		{ECardType.Farm, new Godot.Collections.Array<CardBase>()},
 		{ECardType.Resources, new Godot.Collections.Array<CardBase>()},
@@ -18,7 +17,7 @@ public partial class player : Node
 		{ECardType.Restauration, new Godot.Collections.Array<CardBase>()},
 		{ECardType.Special, new Godot.Collections.Array<CardBase>()},
 		{ECardType.Monument, new Godot.Collections.Array<CardBase>()},
-	};
+	}; // je l'ai mis en public 
 	
 	
 
@@ -31,7 +30,7 @@ public partial class player : Node
 	
 	public void DrawCard(Piles stack)
 	{
-		var card = stack.GetCards();
+		var card = stack.GetCards(this);
 		
 		buildings[card.CardType].Add(card);
 	}
