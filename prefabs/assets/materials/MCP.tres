@@ -1,0 +1,6 @@
+[gd_resource type="ORMMaterial3D" load_steps=2 format=3 uid="uid://bug4algq4nvjw"]
+
+[ext_resource type="Texture2D" uid="uid://d0ypt52urh7x2" path="res://prefabs/assets/materials/CP.png" id="1_law4o"]
+
+[resource]
+albedo_texture = ExtResource("1_law4o")

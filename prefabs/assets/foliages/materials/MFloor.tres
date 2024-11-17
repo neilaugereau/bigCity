@@ -1,0 +1,7 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://cyfjy7nfbn2cx"]
+
+[ext_resource type="Shader" uid="uid://b6diav2s3medj" path="res://prefabs/assets/foliages/materials/MSFloor.tres" id="1_6ll1e"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_6ll1e")

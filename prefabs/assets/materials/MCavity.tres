@@ -1,0 +1,11 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://cacw4tofv3yed"]
+
+[ext_resource type="Shader" path="res://prefabs/assets/materials/MSCavity.gdshader" id="1_mhs6i"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_mhs6i")
+shader_parameter/zNear = 2.0
+shader_parameter/zFar = 10.0
+shader_parameter/width = 1.0
+shader_parameter/addDepth = false

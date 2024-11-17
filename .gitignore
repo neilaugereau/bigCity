@@ -9,18 +9,12 @@ export_presets.cfg
 # Imported translations (automatically generated from CSV files)
 *.translation
 
+.idea/
+.vs/
+
 # Mono-specific ignores
 .mono/
 data_*/
 mono_crash.*.json
-.vs/BigCity/FileContentIndex/00a80373-a9b2-4c7b-825d-7ed7260fa782.vsidx
-.vs/BigCity/FileContentIndex/37bf1309-4747-45a8-be28-4fa0c1d0e41c.vsidx
-.vs/BigCity/FileContentIndex/400a8514-ff31-43ed-ac64-33d88b57e41e.vsidx
-.vs/BigCity/FileContentIndex/9e45f25c-7756-4dfa-8e7b-ab18f8b7eda6.vsidx
-.vs/BigCity/FileContentIndex/e8df257c-b1a0-4571-aaa9-b1e057dc98e8.vsidx
-.vs/BigCity/FileContentIndex/ab48702c-4880-4bbd-8d70-3f64f0b2600e.vsidx
-.vs/BigCity/FileContentIndex/cb470213-a5bc-4b47-8cea-c9be2a5ec3da.vsidx
-.vs/BigCity/FileContentIndex/ee59d86f-1399-4c99-864d-260bf6404aa2.vsidx
-.vs/BigCity/FileContentIndex/fa936dd8-3393-4621-92a7-35a60a813319.vsidx
 *.vsidx
 *.vsidx
