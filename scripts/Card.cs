@@ -9,6 +9,8 @@ public partial class Card : Node2D
 	[Signal]
 	public delegate void hoveredOffEventHandler(Card card);
 
+	public Vector2 startingPosition ;
+
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{

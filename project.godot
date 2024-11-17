@@ -15,6 +15,10 @@ run/main_scene="res://scenes/MainMenu.tscn"
 config/features=PackedStringArray("4.3", "C#", "Forward Plus")
 config/icon="res://icon.svg"
 
+[audio]
+
+buses/default_bus_layout="res://default_audio_bus_layout.tres"
+
 [autoload]
 
 Globals="*res://scripts/Globals.cs"
