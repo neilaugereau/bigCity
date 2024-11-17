@@ -5,8 +5,9 @@ public partial class Game : Node
 {
 	public player mainPlayer { get; private set; }
 	public player Enemy { get; private set; }
-	
 	public player[] allPlayers { get; private set; }
+	
+	public Godot.Collections.Array<DiceC> players { get; private set; }
 	public override void _Ready()
 	{
 		mainPlayer = new player();
@@ -39,8 +40,8 @@ public partial class Game : Node
 	public player[] Shift(player[] playerArray)
 	{
 		player[] output = new player[playerArray.Length];
-		for(int i = 0;i<playerArray.Length; i++)
-			output[i] = playerArray[(i+1)%playerArray.Length]
+		for (int i = 0; i < playerArray.Length; i++)
+			output[i] = playerArray[(i + 1) % playerArray.Length];
 		return output;
 	}
 	// Called every frame. 'delta' is the elapsed time since the previous frame.

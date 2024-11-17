@@ -11,6 +11,9 @@ public partial class DiceColliision : RigidBody3D
 	private float accumulatedTime = 0.0f; //  Temps utilisé en tant que timer
 	Random rand  = new Random();
 	private System.Timers.Timer aTimer;
+	
+	public bool HasLanded = false;
+	public event EventHandler DiceCollided;
 
 	public override void _Ready() // Mise en place des caractéristiques du lancer (vitesse,orientation,puissance)
 	{
@@ -28,14 +31,15 @@ public partial class DiceColliision : RigidBody3D
 			if (new Vector3((int)this.AngularVelocity[0], (int)this.AngularVelocity[1], (int)this.AngularVelocity[2]) ==
 			    Vector3.Zero)
 			{
-				GD.Print(Throw());
+				HasLanded = true;
+				DiceCollided?.Invoke(this, null);
 				SetProcess(false);
 			}
 			accumulatedTime = 0.0f;
 		}
 	}
 
-	public int Throw()
+	public int GetDiceValue()
 	{
 		Basis basis = this.GlobalTransform.Basis;
 		facesRotations = new Vector3[] {

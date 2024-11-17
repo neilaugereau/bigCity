@@ -6,26 +6,22 @@ namespace BigCity.scripts;
 
 public partial class Dice : Node
 {
-	Random random = new();
-	
-	[Export] private PackedScene objectToSpawn;  // Scène assignable dans l'éditeur
-
-	public override void _Ready()
-	{
-		base._Ready();
-		Node firstObject = objectToSpawn.Instantiate();
-		AddChild(firstObject); 
-		if (firstObject is RigidBody3D firstRigidBody)
-		{
-		 	firstRigidBody.Position = new Vector3(0, 5, 0);  
-		}
-	}
-
+	[Export] private PackedScene objectToSpawn;
+	public int diceNumber;
+	public int DiceValues =0;
 	public int ThrowDice()
 	{
-		
-		int currentFaces = random.Next(1,6);
-		
-		return currentFaces;
+		for (int i = 0; i < diceNumber; i++)
+		{
+			Node DiceObject = objectToSpawn.Instantiate();
+			AddChild(DiceObject); 
+			if (DiceObject is RigidBody3D firstRigidBody)
+			{
+				firstRigidBody.Position = new Vector3(0, 5, 0);
+				
+			}
+			DiceValues +=
+		}
+		return DiceValues;
 	}
 }
