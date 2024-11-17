@@ -30,7 +30,7 @@ public partial class player : Node
 	
 	public void DrawCard(Piles stack)
 	{
-		var card = stack.GetCards();
+		var card = stack.GetCards(this);
 		
 		buildings[card.CardType].Add(card);
 	}

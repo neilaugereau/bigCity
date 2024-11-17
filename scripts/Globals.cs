@@ -1,10 +1,41 @@
 using Godot;
 using System;
 using System.Collections.Generic;
+public enum E_Building
+{
+	// Blue Cards
+	FARM,
+	FIELD,
+	FOREST,
+	MINE,
+	ORCHARD, // Verger
 
+	// Red Cards
+	CAFE,
+	RESTAURANT,
+
+	// Green Cards
+	BAKERY,
+	SUPERMARKET,
+	FURNITURE_FACTORY,
+	VEGETABLES_MARKET,
+	CHEESE_SHOP,
+
+	// Special Cards
+	TV_CHANNEL,
+	STADIUM,
+	BUSINESS_CENTER,
+
+	// Monument Cards
+	TOWER,
+	TRAIN_STATION,
+	AMUSEMENT_PARK,
+	MALL
+
+}
 public partial class Globals : Node
 {
-	private BuildingMeshRes buildingsMeshs;
+	private static BuildingMeshRes buildingsMeshs;
 	
 	public static float globalVolume = 100;
 	public static float soundVolume = 100;
@@ -12,39 +43,8 @@ public partial class Globals : Node
 
 	//public static int[,] gridPosition = new int[100, 100];
 	public static Dictionary<Vector2, E_Building> gridPositions = new Dictionary<Vector2, E_Building>();
-	public enum E_Building
-	{
-		// Blue Cards
-		FARM,
-		FIELD,
-		FOREST,
-		MINE,
-		ORCHARD, // Verger
-
-		// Red Cards
-		CAFE,
-		RESTAURANT,
-
-		// Green Cards
-		BAKERY,
-		SUPERMARKET,
-		FURNITURE_FACTORY,
-		VEGETABLES_MARKET,
-		CHEESE_SHOP,
-
-		// Special Cards
-		TV_CHANNEL,
-		STADIUM,
-		BUSINESS_CENTER,
-
-		// Monument Cards
-		TOWER,
-		TRAIN_STATION,
-		AMUSEMENT_PARK,
-		MALL
-
-	}
-	public Dictionary<E_Building, CardBase> Building;
+	
+	public static Dictionary<E_Building, CardBase> Building;
 
 	public Globals()
 	{

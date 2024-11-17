@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" path="res://scripts/Dice.cs" id="1_a50x7"]
 [ext_resource type="Script" path="res://scripts/Physics/GridSelection.cs" id="1_cvahy"]
-[ext_resource type="PackedScene" uid="uid://b5gb3jh1ok56o" path="res://prefabs/diceRgb.tscn" id="1_wxys1"]
-[ext_resource type="PackedScene" uid="uid://diyxc561pj5hf" path="res://prefabs/plane.tscn" id="4_r1j1n"]
+[ext_resource type="PackedScene" path="res://Prefab/diceRgb.tscn" id="1_wxys1"]
+[ext_resource type="PackedScene" path="res://Prefab/plane.tscn" id="4_r1j1n"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_yylce"]
 size = Vector2(60, 60)
