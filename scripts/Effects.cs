@@ -5,43 +5,39 @@ public partial class Effects : Node
 {
     public void SimpleGain(object sender, CardActivationEventArgs e)
     {
-        e.game.currentPlayer.money += ((CardBase)sender).Gain;
+        ((CardBase)sender).owner.money += ((CardBase)sender).Gain;
     }
     
     public void TypeGain(object sender, CardActivationEventArgs e)
     {
-        int nbrTypeCards =  e.game.currentPlayer.buildings[((CardBase)sender).CountType].Count;
-        for (int i = 0; i < nbrTypeCards; i++)
-            e.game.currentPlayer.money += ((CardBase)sender).Gain;
+        ((CardBase)sender).owner.money += ((CardBase)sender).Gain * ((CardBase)sender).owner.buildings[((CardBase)sender).CountType].Count;
     }
 
     public void RedGain(object sender, CardActivationEventArgs e)
     {
-        e.game.currentPlayer.money += ((CardBase)sender).Gain;
-        e.game.opposingPlayer.money -= ((CardBase)sender).Gain;
+        ((CardBase)sender).owner.money += ((CardBase)sender).Gain;
+        e.game.players[0].money -= ((CardBase)sender).Gain;
     }
 
     public void TargetedPlayerGain(object sender, CardActivationEventArgs e)
     {
-        e.game.currentPlayer.money += ((CardBase)sender).Gain;
-        foreach (var elem in e.game.allPlayers)
+        ((CardBase)sender).owner.money += ((CardBase)sender).Gain;
+        foreach (var elem in e.game.players)
         {
-            if (elem != e.game.currentPlayer)
-            {
-                elem.money -= ((CardBase)sender).Gain;
+            if (elem != ((CardBase)sender).owner)
                 break;
-            }
+            elem.money -= ((CardBase)sender).Gain;
         }
     }
     
     public void AllPlayerGain(object sender, CardActivationEventArgs e)
     {
-        foreach (var elem in e.game.allPlayers)
+        foreach (var elem in e.game.players)
         {
-            if (elem != e.game.currentPlayer)
+            if (elem != ((CardBase)sender).owner)
             {
                 elem.money -= ((CardBase)sender).Gain;
-                e.game.currentPlayer.money += ((CardBase)sender).Gain;
+                ((CardBase)sender).owner.money += ((CardBase)sender).Gain;
             }
         }
     }
@@ -49,9 +45,9 @@ public partial class Effects : Node
     public void TradeCards(object sender, CardActivationEventArgs e)
     {
         // J'ai abandonné le trading de carte
-        foreach (var elem in e.game.allPlayers)
+        foreach (var elem in e.game.players)
         {
-            if (elem != e.game.currentPlayer)
+            if (elem != ((CardBase)sender).owner)
             {
                 foreach (var card in elem.buildings.Keys)
                 {

@@ -2,7 +2,7 @@ using Godot;
 using System;
 using System.Timers;
 
-public partial class DiceColliision : RigidBody3D
+public partial class Dice : RigidBody3D
 {
 	// Array de Vector3 permettant d'assigner une valeur(index) aux 6 faces en fonction des rotatiions prédéfinies 
 	[Export] private Color color = new Color(1, 1, 1);
@@ -13,7 +13,7 @@ public partial class DiceColliision : RigidBody3D
 	private System.Timers.Timer aTimer;
 	
 	public bool HasLanded = false;
-	public event EventHandler DiceCollided;
+	public event EventHandler Landed;
 
 	public override void _Ready() // Mise en place des caractéristiques du lancer (vitesse,orientation,puissance)
 	{
@@ -32,7 +32,7 @@ public partial class DiceColliision : RigidBody3D
 			    Vector3.Zero)
 			{
 				HasLanded = true;
-				DiceCollided?.Invoke(this, null);
+				Landed?.Invoke(this, null);
 				SetProcess(false);
 			}
 			accumulatedTime = 0.0f;
