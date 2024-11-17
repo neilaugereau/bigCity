@@ -23,3 +23,4 @@ mono_crash.*.json
 .vs/BigCity/FileContentIndex/ee59d86f-1399-4c99-864d-260bf6404aa2.vsidx
 .vs/BigCity/FileContentIndex/fa936dd8-3393-4621-92a7-35a60a813319.vsidx
 *.vsidx
+*.vsidx
