@@ -1,7 +1,6 @@
 using Godot;
 using System;
 
-namespace BigCity.scripts;
 public class CardActivationEventArgs : EventArgs
 {
 	public Game game { get; set; }

@@ -1,6 +1,5 @@
 using Godot;
 using System;
-namespace BigCity.scripts;
 public partial class Game : Node
 {
 	[Export] Control gameUI;
@@ -42,11 +41,9 @@ public partial class Game : Node
 			new Piles(E_Building.AMUSEMENT_PARK, 4),
 			new Piles(E_Building.MALL, 4)
 		};
-		diceManager = new DiceManager();
-		diceManager.AllDiceLanded += Round;
-		diceManager.ThrowDices(1);
-		
-		base._Ready();
+		((DiceManager)diceManager).AllDiceLanded += Round;
+
+        base._Ready();
 		
 	}
 

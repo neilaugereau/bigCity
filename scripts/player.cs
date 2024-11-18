@@ -3,7 +3,6 @@ using Godot;
 
 public partial class player : Node
 {
-	public Controller playerController {  get; private set; }
 	public int money = 0;
 	Game game;
 	

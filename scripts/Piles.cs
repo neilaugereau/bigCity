@@ -1,7 +1,5 @@
 using Godot;
 using System.Collections.Generic;
-namespace BigCity.scripts;
-
 
 public partial class Piles : Node
 {

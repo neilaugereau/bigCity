@@ -1,7 +1,6 @@
 using Godot;
 using System;
 using System.Collections.Generic;
-namespace BigCity.scripts;
 public enum E_Building
 {
 	// Blue Cards
