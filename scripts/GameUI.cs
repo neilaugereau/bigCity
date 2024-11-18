@@ -3,6 +3,8 @@ using System;
 
 public partial class GameUI : Control
 {
+	public event EventHandler BtnDicePressed;
+
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
@@ -11,13 +13,17 @@ public partial class GameUI : Control
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta)
 	{
-        //Change the value of the label_nbCoins (coins nb of the player)
-        this.GetNode<Label>("label_nbCoins").Text = "";
-    }
+		//Change the value of the label_nbCoins (coins nb of the player)
+		
+	}
 
-    public void _on_btn_dice_pressed()
+	public void UpdateMoneyLabel(int money)
 	{
-		//On click on the button dice
-		// how to modify enabled : this.GetNode<BaseButton>("btn_dice").Disabled = false;
+		this.GetNode<Label>("label_nbCoins").Text = money.ToString();
+	}
+
+	public void _on_btn_dice_pressed()
+	{
+		BtnDicePressed?.Invoke(this, null);
 	}
 }

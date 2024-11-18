@@ -4,12 +4,12 @@ using System;
 
 public class LandedEventArgs : EventArgs
 {
-    public int Value { get; private set; }
+	public int Value { get; private set; }
 
-    public LandedEventArgs(int value)
-    {
-        Value = value;
-    }
+	public LandedEventArgs(int value)
+	{
+		Value = value;
+	}
 }
 
 public partial class DiceManager : Node
@@ -19,14 +19,20 @@ public partial class DiceManager : Node
 	[Export] private PackedScene objectToSpawn;
 
 	private Godot.Collections.Array<Node> diceArray;
+
+	public override void _Ready()
+	{
+		diceArray = new Godot.Collections.Array<Node>();
+		base._Ready();
+	}
 	public void ThrowDices(int n = 1)
 	{
 		for (int i = 0; i < n; i++)
 		{
 			diceArray.Add(objectToSpawn.Instantiate());
-			(diceArray[-1] as Dice).Landed += DiceLanded;
-			AddChild(diceArray[-1]);
-			if (diceArray[-1] is RigidBody3D firstRigidBody)
+			(diceArray[diceArray.Count - 1] as Dice).Landed += DiceLanded;
+			GetParent().AddChild(diceArray[diceArray.Count - 1]);
+			if (diceArray[diceArray.Count - 1] is RigidBody3D firstRigidBody)
 				firstRigidBody.Position = new Vector3(0, 5, 0);
 		}
 	}
