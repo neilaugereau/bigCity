@@ -31,7 +31,7 @@ This project was created in one week as a school project, similar to a GameJam.
 4. **Earn Coins**: Activate your cards to earn income or affect your opponents.
    
 5. **Strategic Building**: Purchase and place cards to optimize your income.
-    
+	
 6. **Win Condition**: The first player to reach a specific goal (e.g., constructing all monuments) wins the game.
 
 ---

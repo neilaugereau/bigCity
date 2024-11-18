@@ -81,3 +81,4 @@ metadata/_edit_use_anchors_ = true
 [connection signal="pressed" from="QuitButton" to="QuitButton" method="_on_pressed"]
 [connection signal="pressed" from="OptionsButton" to="OptionsButton" method="_on_pressed"]
 [connection signal="pressed" from="PlayGameButton" to="QuitButton" method="_on_play_game_button_pressed"]
+[connection signal="pressed" from="PlayGameButton" to="PlayGameButton" method="_on_play_game_button_pressed"]

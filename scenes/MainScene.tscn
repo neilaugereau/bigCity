@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://cera5wmfb7mom"]
+[gd_scene load_steps=13 format=3 uid="uid://cera5wmfb7mom"]
 
 [ext_resource type="Script" path="res://scripts/Physics/GridSelection.cs" id="1_cvahy"]
 [ext_resource type="PackedScene" uid="uid://diyxc561pj5hf" path="res://prefabs/plane.tscn" id="2_d55mr"]
@@ -6,8 +6,6 @@
 [ext_resource type="PackedScene" uid="uid://dh6m1wk2i4y4d" path="res://scenes/GameUI.tscn" id="3_xa11f"]
 [ext_resource type="Material" uid="uid://bug4algq4nvjw" path="res://prefabs/assets/materials/MCP.tres" id="4_6er2p"]
 [ext_resource type="Script" path="res://scripts/Game.cs" id="4_eyagi"]
-[ext_resource type="Script" path="res://scripts/DiceManager.cs" id="5_al1k7"]
-[ext_resource type="PackedScene" uid="uid://b5gb3jh1ok56o" path="res://prefabs/diceRgb.tscn" id="6_3a1ik"]
 [ext_resource type="PackedScene" uid="uid://crh3h0w1f4emu" path="res://scenes/CardScene.tscn" id="7_8evd7"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_yylce"]
@@ -61,8 +59,6 @@ enemyGrid = NodePath("../EnemyGrid")
 cardScene = NodePath("../CardScene")
 
 [node name="DiceManager" type="Node" parent="."]
-script = ExtResource("5_al1k7")
-objectToSpawn = ExtResource("6_3a1ik")
 
 [node name="CardScene" parent="." instance=ExtResource("7_8evd7")]
 

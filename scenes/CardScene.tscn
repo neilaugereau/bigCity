@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://crh3h0w1f4emu"]
 
 [ext_resource type="Script" path="res://scripts/CardManager.cs" id="1_5dga6"]
-[ext_resource type="PackedScene" path="res://prefabs/CardSlot.tscn" id="3_um6ap"]
-[ext_resource type="PackedScene" path="res://prefabs/deck.tscn" id="4_8cnh1"]
+[ext_resource type="PackedScene" uid="uid://c3ug2c1wfon4o" path="res://prefabs/CardSlot.tscn" id="3_um6ap"]
+[ext_resource type="PackedScene" uid="uid://blbua61xbm0pl" path="res://prefabs/deck.tscn" id="4_8cnh1"]
 [ext_resource type="Script" path="res://scripts/PlayerHand.cs" id="4_mtuce"]
 [ext_resource type="Script" path="res://scripts/InputManager.cs" id="6_d24ux"]
 

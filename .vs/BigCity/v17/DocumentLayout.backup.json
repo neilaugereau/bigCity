@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\Neil\\Documents\\GitHub\\bigCity\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{79F3927B-6DB1-46B5-8E3C-8ADB40EC5B89}|BigCity.csproj|c:\\users\\neil\\documents\\github\\bigcity\\scripts\\inputmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{79F3927B-6DB1-46B5-8E3C-8ADB40EC5B89}|BigCity.csproj|solutionrelative:scripts\\inputmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{79F3927B-6DB1-46B5-8E3C-8ADB40EC5B89}|BigCity.csproj|c:\\users\\neil\\documents\\github\\bigcity\\scripts\\physics\\gridselection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{79F3927B-6DB1-46B5-8E3C-8ADB40EC5B89}|BigCity.csproj|solutionrelative:scripts\\physics\\gridselection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -31,10 +35,6 @@
       "RelativeMoniker": "D:0:0:{79F3927B-6DB1-46B5-8E3C-8ADB40EC5B89}|BigCity.csproj|solutionrelative:scripts\\playerhand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{79F3927B-6DB1-46B5-8E3C-8ADB40EC5B89}|BigCity.csproj|c:\\users\\neil\\documents\\github\\bigcity\\scripts\\inputmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{79F3927B-6DB1-46B5-8E3C-8ADB40EC5B89}|BigCity.csproj|solutionrelative:scripts\\inputmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{79F3927B-6DB1-46B5-8E3C-8ADB40EC5B89}|BigCity.csproj|c:\\users\\neil\\documents\\github\\bigcity\\scripts\\cardrenderer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{79F3927B-6DB1-46B5-8E3C-8ADB40EC5B89}|BigCity.csproj|solutionrelative:scripts\\cardrenderer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -46,7 +46,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -58,7 +58,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Controller.cs",
               "DocumentMoniker": "C:\\Users\\Neil\\Documents\\GitHub\\bigCity\\scripts\\Controller.cs",
               "RelativeDocumentMoniker": "scripts\\Controller.cs",
@@ -70,7 +70,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "GridSelection.cs",
               "DocumentMoniker": "C:\\Users\\Neil\\Documents\\GitHub\\bigCity\\scripts\\Physics\\GridSelection.cs",
               "RelativeDocumentMoniker": "scripts\\Physics\\GridSelection.cs",
@@ -95,19 +95,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 0,
               "Title": "InputManager.cs",
               "DocumentMoniker": "C:\\Users\\Neil\\Documents\\GitHub\\bigCity\\scripts\\InputManager.cs",
               "RelativeDocumentMoniker": "scripts\\InputManager.cs",
               "ToolTip": "C:\\Users\\Neil\\Documents\\GitHub\\bigCity\\scripts\\InputManager.cs",
               "RelativeToolTip": "scripts\\InputManager.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACQAAAAAAAAAAAAowEwAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-17T21:19:51.016Z"
+              "WhenOpened": "2024-11-17T21:19:51.016Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Deck.cs",
               "DocumentMoniker": "C:\\Users\\Neil\\Documents\\GitHub\\bigCity\\scripts\\Deck.cs",
               "RelativeDocumentMoniker": "scripts\\Deck.cs",
@@ -119,7 +120,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "CardManager.cs",
               "DocumentMoniker": "C:\\Users\\Neil\\Documents\\GitHub\\bigCity\\scripts\\CardManager.cs",
               "RelativeDocumentMoniker": "scripts\\CardManager.cs",
@@ -131,7 +132,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "PlayerHand.cs",
               "DocumentMoniker": "C:\\Users\\Neil\\Documents\\GitHub\\bigCity\\scripts\\PlayerHand.cs",
               "RelativeDocumentMoniker": "scripts\\PlayerHand.cs",
@@ -143,7 +144,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "CardSlot.cs",
               "DocumentMoniker": "C:\\Users\\Neil\\Documents\\GitHub\\bigCity\\scripts\\CardSlot.cs",
               "RelativeDocumentMoniker": "scripts\\CardSlot.cs",
@@ -155,7 +156,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Card.cs",
               "DocumentMoniker": "C:\\Users\\Neil\\Documents\\GitHub\\bigCity\\scripts\\Card.cs",
               "RelativeDocumentMoniker": "scripts\\Card.cs",

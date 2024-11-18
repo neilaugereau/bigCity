@@ -19,11 +19,9 @@ public partial class player : Node
 		{ECardType.Restauration, new Godot.Collections.Array<CardBase>()},
 		{ECardType.Special, new Godot.Collections.Array<CardBase>()},
 		{ECardType.Monument, new Godot.Collections.Array<CardBase>()},
-	}; // je l'ai mis en public 
-	
-	
+	};
 
-	public void ExecuteCardSpecial(ECardType type, int diceValue)
+    public void ExecuteCardSpecial(ECardType type, int diceValue)
 	{
 		foreach(var card in buildings[type])
 			if(diceValue >= card.DiceRange[0] && diceValue <= card.DiceRange[1])

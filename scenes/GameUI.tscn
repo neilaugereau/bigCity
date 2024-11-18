@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://bd0edbw0khbet" path="res://assets/game/dice_icon.png" id="1_o1xu4"]
 [ext_resource type="Script" path="res://scripts/GameUI.cs" id="1_pg1u2"]
 [ext_resource type="Texture2D" uid="uid://bhqg3li6shoec" path="res://assets/game/cards/coin.png" id="3_ow3m8"]
-[ext_resource type="LabelSettings" path="res://UI/labelSettings/CoinLabelSettings.tres" id="4_fvhg7"]
+[ext_resource type="LabelSettings" uid="uid://glekinwfyad4" path="res://UI/labelSettings/CoinLabelSettings.tres" id="4_fvhg7"]
 
 [node name="GameUI" type="Control"]
 layout_mode = 3

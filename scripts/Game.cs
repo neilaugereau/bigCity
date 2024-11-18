@@ -147,6 +147,18 @@ public partial class Game : Node
 		int rInt = r.Next(0, 6);
 		return rInt;
 	}
+
+    public override void _Process(double delta)
+    {
+        if(Enemy.money >= 20)
+		{
+            GetTree().ChangeSceneToFile("res://scenes/GameOver.tscn");
+        }
+		if(mainPlayer.money >= 20)
+		{
+            GetTree().ChangeSceneToFile("res://scenes/Win.tscn");
+        }
+    }
 }
 
 
