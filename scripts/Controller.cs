@@ -1,6 +1,6 @@
 using Godot;
 using System;
-
+namespace BigCity.scripts;
 public partial class Controller : Node
 {
 	Game game;

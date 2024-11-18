@@ -34,4 +34,6 @@ public partial class player : Node
 		
 		buildings[card.CardType].Add(card);
 	}
+	
+	
 }
