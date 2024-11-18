@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://c15tsvub3b5ci"]
+
+[ext_resource type="Script" path="res://scripts/Deck.cs" id="1_rodqv"]
+[ext_resource type="Texture2D" uid="uid://bf6jpuggf8wt0" path="res://assets/game/cards/Deck.png" id="2_qb15v"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hr4fl"]
+size = Vector2(104, 154)
+
+[node name="Deck" type="Node2D"]
+position = Vector2(523, 293)
+script = ExtResource("1_rodqv")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.58, 0.58)
+texture = ExtResource("2_qb15v")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_hr4fl")

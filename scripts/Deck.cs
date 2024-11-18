@@ -9,6 +9,7 @@ public partial class Deck : Node2D
 
 	// Called when the node enters the scene tree for the first time.
 	List<Card> playerDeck = new List<Card>();
+	// YOU CAN ADD YOUR OWN DECK
 
 	private float HAND_Y_POSITION;
 	private float centerScreenX;
@@ -18,14 +19,6 @@ public partial class Deck : Node2D
 		centerScreenX = GetViewportRect().Size.X / 2;
 		HAND_Y_POSITION = GetViewportRect().Size.Y - (CARD_WIDTH);
 
-		for (int i = 0; i < 10; i++) 
-		{
-			var dummyCard = new Card
-			{
-				Name = $"Card{i}"
-			};
-			playerDeck.Add(dummyCard);
-		}
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
