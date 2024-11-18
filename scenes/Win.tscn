@@ -1,11 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://ccs8gd3eitxuv"]
+[gd_scene load_steps=4 format=3 uid="uid://c7hcg3nnsfxle"]
 
-[ext_resource type="Theme" uid="uid://d36g08s6peeqh" path="res://UI/default_theme.tres" id="1_n7qga"]
-[ext_resource type="Script" path="res://scripts/UserInterface/GameOverMenu.cs" id="2_osax7"]
+[ext_resource type="Theme" uid="uid://d36g08s6peeqh" path="res://UI/default_theme.tres" id="1_re3yu"]
+[ext_resource type="Script" path="res://scripts/UserInterface/GameOverMenu.cs" id="2_4vgld"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_f0kkf"]
 font_size = 96
-font_color = Color(0.556863, 0.113725, 0.0156863, 1)
+font_color = Color(0.184314, 0.513726, 0.0509804, 1)
 
 [node name="GameOver" type="Control"]
 layout_mode = 3
@@ -14,8 +14,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("1_n7qga")
-script = ExtResource("2_osax7")
+theme = ExtResource("1_re3yu")
+script = ExtResource("2_4vgld")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 0
@@ -29,14 +29,14 @@ metadata/_edit_use_anchors_ = true
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.277027
-anchor_top = 0.141176
+anchor_top = 0.129412
 anchor_right = 0.717061
-anchor_bottom = 0.335294
+anchor_bottom = 0.32353
 offset_left = -3.05176e-05
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("1_n7qga")
-text = "Game Over"
+theme = ExtResource("1_re3yu")
+text = "You Win !"
 label_settings = SubResource("LabelSettings_f0kkf")
 horizontal_alignment = 1
 metadata/_edit_use_anchors_ = true
