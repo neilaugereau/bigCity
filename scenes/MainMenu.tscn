@@ -2,9 +2,9 @@
 
 [ext_resource type="Theme" uid="uid://d36g08s6peeqh" path="res://UI/default_theme.tres" id="1_2crcq"]
 [ext_resource type="Script" path="res://scripts/QuitButton.cs" id="1_8ud04"]
-[ext_resource type="LabelSettings" uid="uid://cdctlxit7uhpk" path="res://UI/labelSettings/titleScreenLabel.tres" id="2_4gmg5"]
 [ext_resource type="Script" path="res://scripts/OptionsButton.cs" id="2_hre4q"]
 [ext_resource type="Script" path="res://scripts/PlayGameButton.cs" id="2_v8guy"]
+[ext_resource type="Texture2D" uid="uid://cgqwsnjtymhk2" path="res://icon.png" id="5_712uu"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -67,17 +67,15 @@ text = "Play Game"
 script = ExtResource("2_v8guy")
 metadata/_edit_use_anchors_ = true
 
-[node name="TitleMainScreen" type="Label" parent="."]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.0486111
-anchor_top = 0.185185
-anchor_right = 0.335938
-anchor_bottom = 0.37963
-grow_horizontal = 2
-grow_vertical = 2
-text = "Big City"
-label_settings = ExtResource("2_4gmg5")
+[node name="Icon" type="TextureRect" parent="."]
+layout_mode = 0
+anchor_left = 0.0347222
+anchor_top = 0.0617284
+anchor_right = 0.305556
+anchor_bottom = 0.54321
+offset_bottom = 3.05176e-05
+texture = ExtResource("5_712uu")
+expand_mode = 1
 metadata/_edit_use_anchors_ = true
 
 [connection signal="pressed" from="QuitButton" to="QuitButton" method="_on_pressed"]

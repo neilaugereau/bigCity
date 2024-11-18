@@ -7,6 +7,14 @@
       "RelativeMoniker": "D:0:0:{79F3927B-6DB1-46B5-8E3C-8ADB40EC5B89}|BigCity.csproj|solutionrelative:scripts\\inputmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{79F3927B-6DB1-46B5-8E3C-8ADB40EC5B89}|BigCity.csproj|c:\\users\\neil\\documents\\github\\bigcity\\scripts\\physics\\gridselection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{79F3927B-6DB1-46B5-8E3C-8ADB40EC5B89}|BigCity.csproj|solutionrelative:scripts\\physics\\gridselection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79F3927B-6DB1-46B5-8E3C-8ADB40EC5B89}|BigCity.csproj|c:\\users\\neil\\documents\\github\\bigcity\\scripts\\controller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{79F3927B-6DB1-46B5-8E3C-8ADB40EC5B89}|BigCity.csproj|solutionrelative:scripts\\controller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{79F3927B-6DB1-46B5-8E3C-8ADB40EC5B89}|BigCity.csproj|c:\\users\\neil\\documents\\github\\bigcity\\scripts\\deck.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{79F3927B-6DB1-46B5-8E3C-8ADB40EC5B89}|BigCity.csproj|solutionrelative:scripts\\deck.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -15,20 +23,20 @@
       "RelativeMoniker": "D:0:0:{79F3927B-6DB1-46B5-8E3C-8ADB40EC5B89}|BigCity.csproj|solutionrelative:scripts\\cardmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{79F3927B-6DB1-46B5-8E3C-8ADB40EC5B89}|BigCity.csproj|c:\\users\\neil\\documents\\github\\bigcity\\scripts\\playerhand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{79F3927B-6DB1-46B5-8E3C-8ADB40EC5B89}|BigCity.csproj|solutionrelative:scripts\\playerhand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{79F3927B-6DB1-46B5-8E3C-8ADB40EC5B89}|BigCity.csproj|c:\\users\\neil\\documents\\github\\bigcity\\scripts\\cardrenderer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{79F3927B-6DB1-46B5-8E3C-8ADB40EC5B89}|BigCity.csproj|solutionrelative:scripts\\cardrenderer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{79F3927B-6DB1-46B5-8E3C-8ADB40EC5B89}|BigCity.csproj|c:\\users\\neil\\documents\\github\\bigcity\\scripts\\card.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{79F3927B-6DB1-46B5-8E3C-8ADB40EC5B89}|BigCity.csproj|solutionrelative:scripts\\card.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{79F3927B-6DB1-46B5-8E3C-8ADB40EC5B89}|BigCity.csproj|c:\\users\\neil\\documents\\github\\bigcity\\scripts\\cardslot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{79F3927B-6DB1-46B5-8E3C-8ADB40EC5B89}|BigCity.csproj|solutionrelative:scripts\\cardslot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79F3927B-6DB1-46B5-8E3C-8ADB40EC5B89}|BigCity.csproj|c:\\users\\neil\\documents\\github\\bigcity\\scripts\\playerhand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{79F3927B-6DB1-46B5-8E3C-8ADB40EC5B89}|BigCity.csproj|solutionrelative:scripts\\playerhand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79F3927B-6DB1-46B5-8E3C-8ADB40EC5B89}|BigCity.csproj|c:\\users\\neil\\documents\\github\\bigcity\\scripts\\cardrenderer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{79F3927B-6DB1-46B5-8E3C-8ADB40EC5B89}|BigCity.csproj|solutionrelative:scripts\\cardrenderer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,7 +46,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -50,7 +58,32 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
+              "Title": "Controller.cs",
+              "DocumentMoniker": "C:\\Users\\Neil\\Documents\\GitHub\\bigCity\\scripts\\Controller.cs",
+              "RelativeDocumentMoniker": "scripts\\Controller.cs",
+              "ToolTip": "C:\\Users\\Neil\\Documents\\GitHub\\bigCity\\scripts\\Controller.cs",
+              "RelativeToolTip": "scripts\\Controller.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-18T02:07:58.19Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "GridSelection.cs",
+              "DocumentMoniker": "C:\\Users\\Neil\\Documents\\GitHub\\bigCity\\scripts\\Physics\\GridSelection.cs",
+              "RelativeDocumentMoniker": "scripts\\Physics\\GridSelection.cs",
+              "ToolTip": "C:\\Users\\Neil\\Documents\\GitHub\\bigCity\\scripts\\Physics\\GridSelection.cs",
+              "RelativeToolTip": "scripts\\Physics\\GridSelection.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAQwAIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-18T02:07:26.059Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "CardRenderer.cs",
               "DocumentMoniker": "C:\\Users\\Neil\\Documents\\GitHub\\bigCity\\scripts\\CardRenderer.cs",
               "RelativeDocumentMoniker": "scripts\\CardRenderer.cs",
@@ -58,8 +91,7 @@
               "RelativeToolTip": "scripts\\CardRenderer.cs",
               "ViewState": "AgIAAAUAAAAAAAAAAAAQwCEAAABHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T01:15:53.939Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-18T01:15:53.939Z"
             },
             {
               "$type": "Document",
@@ -69,49 +101,46 @@
               "RelativeDocumentMoniker": "scripts\\InputManager.cs",
               "ToolTip": "C:\\Users\\Neil\\Documents\\GitHub\\bigCity\\scripts\\InputManager.cs",
               "RelativeToolTip": "scripts\\InputManager.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAQwB0AAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAACQAAAAAAAAAAAAowEwAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-17T21:19:51.016Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Deck.cs",
               "DocumentMoniker": "C:\\Users\\Neil\\Documents\\GitHub\\bigCity\\scripts\\Deck.cs",
               "RelativeDocumentMoniker": "scripts\\Deck.cs",
               "ToolTip": "C:\\Users\\Neil\\Documents\\GitHub\\bigCity\\scripts\\Deck.cs",
               "RelativeToolTip": "scripts\\Deck.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAgwCUAAAA6AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-17T22:19:22.877Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-17T22:19:22.877Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "CardManager.cs",
               "DocumentMoniker": "C:\\Users\\Neil\\Documents\\GitHub\\bigCity\\scripts\\CardManager.cs",
               "RelativeDocumentMoniker": "scripts\\CardManager.cs",
               "ToolTip": "C:\\Users\\Neil\\Documents\\GitHub\\bigCity\\scripts\\CardManager.cs",
               "RelativeToolTip": "scripts\\CardManager.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAQwA8AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAIsAAAAAAAAAAAAYwEkAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-16T21:42:34.124Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-16T21:42:34.124Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
               "Title": "PlayerHand.cs",
               "DocumentMoniker": "C:\\Users\\Neil\\Documents\\GitHub\\bigCity\\scripts\\PlayerHand.cs",
               "RelativeDocumentMoniker": "scripts\\PlayerHand.cs",
               "ToolTip": "C:\\Users\\Neil\\Documents\\GitHub\\bigCity\\scripts\\PlayerHand.cs",
               "RelativeToolTip": "scripts\\PlayerHand.cs",
-              "ViewState": "AgIAAB0AAAAAAAAAAAAwwCsAAAA1AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADMAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-17T21:19:51.038Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-17T21:19:51.038Z"
             },
             {
               "$type": "Document",
@@ -123,8 +152,7 @@
               "RelativeToolTip": "scripts\\CardSlot.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-17T21:19:51.04Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-17T21:19:51.04Z"
             },
             {
               "$type": "Document",
@@ -136,8 +164,7 @@
               "RelativeToolTip": "scripts\\Card.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-17T01:15:00.153Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-17T01:15:00.153Z"
             }
           ]
         }
