@@ -1,0 +1,73 @@
+[gd_scene load_steps=4 format=3 uid="uid://ccs8gd3eitxuv"]
+
+[ext_resource type="Theme" uid="uid://d36g08s6peeqh" path="res://UI/default_theme.tres" id="1_n7qga"]
+[ext_resource type="Script" path="res://scripts/UserInterface/GameOverMenu.cs" id="2_osax7"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_f0kkf"]
+font_size = 96
+font_color = Color(0.556863, 0.113725, 0.0156863, 1)
+
+[node name="GameOver" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_n7qga")
+script = ExtResource("2_osax7")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+anchor_left = -0.0138889
+anchor_top = -0.0246914
+anchor_right = 1.01389
+anchor_bottom = 1.02469
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.277027
+anchor_top = 0.141176
+anchor_right = 0.717061
+anchor_bottom = 0.335294
+offset_left = -3.05176e-05
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_n7qga")
+text = "Game Over"
+label_settings = SubResource("LabelSettings_f0kkf")
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="btn_continue" type="Button" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.297297
+anchor_top = 0.482353
+anchor_right = 0.695946
+anchor_bottom = 0.57647
+offset_right = 6.10352e-05
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 32
+text = "Continue"
+metadata/_edit_use_anchors_ = true
+
+[node name="btn_quit" type="Button" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.297297
+anchor_top = 0.647059
+anchor_right = 0.695946
+anchor_bottom = 0.741176
+offset_right = 6.10352e-05
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 32
+text = "Quit"
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="Panel/btn_continue" to="." method="_on_btn_continue_pressed"]
+[connection signal="pressed" from="Panel/btn_quit" to="." method="_on_btn_quit_pressed"]
