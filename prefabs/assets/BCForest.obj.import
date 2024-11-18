@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://diiogb158r1ic"
+path="res://.godot/imported/BCForest.obj-962857ad5147733f780facc9a652d01c.mesh"
+
+[deps]
+
+files=["res://.godot/imported/BCForest.obj-962857ad5147733f780facc9a652d01c.mesh"]
+
+source_file="res://prefabs/assets/BCForest.obj"
+dest_files=["res://.godot/imported/BCForest.obj-962857ad5147733f780facc9a652d01c.mesh", "res://.godot/imported/BCForest.obj-962857ad5147733f780facc9a652d01c.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false
