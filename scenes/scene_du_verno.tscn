@@ -12,10 +12,8 @@
 [ext_resource type="ArrayMesh" uid="uid://dto0laiyqxa0s" path="res://prefabs/assets/BCFarm.obj" id="15_t4vij"]
 [ext_resource type="ArrayMesh" uid="uid://cg3idb7ohg4jo" path="res://prefabs/assets/BCRadioTower.obj" id="16_1clmi"]
 [ext_resource type="ArrayMesh" uid="uid://dgkstrpbrf6jv" path="res://prefabs/assets/BCShoppingCenter.obj" id="17_0db37"]
-[ext_resource type="Script" path="res://addons/BWHIB/foliage.gd" id="18_5uisb"]
 [ext_resource type="ArrayMesh" uid="uid://b5gdhf5md07fi" path="res://prefabs/assets/BCStade.obj" id="18_qfvsx"]
 [ext_resource type="ArrayMesh" uid="uid://cpaaoluau4fwd" path="res://prefabs/assets/BCSuperMarket.obj" id="19_f0rx3"]
-[ext_resource type="Script" path="res://addons/BWHIB/BWHIBFoliage.gd" id="19_tkee4"]
 [ext_resource type="ArrayMesh" uid="uid://dss3rhd8uu7j7" path="res://prefabs/assets/BCWoodFactory.obj" id="20_kw82f"]
 [ext_resource type="ArrayMesh" uid="uid://diiogb158r1ic" path="res://prefabs/assets/BCForest.obj" id="20_w7s1x"]
 [ext_resource type="ArrayMesh" uid="uid://bf3fi35etxbl2" path="res://prefabs/assets/BCFruitsStage.obj" id="21_h5ohq"]
@@ -24,18 +22,11 @@
 [ext_resource type="Script" path="res://scenes/StatFPS.gd" id="22_447kb"]
 [ext_resource type="ArrayMesh" uid="uid://dspk7oo1r0lbj" path="res://prefabs/assets/BCMine .obj" id="23_uby55"]
 [ext_resource type="ArrayMesh" uid="uid://dwoqfedv10dtf" path="res://prefabs/assets/BCWheatFarm.obj" id="24_vgbr2"]
+[ext_resource type="Script" path="res://addons/BWHIB/BWHIBFoliage.gd" id="25_lpkhn"]
 [ext_resource type="ArrayMesh" uid="uid://cnc7c7mqvke5" path="res://prefabs/assets/BCorchard .obj" id="25_m3kaa"]
 [ext_resource type="ArrayMesh" uid="uid://lli88lp61nf0" path="res://prefabs/assets/BCTVChannel.obj" id="26_ostii"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_7ynm1"]
-
-[sub_resource type="Environment" id="Environment_j686l"]
-sdfgi_read_sky_light = false
-glow_enabled = true
-fog_enabled = true
-fog_light_color = Color(0.525107, 0.560066, 0.615003, 1)
-fog_light_energy = 0.08
-volumetric_fog_density = 0.0144
 
 [sub_resource type="BoxMesh" id="BoxMesh_n23jw"]
 
@@ -96,6 +87,16 @@ lightmap_size_hint = Vector2i(12, 12)
 material = SubResource("StandardMaterial3D_17sww")
 orientation = 2
 
+[sub_resource type="Environment" id="Environment_j686l"]
+sdfgi_read_sky_light = false
+glow_enabled = true
+fog_enabled = true
+fog_light_color = Color(1, 1, 1, 1)
+fog_light_energy = 0.01
+volumetric_fog_density = 0.0144
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_y47ok"]
+
 [node name="SceneDuVerno" type="Node3D"]
 
 [node name="Floor" type="MeshInstance3D" parent="."]
@@ -103,11 +104,9 @@ transform = Transform3D(178.033, 0, 0, 0, 1, 0, 0, 0, 178.033, 0, 0.0125798, 0)
 material_override = ExtResource("1_q0rel")
 mesh = SubResource("PlaneMesh_7ynm1")
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_j686l")
-
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.814683, -0.0518504, -0.577584, -0.570129, -0.110507, 0.814089, -0.106038, 0.992522, 0.0604668, 0, 7.81371, 0)
+transform = Transform3D(-0.634741, 0.269746, -0.724114, -0.762679, -0.0680886, 0.643183, 0.124192, 0.960521, 0.248949, -107.767, 22.1045, 0)
+light_energy = 2.101
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
 transform = Transform3D(21.1058, 0, -11.1062, 0, 1, 0, 11.1062, 0, 21.1058, 4.29959, 14.4063, -2.96949)
@@ -226,12 +225,6 @@ lifetime = 3.0
 process_material = SubResource("ParticleProcessMaterial_oxh2y")
 draw_pass_1 = SubResource("PlaneMesh_47732")
 
-[node name="FolliageGrid" type="Node" parent="."]
-script = ExtResource("18_5uisb")
-
-[node name="BWHIBFoliage" type="Node" parent="."]
-script = ExtResource("19_tkee4")
-
 [node name="BcRestaurant7" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -73.384, 0.858051, 27.0085)
 material_override = ExtResource("7_xq6pi")
@@ -276,3 +269,12 @@ material_override = ExtResource("7_xq6pi")
 material_overlay = ExtResource("7_pg1m3")
 mesh = ExtResource("26_ostii")
 skeleton = NodePath("../BcRestaurant")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_j686l")
+
+[node name="BWHIBFoliage" type="Node3D" parent="."]
+transform = Transform3D(0.999994, -0.00192342, 0.00290941, 0.00192384, 0.999998, -0.000140151, -0.00290914, 0.000145736, 0.999996, 0, 0, 0)
+script = ExtResource("25_lpkhn")
+foliage_mesh = SubResource("CylinderMesh_y47ok")
+foliage_count = 175
