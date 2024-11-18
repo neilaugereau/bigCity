@@ -1,7 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://cera5wmfb7mom"]
+[gd_scene load_steps=10 format=3 uid="uid://cera5wmfb7mom"]
 
 [ext_resource type="Script" path="res://scripts/Physics/GridSelection.cs" id="1_cvahy"]
-[ext_resource type="PackedScene" uid="uid://bnk173xuvhuvh" path="res://Prefab/plane.tscn" id="4_r1j1n"]
+[ext_resource type="PackedScene" uid="uid://diyxc561pj5hf" path="res://prefabs/plane.tscn" id="2_d55mr"]
+[ext_resource type="Material" uid="uid://cacw4tofv3yed" path="res://prefabs/assets/materials/MCavity.tres" id="3_0m5qg"]
+[ext_resource type="Material" uid="uid://bug4algq4nvjw" path="res://prefabs/assets/materials/MCP.tres" id="4_6er2p"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_yylce"]
 size = Vector2(60, 60)
@@ -20,6 +22,7 @@ sky = SubResource("Sky_jt2mw")
 [node name="MainScene" type="Node3D"]
 
 [node name="Plane" type="RigidBody3D" parent="."]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0)
 gravity_scale = 0.0
 freeze = true
 
@@ -37,7 +40,9 @@ light_color = Color(0.823529, 0.819608, 0.67451, 1)
 light_energy = 2.145
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(-0.180245, -0.155212, 0.971299, 3.11261e-09, 0.987472, 0.157796, -0.983622, 0.028442, -0.177987, 36.8715, 18.9754, 0.902283)
+transform = Transform3D(0.991998, -0.019922, 0.12467, -0.0636364, 0.773957, 0.630033, -0.10904, -0.632925, 0.766496, 36.8715, 20.5033, 79.539)
 environment = SubResource("Environment_k5f1k")
 script = ExtResource("1_cvahy")
-tiles = ExtResource("4_r1j1n")
+tiles = ExtResource("2_d55mr")
+OutlineMaterial = ExtResource("3_0m5qg")
+OverrideMaterial = ExtResource("4_6er2p")

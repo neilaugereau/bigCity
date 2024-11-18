@@ -5,11 +5,18 @@ public partial class GridSelection : Camera3D
 {
 	[Export]
 	public PackedScene tiles;
-
-	public int Spacement = 5;
-	public Vector2 PlaneSize = new Vector2(60, 60); // A changer en fonction de la taille
-	public Vector2 tilePose;
 	
+	[Export]
+	public Material OutlineMaterial;
+	
+	[Export]
+	public Material OverrideMaterial;
+
+
+	public int Spacement = 20;
+	public Vector2 PlaneSize = new Vector2(200, 200); // A changer en fonction de la taille
+	public Vector2 tilePose;
+	private Vector3 lastPosition;
 	public Node floatingTile;
 	private bool isCtrlPressed = false;
 	
@@ -53,11 +60,11 @@ public partial class GridSelection : Camera3D
 					{
 						if (!Globals.gridPositions.ContainsKey(tilePose))
 						{
-							TileSelector(positionToMove, 4,Colors.Green);
+							TileSelector(positionToMove, 10,Colors.Green);
 						}
 						else
 						{
-							TileSelector(positionToMove, 4, Colors.Red);
+							TileSelector(positionToMove, 10, Colors.Red);
 						}
 					
 					}
@@ -74,6 +81,7 @@ public partial class GridSelection : Camera3D
 	{
 		//GD.Print($"({(positionToMove[0])} ; {(positionToMove[2])})");
 		var building = tiles.Instantiate();
+		((MeshInstance3D)building).Mesh = Globals.Building[E_Building.FARM].BuildingMesh;
 		Globals.gridPositions.Add(tilePose, E_Building.FARM);
 		GetTree().GetRoot().AddChild(building);
 		
@@ -81,13 +89,13 @@ public partial class GridSelection : Camera3D
 		{
 			positionToMove[1] += posY;
 			buildingNode.GlobalTransform = new Transform3D(buildingNode.GlobalTransform.Basis, positionToMove);
+			//buildingNode.GlobalScale(new Vector3(0.1f,0.1f,0.1f));
+			buildingNode.Scale = new Vector3(1f, 1f, 1f);
 		}
 		if (building is MeshInstance3D buildingMesh)
 		{
-			var material = buildingMesh.GetSurfaceOverrideMaterial(0)?.Duplicate() as StandardMaterial3D;
-			material = new StandardMaterial3D();
-			buildingMesh.SetSurfaceOverrideMaterial(0, material);
-			material.AlbedoColor = color;
+			buildingMesh.SetMaterialOverride(OverrideMaterial);
+			buildingMesh.SetMaterialOverlay(OutlineMaterial);
 		}
 	}
 
@@ -98,20 +106,28 @@ public partial class GridSelection : Camera3D
 		{
 			floatingTile = tiles.Instantiate();
 			GetTree().GetRoot().AddChild(floatingTile);
+			((MeshInstance3D)floatingTile).Mesh = Globals.Building[E_Building.FARM].BuildingMesh;
 			
 		}
 		
 		if (floatingTile is Node3D floatingTileNode)
 		{
 			positionToMove[1] = posY;
+			if (positionToMove != lastPosition)
+			{
+				lastPosition = positionToMove;
+			}
 			floatingTileNode.GlobalTransform = new Transform3D(floatingTileNode.GlobalTransform.Basis, positionToMove);
+			// floatingTileNode.Scale = new Vector3(0.5f, 0.5f, 0.5f);
+			floatingTileNode.Scale = new Vector3(1f, 1f, 1f);
 		}
 		if (floatingTile is MeshInstance3D buildingMesh)
 		{
-			var material = buildingMesh.GetSurfaceOverrideMaterial(0)?.Duplicate() as StandardMaterial3D;
-			material = new StandardMaterial3D();
-			buildingMesh.SetSurfaceOverrideMaterial(0, material);
+			var material = new StandardMaterial3D();
 			material.AlbedoColor = color;
+			
+			buildingMesh.SetMaterialOverride(material);
+			buildingMesh.SetMaterialOverlay(OutlineMaterial);
 		}
 	}
 

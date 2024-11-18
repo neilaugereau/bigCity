@@ -1,6 +1,30 @@
-[gd_resource type="Resource" script_class="BuildingMeshRes" load_steps=2 format=3 uid="uid://btm3468e7ukn5"]
+[gd_resource type="Resource" script_class="BuildingMeshRes" load_steps=14 format=3 uid="uid://btm3468e7ukn5"]
 
 [ext_resource type="Script" path="res://scripts/BuildingMeshRes.cs" id="1_ok03t"]
+[ext_resource type="ArrayMesh" uid="uid://biuoi4ko3gmpc" path="res://prefabs/assets/BCAmusementPark.obj" id="1_pi615"]
+[ext_resource type="ArrayMesh" uid="uid://b0ot0jbf2cpbv" path="res://prefabs/assets/BCBakery.obj" id="2_anm24"]
+[ext_resource type="ArrayMesh" uid="uid://dxtkrwxn83hel" path="res://prefabs/assets/BCBuisnessCenter.obj" id="3_mk25l"]
+[ext_resource type="ArrayMesh" uid="uid://o4rlollx860p" path="res://prefabs/assets/BCCoffeeInteractive.obj" id="4_iq46x"]
+[ext_resource type="ArrayMesh" uid="uid://c3rs3250arfkn" path="res://prefabs/assets/BCCheeseFactory.obj" id="5_dahkh"]
+[ext_resource type="ArrayMesh" uid="uid://dto0laiyqxa0s" path="res://prefabs/assets/BCFarm.obj" id="6_vjug1"]
+[ext_resource type="ArrayMesh" uid="uid://dss3rhd8uu7j7" path="res://prefabs/assets/BCWoodFactory.obj" id="7_tumqb"]
+[ext_resource type="ArrayMesh" uid="uid://dgkstrpbrf6jv" path="res://prefabs/assets/BCShoppingCenter.obj" id="8_75lx0"]
+[ext_resource type="ArrayMesh" uid="uid://d3iw2wg123a15" path="res://prefabs/assets/BCRestaurant.obj" id="9_04rjr"]
+[ext_resource type="ArrayMesh" uid="uid://b5gdhf5md07fi" path="res://prefabs/assets/BCStade.obj" id="10_0bx12"]
+[ext_resource type="ArrayMesh" uid="uid://cpaaoluau4fwd" path="res://prefabs/assets/BCSuperMarket.obj" id="11_cddd8"]
+[ext_resource type="ArrayMesh" uid="uid://cg3idb7ohg4jo" path="res://prefabs/assets/BCRadioTower.obj" id="12_16jvy"]
 
 [resource]
 script = ExtResource("1_ok03t")
+Farm = ExtResource("6_vjug1")
+Cafe = ExtResource("4_iq46x")
+Restaurant = ExtResource("9_04rjr")
+Bakery = ExtResource("2_anm24")
+Supermarket = ExtResource("11_cddd8")
+FurnitureFactory = ExtResource("7_tumqb")
+CheeseShop = ExtResource("5_dahkh")
+Stadium = ExtResource("10_0bx12")
+BusinessCenter = ExtResource("3_mk25l")
+Tower = ExtResource("12_16jvy")
+AmusementPark = ExtResource("1_pi615")
+Mall = ExtResource("8_75lx0")

@@ -13,7 +13,7 @@ public partial class Deck : Node2D
     private float HAND_Y_POSITION;
     private float centerScreenX;
 
-    public override void _Ready()
+	public override void _Ready()
 	{
         centerScreenX = GetViewportRect().Size.X / 2;
         HAND_Y_POSITION = GetViewportRect().Size.Y - (CARD_WIDTH);
