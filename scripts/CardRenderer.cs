@@ -1,6 +1,5 @@
 using Godot;
 using System;
-namespace BigCity.scripts;
 public partial class CardRenderer : Node2D
 {
 	private static Texture2D[] iconTextures = new Texture2D[8] {

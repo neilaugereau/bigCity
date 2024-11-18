@@ -2,12 +2,24 @@ using Godot;
 using Godot.Collections;
 using System;
 
+public class ChooseCardEventArgs : EventArgs
+{
+    public E_Building building;
+
+    public ChooseCardEventArgs(E_Building building)
+    {
+        this.building = building;
+    }
+    
+    
+}
 public partial class CardManager : Node2D
 {
     // Constants defining collision masks for cards and card slots
     const int COLLISION_MASK_CARD = 1;
     const int COLLISION_MASK_CARD_SLOT = 2;
-
+    
+    public event EventHandler<ChooseCardEventArgs > chooseCard;
     // The card currently being dragged
     private Node2D _cardBeingDragged;
 
@@ -48,7 +60,8 @@ public partial class CardManager : Node2D
 
         // Check if the card can be dropped onto a slot
         CardSlot cardSlotFounded = RaycastCheckForCardSlot() as CardSlot;
-
+        var cardRenderer = ((Card)_cardBeingDragged).GetNode<CardRenderer>("CardRenderer");
+        chooseCard?.Invoke(this, new ChooseCardEventArgs(cardRenderer.cardBuilding));
         if (cardSlotFounded != null && !cardSlotFounded.cardInSlot)
         {
             // Remove the card from the player's hand
