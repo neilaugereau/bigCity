@@ -42,7 +42,7 @@ light_color = Color(0.823529, 0.819608, 0.67451, 1)
 light_energy = 2.145
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(0.991998, -0.019922, 0.12467, -0.0636364, 0.773957, 0.630033, -0.10904, -0.632925, 0.766496, 36.8715, 20.5033, 79.539)
+transform = Transform3D(1, 0, 0, 0, 0.776047, 0.630676, 0, -0.630676, 0.776047, 36.8715, 20.5033, 79.539)
 environment = SubResource("Environment_k5f1k")
 script = ExtResource("1_cvahy")
 tiles = ExtResource("2_d55mr")

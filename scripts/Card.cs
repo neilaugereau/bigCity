@@ -10,7 +10,7 @@ public partial class Card : Node2D
 	public delegate void hoveredOffEventHandler(Card card);
 
 	public Vector2 startingPosition ;
-
+	//CardRenderer cardRenderer ;
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
@@ -18,6 +18,7 @@ public partial class Card : Node2D
 		if (cardManager != null)
 		{
 			cardManager.ConnectCardsSignals(this);
+			//cardRenderer = new CardRenderer(E_Building.FARM);
 		}
 	}
 

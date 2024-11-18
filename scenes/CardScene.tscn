@@ -1,14 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://crh3h0w1f4emu"]
+[gd_scene load_steps=6 format=3 uid="uid://crh3h0w1f4emu"]
 
 [ext_resource type="Script" path="res://scripts/CardManager.cs" id="1_5dga6"]
 [ext_resource type="PackedScene" uid="uid://c3ug2c1wfon4o" path="res://prefabs/CardSlot.tscn" id="3_um6ap"]
-[ext_resource type="Script" path="res://scripts/Deck.cs" id="4_ej76s"]
-[ext_resource type="Texture2D" uid="uid://bf6jpuggf8wt0" path="res://assets/game/cards/Deck.png" id="4_hvcl7"]
+[ext_resource type="PackedScene" uid="uid://c15tsvub3b5ci" path="res://prefabs/deck.tscn" id="4_8cnh1"]
 [ext_resource type="Script" path="res://scripts/PlayerHand.cs" id="4_mtuce"]
 [ext_resource type="Script" path="res://scripts/InputManager.cs" id="6_d24ux"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_hr4fl"]
-size = Vector2(104, 154)
 
 [node name="CardScene" type="Node2D"]
 
@@ -16,32 +12,13 @@ size = Vector2(104, 154)
 position = Vector2(555, 319)
 script = ExtResource("1_5dga6")
 
-[node name="CardSlot" parent="." instance=ExtResource("3_um6ap")]
-position = Vector2(92, 100)
-
-[node name="CardSlot2" parent="." instance=ExtResource("3_um6ap")]
-position = Vector2(289, 103)
-
-[node name="CardSlot3" parent="." instance=ExtResource("3_um6ap")]
-position = Vector2(451, 97)
-
 [node name="PlayerHand" type="Node2D" parent="."]
 script = ExtResource("4_mtuce")
 
-[node name="Deck" type="Node2D" parent="."]
-position = Vector2(523, 293)
-script = ExtResource("4_ej76s")
-
-[node name="Sprite2D" type="Sprite2D" parent="Deck"]
-scale = Vector2(0.58, 0.58)
-texture = ExtResource("4_hvcl7")
-
-[node name="Area2D" type="Area2D" parent="Deck"]
-collision_layer = 4
-collision_mask = 4
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Deck/Area2D"]
-shape = SubResource("RectangleShape2D_hr4fl")
+[node name="Deck" parent="." instance=ExtResource("4_8cnh1")]
 
 [node name="InputManager" type="Node2D" parent="."]
 script = ExtResource("6_d24ux")
+
+[node name="CardSlot" parent="." instance=ExtResource("3_um6ap")]
+position = Vector2(102, 130)

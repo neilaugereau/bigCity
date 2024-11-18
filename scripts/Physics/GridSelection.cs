@@ -19,6 +19,10 @@ public partial class GridSelection : Camera3D
 	private Vector3 lastPosition;
 	public Node floatingTile;
 	private bool isCtrlPressed = false;
+	private bool isMiddleMousePressed = false;
+	private float lastMouseX = 0;
+	
+	//private Vector2 lastMousePos; Rotation
 	
 	
 	public override void _Input(InputEvent @event)
@@ -29,6 +33,51 @@ public partial class GridSelection : Camera3D
 			if (keyEvent.Keycode == Key.Ctrl && keyEvent.Pressed && !keyEvent.Echo)
 				isCtrlPressed = !isCtrlPressed;
 		}
+	
+		if (@event is InputEventMouseButton mouseButtonEvent)
+		{
+			if (mouseButtonEvent.ButtonIndex == MouseButton.Middle)
+			{
+				isMiddleMousePressed = mouseButtonEvent.Pressed;
+			}
+			if (mouseButtonEvent.ButtonIndex == MouseButton.WheelUp && mouseButtonEvent.Pressed)
+			{
+				lastPosition = this.Position;
+				this.Position = new Vector3(Lerp(lastPosition[0],this.Position.X*0.5f,0.5f), Lerp(lastPosition[1],this.Position.Y*0.5f,0.5f), Lerp(lastPosition[2],this.Position.Z*0.5f,0.5f));
+			}
+			else if (mouseButtonEvent.ButtonIndex == MouseButton.WheelDown && mouseButtonEvent.Pressed)
+			{
+				lastPosition = this.Position;
+				
+				this.Position = new Vector3(Lerp(lastPosition[0],this.Position.X*2f,0.5f), Lerp(lastPosition[1],this.Position.Y*2f,0.5f), Lerp(lastPosition[2],this.Position.Z*2f,0.5f));
+			}
+		}
+		
+		/* Rotation 
+		if (isMiddleMousePressed && @event is InputEventMouseMotion mouseButton)
+		{
+			float deltaX = mouseButton.Position.X;
+			this.Rotation += new Vector3(0, (deltaX < lastMouseX ? (1000 - deltaX) : deltaX) * (deltaX < lastMouseX ? -0.0001f : 0.0001f), 0);
+			lastMouseX = deltaX;
+		}*/
+		
+		if (@event is InputEventKey key)
+		{
+			Vector3 moveDirection = Vector3.Zero;
+			Vector3 forward = -this.GlobalTransform.Basis.Z;  
+			Vector3 right = this.GlobalTransform.Basis.X;
+			
+			forward.Y = 0; 
+			right.Y = 0;
+			
+			if (Input.IsActionPressed("move_forward")) moveDirection += forward;
+			if (Input.IsActionPressed("move_left")) moveDirection -= right;
+			if (Input.IsActionPressed("move_backward")) moveDirection -= forward;
+			if (Input.IsActionPressed("move_right")) moveDirection += right;
+			this.Position += moveDirection.Normalized() * 5.0f ;
+			this.Position = new Vector3(Mathf.Clamp(this.Position.X, -140, 140), this.Position.Y, Mathf.Clamp(this.Position.Z, -140, 140));
+		}
+			
 		if (isCtrlPressed)
 		{
 			PhysicsDirectSpaceState3D spaceState = GetWorld3D().DirectSpaceState;
@@ -51,7 +100,7 @@ public partial class GridSelection : Camera3D
 				if (Math.Abs(positionToMove[0]) != Math.Abs(PlaneSize[0] / 2) &&
 					Math.Abs(positionToMove[2]) != Math.Abs(PlaneSize[1] / 2))
 				{
-					if (@event.IsPressed() && @event is InputEventMouseButton)
+					if (@event.IsPressed() && @event is InputEventMouseButton )
 					{
 						if (!Globals.gridPositions.ContainsKey(tilePose))
 							PlaceTile(positionToMove, 0,Colors.Black);
@@ -139,5 +188,10 @@ public partial class GridSelection : Camera3D
 			floatingTile = null;  
 		}
 		
+	}
+	
+	float Lerp(float firstFloat, float secondFloat, float by)
+	{
+		return firstFloat * (1 - by) + secondFloat * by;
 	}
 }

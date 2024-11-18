@@ -1,6 +1,6 @@
 using Godot;
 using System;
-
+namespace BigCity.scripts;
 public partial class CardRenderer : Node2D
 {
 	private static Texture2D[] iconTextures = new Texture2D[8] {
@@ -16,6 +16,11 @@ public partial class CardRenderer : Node2D
 
 	public E_Building cardBuilding = E_Building.FARM;
 	
+	public CardRenderer()
+	{
+
+	}
+
 	public CardRenderer(E_Building building)
 	{
 		cardBuilding = building;
@@ -24,7 +29,11 @@ public partial class CardRenderer : Node2D
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
-		((ShaderMaterial)GetNode<Sprite2D>("Overlay").Material).SetShaderParameter("color", CardBase.CARD_COLORS[(int)Globals.Building[cardBuilding].CardColor]);
+        var subViewport = GetNode<SubViewport>("SubViewportContainer/SubViewport");
+        subViewport.RenderTargetUpdateMode = SubViewport.UpdateMode.Once;
+        subViewport.RenderTargetClearMode = SubViewport.ClearMode.Never;
+
+        ((ShaderMaterial)GetNode<Sprite2D>("Overlay").Material).SetShaderParameter("color", CardBase.CARD_COLORS[(int)Globals.Building[cardBuilding].CardColor]);
 		((ShaderMaterial)GetNode<MeshInstance2D>("MeshInstance2D").Material).SetShaderParameter("color", new Color(0.7f, 0.7f, 0.7f, 1.0f) * CardBase.CARD_COLORS[(int)Globals.Building[cardBuilding].CardColor]);
 
 		GetNode<RichTextLabel>("CoinLabel").Text = Globals.Building[cardBuilding].Price.ToString();

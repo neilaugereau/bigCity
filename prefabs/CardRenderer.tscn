@@ -48,8 +48,9 @@ offset_bottom = 835.0
 [node name="SubViewport" type="SubViewport" parent="SubViewportContainer"]
 transparent_bg = true
 handle_input_locally = false
-msaa_3d = 1
 size = Vector2i(2600, 4096)
+render_target_clear_mode = 1
+render_target_update_mode = 4
 
 [node name="Node3D" type="Node3D" parent="SubViewportContainer/SubViewport"]
 
@@ -141,7 +142,3 @@ scale = Vector2(0.714854, 0.714854)
 texture = ExtResource("6_ee1ym")
 region_rect = Rect2(-256, -256, 1000, 1000)
 region_filter_clip_enabled = true
-
-[node name="Camera2D" type="Camera2D" parent="."]
-scale = Vector2(3.07806, -68.0964)
-zoom = Vector2(0.115, 0.115)
