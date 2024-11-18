@@ -1,5 +1,6 @@
 using Godot;
 using System;
+using System.Linq;
 public partial class Game : Node
 {
 	[Export] Control gameUI;
@@ -10,11 +11,15 @@ public partial class Game : Node
 	public int mainPlayerIndex { get; private set; }
 
 	public Piles[] cardStack;
+
+	private bool playerCanThrowDice = false;
 	public override void _Ready()
 	{
 		mainPlayer = new player();
 		Enemy = new player();
 		players = new player[] { mainPlayer, Enemy };
+
+		Enemy.PlayerChoiceEvent += EnemyAction;
 
 		((DiceManager)diceManager).AllDiceLanded += Round;
 
@@ -43,13 +48,12 @@ public partial class Game : Node
 		};
 		((DiceManager)diceManager).AllDiceLanded += Round;
 
-        base._Ready();
+		base._Ready();
 		
 	}
 
 	public void Round(object sender, LandedEventArgs args)
 	{
-		return;
 		foreach (player p in players)
 		{
 			p.ExecuteCardSpecial(ECardType.Farm,args.Value);
@@ -66,14 +70,13 @@ public partial class Game : Node
 		players[0].ExecuteCardSpecial(ECardType.Factory, args.Value);
 		players[0].ExecuteCardSpecial(ECardType.Market, args.Value);
 
-		players[0].DrawCard(cardStack[0]); // A RETRAVAILLER
-		
-		Shift(players);
+		players[0].OnPlayerChoiceEvent();
 	}
 	
 	public void OnPlayerThrowDices(object sender, EventArgs args)
 	{
-		((DiceManager)diceManager).ThrowDices(1);
+		if(mainPlayerIndex == 0)
+			((DiceManager)diceManager).ThrowDices(1);
 	}
 
 	public player[] Shift(player[] playerArray)
@@ -87,6 +90,23 @@ public partial class Game : Node
 			mainPlayerIndex = players.Length - 1;
 
 		return output;
+	}
+
+	public void EnemyAction(object sender, EventArgs args)
+	{
+		player p = (player)sender;
+
+		Piles[] buyablePile = new Piles[cardStack.Length];
+		foreach(var pile in cardStack)
+		{
+			if (p.money > Globals.Building[pile.card].Price)
+				buyablePile.Append(pile);
+		}
+
+		p.DrawCard(buyablePile[GD.Randi() % buyablePile.Length]);
+
+		players = Shift(players);
+		((DiceManager)diceManager).ThrowDices(1);
 	}
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta)

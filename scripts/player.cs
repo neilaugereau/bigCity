@@ -1,8 +1,11 @@
 using BigCity.scripts;
 using Godot;
+using System;
 
 public partial class player : Node
 {
+	public event EventHandler PlayerChoiceEvent;
+
 	public int money = 0;
 	Game game;
 	
@@ -32,6 +35,11 @@ public partial class player : Node
 		var card = stack.GetCards(this);
 		
 		buildings[card.CardType].Add(card);
+	}
+
+	public void OnPlayerChoiceEvent()
+	{
+		PlayerChoiceEvent?.Invoke(this, null);
 	}
 	
 	

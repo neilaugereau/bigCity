@@ -1,8 +1,10 @@
 using Godot;
 using System;
 
-public partial class GridSelection : Camera3D
+public partial class GridSelection : Node3D
 {
+	[Export] public Camera3D camera;
+
 	[Export]
 	public PackedScene tiles;
 	
@@ -33,7 +35,16 @@ public partial class GridSelection : Camera3D
 			if (keyEvent.Keycode == Key.Ctrl && keyEvent.Pressed && !keyEvent.Echo)
 				isCtrlPressed = !isCtrlPressed;
 		}
-	
+
+		/* Rotation 
+		if (isMiddleMousePressed && @event is InputEventMouseMotion mouseButton)
+		{
+			float deltaX = mouseButton.Position.X;
+			this.Rotation += new Vector3(0, (deltaX < lastMouseX ? (1000 - deltaX) : deltaX) * (deltaX < lastMouseX ? -0.0001f : 0.0001f), 0);
+			lastMouseX = deltaX;
+		}*/
+
+		
 		if (@event is InputEventMouseButton mouseButtonEvent)
 		{
 			if (mouseButtonEvent.ButtonIndex == MouseButton.Middle)
@@ -43,47 +54,21 @@ public partial class GridSelection : Camera3D
 			if (mouseButtonEvent.ButtonIndex == MouseButton.WheelUp && mouseButtonEvent.Pressed)
 			{
 				lastPosition = this.Position;
-				this.Position = new Vector3(Lerp(lastPosition[0],this.Position.X*0.5f,0.5f), Lerp(lastPosition[1],this.Position.Y*0.5f,0.5f), Lerp(lastPosition[2],this.Position.Z*0.5f,0.5f));
+				this.Position = new Vector3(Lerp(lastPosition[0], this.Position.X * 0.5f, 0.5f), Lerp(lastPosition[1], this.Position.Y * 0.5f, 0.5f), Lerp(lastPosition[2], this.Position.Z * 0.5f, 0.5f));
 			}
 			else if (mouseButtonEvent.ButtonIndex == MouseButton.WheelDown && mouseButtonEvent.Pressed)
 			{
 				lastPosition = this.Position;
-				
-				this.Position = new Vector3(Lerp(lastPosition[0],this.Position.X*2f,0.5f), Lerp(lastPosition[1],this.Position.Y*2f,0.5f), Lerp(lastPosition[2],this.Position.Z*2f,0.5f));
+
+				this.Position = new Vector3(Lerp(lastPosition[0], this.Position.X * 2f, 0.5f), Lerp(lastPosition[1], this.Position.Y * 2f, 0.5f), Lerp(lastPosition[2], this.Position.Z * 2f, 0.5f));
 			}
 		}
-		
-		/* Rotation 
-		if (isMiddleMousePressed && @event is InputEventMouseMotion mouseButton)
-		{
-			float deltaX = mouseButton.Position.X;
-			this.Rotation += new Vector3(0, (deltaX < lastMouseX ? (1000 - deltaX) : deltaX) * (deltaX < lastMouseX ? -0.0001f : 0.0001f), 0);
-			lastMouseX = deltaX;
-		}*/
-		
-		if (@event is InputEventKey key)
-		{
-			Vector3 moveDirection = Vector3.Zero;
-			Vector3 forward = -this.GlobalTransform.Basis.Z;  
-			Vector3 right = this.GlobalTransform.Basis.X;
-			
-			forward.Y = 0; 
-			right.Y = 0;
-			
-			if (Input.IsActionPressed("move_forward")) moveDirection += forward;
-			if (Input.IsActionPressed("move_left")) moveDirection -= right;
-			if (Input.IsActionPressed("move_backward")) moveDirection -= forward;
-			if (Input.IsActionPressed("move_right")) moveDirection += right;
-			this.Position += moveDirection.Normalized() * 5.0f ;
-			this.Position = new Vector3(Mathf.Clamp(this.Position.X, -140, 140), this.Position.Y, Mathf.Clamp(this.Position.Z, -140, 140));
-		}
-			
 		if (isCtrlPressed)
 		{
 			PhysicsDirectSpaceState3D spaceState = GetWorld3D().DirectSpaceState;
 			Vector2 mousePos = GetViewport().GetMousePosition();
-			Vector3 rayOrigin = ProjectRayOrigin(mousePos);
-			Vector3 rayEnd = rayOrigin + ProjectRayNormal(mousePos) * 200;
+			Vector3 rayOrigin = camera.ProjectRayOrigin(mousePos);
+			Vector3 rayEnd = rayOrigin + camera.ProjectRayNormal(mousePos) * 200;
 			var rayQuery = new PhysicsRayQueryParameters3D
 			{
 				From = rayOrigin,
@@ -93,8 +78,6 @@ public partial class GridSelection : Camera3D
 			if(intersection.ContainsKey("collider"))
 			{
 				Vector3 positionToMove = (Vector3)intersection["position"];
-				positionToMove[0] = (float)Math.Round(positionToMove[0] / Spacement) * Spacement;
-				positionToMove[2] = (float)Math.Round(positionToMove[2] / Spacement) * Spacement;
 
 				tilePose = new Vector2(positionToMove[0], positionToMove[2]);
 				if (Math.Abs(positionToMove[0]) != Math.Abs(PlaneSize[0] / 2) &&
@@ -128,6 +111,10 @@ public partial class GridSelection : Camera3D
 
 	public void PlaceTile(Vector3 positionToMove,int posY,Color color)
 	{
+		Vector3 posToMove = positionToMove;
+		posToMove[0] = (float)Math.Round(positionToMove[0] / Spacement) * Spacement;
+		posToMove[2] = (float)Math.Round(positionToMove[2] / Spacement) * Spacement;
+
 		//GD.Print($"({(positionToMove[0])} ; {(positionToMove[2])})");
 		var building = tiles.Instantiate();
 		((MeshInstance3D)building).Mesh = Globals.Building[E_Building.FARM].BuildingMesh;
@@ -136,8 +123,8 @@ public partial class GridSelection : Camera3D
 		
 		if (building is Node3D buildingNode)
 		{
-			positionToMove[1] += posY;
-			buildingNode.GlobalTransform = new Transform3D(buildingNode.GlobalTransform.Basis, positionToMove);
+			posToMove[1] += posY;
+			buildingNode.GlobalTransform = new Transform3D(buildingNode.GlobalTransform.Basis, posToMove);
 			//buildingNode.GlobalScale(new Vector3(0.1f,0.1f,0.1f));
 			buildingNode.Scale = new Vector3(1f, 1f, 1f);
 		}
@@ -150,6 +137,9 @@ public partial class GridSelection : Camera3D
 
 	public void TileSelector(Vector3 positionToMove,int posY,Color color)
 	{
+		Vector3 posToMove = positionToMove;
+		posToMove[0] = (float)Math.Round(positionToMove[0] / Spacement) * Spacement;
+		posToMove[2] = (float)Math.Round(positionToMove[2] / Spacement) * Spacement;
 
 		if (floatingTile == null)
 		{
@@ -161,12 +151,12 @@ public partial class GridSelection : Camera3D
 		
 		if (floatingTile is Node3D floatingTileNode)
 		{
-			positionToMove[1] = posY;
-			if (positionToMove != lastPosition)
+			posToMove[1] = posY;
+			if (posToMove != lastPosition)
 			{
-				lastPosition = positionToMove;
+				lastPosition = posToMove;
 			}
-			floatingTileNode.GlobalTransform = new Transform3D(floatingTileNode.GlobalTransform.Basis, positionToMove);
+			floatingTileNode.GlobalTransform = new Transform3D(floatingTileNode.GlobalTransform.Basis, posToMove);
 			// floatingTileNode.Scale = new Vector3(0.5f, 0.5f, 0.5f);
 			floatingTileNode.Scale = new Vector3(1f, 1f, 1f);
 		}

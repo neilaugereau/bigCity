@@ -1,11 +1,14 @@
-[gd_scene load_steps=12 format=3 uid="uid://cera5wmfb7mom"]
+[gd_scene load_steps=15 format=3 uid="uid://cera5wmfb7mom"]
 
 [ext_resource type="Script" path="res://scripts/Physics/GridSelection.cs" id="1_cvahy"]
 [ext_resource type="PackedScene" uid="uid://cpyceutmb6dxa" path="res://Prefab/diceRgb.tscn" id="1_wxys1"]
 [ext_resource type="PackedScene" uid="uid://diyxc561pj5hf" path="res://prefabs/plane.tscn" id="2_d55mr"]
+[ext_resource type="Material" uid="uid://cacw4tofv3yed" path="res://prefabs/assets/materials/MCavity.tres" id="3_0m5qg"]
 [ext_resource type="PackedScene" uid="uid://dh6m1wk2i4y4d" path="res://scenes/GameUI.tscn" id="3_xa11f"]
+[ext_resource type="Material" uid="uid://bug4algq4nvjw" path="res://prefabs/assets/materials/MCP.tres" id="4_6er2p"]
 [ext_resource type="Script" path="res://scripts/Game.cs" id="4_eyagi"]
 [ext_resource type="Script" path="res://scripts/DiceManager.cs" id="5_al1k7"]
+[ext_resource type="Script" path="res://scripts/CameraMovement.cs" id="5_ml4f8"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_yylce"]
 size = Vector2(60, 60)
@@ -22,11 +25,20 @@ background_mode = 2
 sky = SubResource("Sky_jt2mw")
 
 [node name="MainScene" type="Node3D"]
+script = ExtResource("1_cvahy")
+tiles = ExtResource("2_d55mr")
+OutlineMaterial = ExtResource("3_0m5qg")
+OverrideMaterial = ExtResource("4_6er2p")
 
-[node name="Plane" type="RigidBody3D" parent="."]
+[node name="Plane" type="RigidBody3D" parent="." node_paths=PackedStringArray("camera")]
 transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0)
 gravity_scale = 0.0
 freeze = true
+script = ExtResource("1_cvahy")
+camera = NodePath("../Camera3D")
+tiles = ExtResource("2_d55mr")
+OutlineMaterial = ExtResource("3_0m5qg")
+OverrideMaterial = ExtResource("4_6er2p")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Plane"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.68915, -1.0261, 1.53161)
@@ -42,10 +54,9 @@ light_color = Color(0.823529, 0.819608, 0.67451, 1)
 light_energy = 2.145
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.776047, 0.630676, 0, -0.630676, 0.776047, 36.8715, 20.5033, 79.539)
+transform = Transform3D(0.991998, -0.019922, 0.12467, -0.0636364, 0.773957, 0.630033, -0.10904, -0.632925, 0.766496, 36.8715, 20.5033, 79.539)
 environment = SubResource("Environment_k5f1k")
-script = ExtResource("1_cvahy")
-tiles = ExtResource("2_d55mr")
+script = ExtResource("5_ml4f8")
 
 [node name="GameUI" parent="." instance=ExtResource("3_xa11f")]
 
