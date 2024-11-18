@@ -58,8 +58,8 @@ public partial class Globals : Node
 			{E_Building.MINE, new CardBase( (ECardColor)ECardColor.Blue, (ECardType)ECardType.Resources , "Mine", CardDescriptions.Blue(5), 6, buildingsMeshs.Mine, 9, 9) },
 			{E_Building.ORCHARD, new CardBase( (ECardColor)ECardColor.Blue, (ECardType)ECardType.Agricole , "Orchard", CardDescriptions.Blue(3), 3, buildingsMeshs.Orchard, 10, 10) },
 
-			{E_Building.CAFE, new CardBase( (ECardColor)ECardColor.Red, (ECardType)ECardType.Restauration , "Cafe", "Recieve 1 coin\nfrom the player\nthat threw the dices.", 2, buildingsMeshs.Cafe, 3, 3) },
-			{E_Building.RESTAURANT, new CardBase( (ECardColor)ECardColor.Red, (ECardType)ECardType.Restauration , "Restaurant", "Recieve 2 coin\nfrom the player\nthat threw the dices.", 3, buildingsMeshs.Restaurant, 9, 10) },
+			{E_Building.CAFE, new CardBase( (ECardColor)ECardColor.Red, (ECardType)ECardType.Restauration , "Cafe", "Receive 1 coins\nfrom the player\nthat threw the dices.", 2, buildingsMeshs.Cafe, 3, 3) },
+			{E_Building.RESTAURANT, new CardBase( (ECardColor)ECardColor.Red, (ECardType)ECardType.Restauration , "Restaurant", "Receive 2 coins\nfrom the player\nthat threw the dices.", 3, buildingsMeshs.Restaurant, 9, 10) },
 
 			{E_Building.BAKERY, new CardBase( (ECardColor)ECardColor.Green, (ECardType)ECardType.Shop , "Bakery", CardDescriptions.GreenBank(1), 0, buildingsMeshs.Bakery, 2, 3) },
 			{E_Building.SUPERMARKET, new CardBase( (ECardColor)ECardColor.Green, (ECardType)ECardType.Shop , "Supermarket", CardDescriptions.GreenBank(3), 2, buildingsMeshs.Supermarket, 4, 4) },
@@ -67,8 +67,8 @@ public partial class Globals : Node
 			{E_Building.VEGETABLES_MARKET, new CardBase( (ECardColor)ECardColor.Green, (ECardType)ECardType.Market , "Vegetables Market", CardDescriptions.GreenForeach(2), 2, buildingsMeshs.VegetablesMarket, 11, 12) },
 			{E_Building.CHEESE_SHOP, new CardBase( (ECardColor)ECardColor.Green, (ECardType)ECardType.Factory , "Cheese Shop", CardDescriptions.GreenForeach(3), 5, buildingsMeshs.CheeseShop, 7, 7) },
 
-			{E_Building.TV_CHANNEL, new CardBase( (ECardColor)ECardColor.Violet, (ECardType)ECardType.Special , "TV Channel", CardDescriptions.YOUR_TURN_ONLY + "Recieve 5 coins\nfrom your enemy.", 7, buildingsMeshs.TVChannel, 6, 6) },
-			{E_Building.STADIUM, new CardBase( (ECardColor)ECardColor.Violet, (ECardType)ECardType.Special , "Stadium", CardDescriptions.YOUR_TURN_ONLY + "Recieve 2 coins\nfrom your enemy.", 6, buildingsMeshs.Stadium, 6, 6) },
+			{E_Building.TV_CHANNEL, new CardBase( (ECardColor)ECardColor.Violet, (ECardType)ECardType.Special , "TV Channel", CardDescriptions.YOUR_TURN_ONLY + "Receive 5 coins\nfrom your enemy.", 7, buildingsMeshs.TVChannel, 6, 6) },
+			{E_Building.STADIUM, new CardBase( (ECardColor)ECardColor.Violet, (ECardType)ECardType.Special , "Stadium", CardDescriptions.YOUR_TURN_ONLY + "Receive 2 coins\nfrom your enemy.", 6, buildingsMeshs.Stadium, 6, 6) },
 			{E_Building.BUSINESS_CENTER, new CardBase( (ECardColor)ECardColor.Violet, (ECardType)ECardType.Special , "Business Center", CardDescriptions.YOUR_TURN_ONLY + "You can exchange\nwith your enemy\nany building\nexcept monuments.", 8, buildingsMeshs.BusinessCenter, 6, 6) },
 
 			{E_Building.TOWER, new CardBase( (ECardColor)ECardColor.Yellow, (ECardType)ECardType.Monument , "Tower", "Once each round\nyou can choose\nto throw your dice again.", 22, buildingsMeshs.Tower, 0, 0) },

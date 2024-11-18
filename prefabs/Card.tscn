@@ -1,13 +1,129 @@
-[gd_scene load_steps=4 format=3 uid="uid://b04pk4qcg13bo"]
+[gd_scene load_steps=8 format=3 uid="uid://b04pk4qcg13bo"]
 
 [ext_resource type="PackedScene" uid="uid://c47obbku8n21h" path="res://prefabs/CardRenderer.tscn" id="1_o4ym6"]
 [ext_resource type="Script" path="res://scripts/Card.cs" id="1_usf5f"]
+[ext_resource type="Texture2D" uid="uid://bbsi82vjlxy5l" path="res://assets/game/cards/card_back.png" id="2_0eu74"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r0q3b"]
 size = Vector2(108, 154)
 
+[sub_resource type="Animation" id="Animation_y2lsx"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CardBack:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.03, 0.03)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CardBack:z_index")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [-1]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CardRenderer:z_index")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CardRenderer:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.03, 0.03)]
+}
+
+[sub_resource type="Animation" id="Animation_d0em8"]
+resource_name = "card_flip"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CardBack:scale")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0.03, 0.03), Vector2(0.003, 0.03), Vector2(0.03, 0.03)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CardBack:z_index")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [-1, 0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CardRenderer:z_index")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, -1]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CardRenderer:scale")
+tracks/3/interp = 2
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0.03, 0.03), Vector2(0.003, 0.03), Vector2(0.03, 0.03)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_n2amw"]
+_data = {
+"RESET": SubResource("Animation_y2lsx"),
+"card_flip": SubResource("Animation_d0em8")
+}
+
 [node name="Card" type="Node2D"]
+z_index = 1
 script = ExtResource("1_usf5f")
+
+[node name="CardBack" type="Sprite2D" parent="."]
+z_index = -1
+scale = Vector2(0.03, 0.03)
+texture = ExtResource("2_0eu74")
 
 [node name="CardRenderer" parent="." instance=ExtResource("1_o4ym6")]
 scale = Vector2(0.03, 0.03)
@@ -16,6 +132,11 @@ scale = Vector2(0.03, 0.03)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("RectangleShape2D_r0q3b")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_n2amw")
+}
 
 [connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]

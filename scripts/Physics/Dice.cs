@@ -29,7 +29,7 @@ public partial class Dice : RigidBody3D
 		if (accumulatedTime >= 2f)
 		{
 			if (new Vector3((int)this.AngularVelocity[0], (int)this.AngularVelocity[1], (int)this.AngularVelocity[2]) ==
-			    Vector3.Zero)
+				Vector3.Zero)
 			{
 				HasLanded = true;
 				Landed?.Invoke(this, null);

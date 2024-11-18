@@ -1,7 +1,6 @@
 using Godot;
 using System;
 
-
 public class CardActivationEventArgs : EventArgs
 {
 	public Game game { get; set; }

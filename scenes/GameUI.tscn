@@ -1,3 +1,53 @@
-[gd_scene format=3 uid="uid://dh6m1wk2i4y4d"]
+[gd_scene load_steps=5 format=3 uid="uid://dh6m1wk2i4y4d"]
 
-[node name="GameUi" type="Node2D"]
+[ext_resource type="Texture2D" uid="uid://bd0edbw0khbet" path="res://assets/game/dice_icon.png" id="1_o1xu4"]
+[ext_resource type="Script" path="res://scripts/GameUI.cs" id="1_pg1u2"]
+[ext_resource type="Texture2D" uid="uid://bhqg3li6shoec" path="res://assets/game/cards/coin.png" id="3_ow3m8"]
+[ext_resource type="LabelSettings" path="res://UI/labelSettings/CoinLabelSettings.tres" id="4_fvhg7"]
+
+[node name="GameUI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_pg1u2")
+
+[node name="btn_dice" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0555556
+anchor_top = 0.728395
+anchor_right = 0.145833
+anchor_bottom = 0.891975
+icon = ExtResource("1_o1xu4")
+flat = true
+icon_alignment = 1
+expand_icon = true
+metadata/_edit_use_anchors_ = true
+
+[node name="texRect_coin" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.916667
+anchor_top = 0.0617284
+anchor_right = 0.972222
+anchor_bottom = 0.160494
+texture = ExtResource("3_ow3m8")
+expand_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="label_nbCoins" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.631944
+anchor_top = 0.0617284
+anchor_right = 0.905382
+anchor_bottom = 0.160494
+label_settings = ExtResource("4_fvhg7")
+horizontal_alignment = 2
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="btn_dice" to="." method="_on_btn_dice_pressed"]

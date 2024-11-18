@@ -3,20 +3,36 @@
   "WorkspaceRootPath": "C:\\Users\\Neil\\Documents\\GitHub\\bigCity\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{79F3927B-6DB1-46B5-8E3C-8ADB40EC5B89}|BigCity.csproj|c:\\users\\neil\\documents\\github\\bigcity\\scripts\\globals.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{79F3927B-6DB1-46B5-8E3C-8ADB40EC5B89}|BigCity.csproj|solutionrelative:scripts\\globals.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{79F3927B-6DB1-46B5-8E3C-8ADB40EC5B89}|BigCity.csproj|c:\\users\\neil\\documents\\github\\bigcity\\scripts\\gameui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{79F3927B-6DB1-46B5-8E3C-8ADB40EC5B89}|BigCity.csproj|solutionrelative:scripts\\gameui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{79F3927B-6DB1-46B5-8E3C-8ADB40EC5B89}|BigCity.csproj|c:\\users\\neil\\documents\\github\\bigcity\\scripts\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{79F3927B-6DB1-46B5-8E3C-8ADB40EC5B89}|BigCity.csproj|solutionrelative:scripts\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{79F3927B-6DB1-46B5-8E3C-8ADB40EC5B89}|BigCity.csproj|c:\\users\\neil\\documents\\github\\bigcity\\scripts\\cardbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{79F3927B-6DB1-46B5-8E3C-8ADB40EC5B89}|BigCity.csproj|solutionrelative:scripts\\cardbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{79F3927B-6DB1-46B5-8E3C-8ADB40EC5B89}|BigCity.csproj|c:\\users\\neil\\documents\\github\\bigcity\\scripts\\cardmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{79F3927B-6DB1-46B5-8E3C-8ADB40EC5B89}|BigCity.csproj|solutionrelative:scripts\\cardmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{79F3927B-6DB1-46B5-8E3C-8ADB40EC5B89}|BigCity.csproj|c:\\users\\neil\\documents\\github\\bigcity\\scripts\\playerhand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{79F3927B-6DB1-46B5-8E3C-8ADB40EC5B89}|BigCity.csproj|solutionrelative:scripts\\playerhand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79F3927B-6DB1-46B5-8E3C-8ADB40EC5B89}|BigCity.csproj|c:\\users\\neil\\documents\\github\\bigcity\\scripts\\cardslot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{79F3927B-6DB1-46B5-8E3C-8ADB40EC5B89}|BigCity.csproj|solutionrelative:scripts\\cardslot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{79F3927B-6DB1-46B5-8E3C-8ADB40EC5B89}|BigCity.csproj|c:\\users\\neil\\documents\\github\\bigcity\\scripts\\card.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{79F3927B-6DB1-46B5-8E3C-8ADB40EC5B89}|BigCity.csproj|solutionrelative:scripts\\card.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79F3927B-6DB1-46B5-8E3C-8ADB40EC5B89}|BigCity.csproj|c:\\users\\neil\\documents\\github\\bigcity\\scripts\\deck.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{79F3927B-6DB1-46B5-8E3C-8ADB40EC5B89}|BigCity.csproj|solutionrelative:scripts\\deck.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{79F3927B-6DB1-46B5-8E3C-8ADB40EC5B89}|BigCity.csproj|c:\\users\\neil\\documents\\github\\bigcity\\scripts\\inputmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{79F3927B-6DB1-46B5-8E3C-8ADB40EC5B89}|BigCity.csproj|solutionrelative:scripts\\inputmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +42,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,42 +54,53 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "player.cs",
-              "DocumentMoniker": "C:\\Users\\Neil\\Documents\\GitHub\\bigCity\\scripts\\player.cs",
-              "RelativeDocumentMoniker": "scripts\\player.cs",
-              "ToolTip": "C:\\Users\\Neil\\Documents\\GitHub\\bigCity\\scripts\\player.cs",
-              "RelativeToolTip": "scripts\\player.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-17T12:55:07.679Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Globals.cs",
-              "DocumentMoniker": "C:\\Users\\Neil\\Documents\\GitHub\\bigCity\\scripts\\Globals.cs",
-              "RelativeDocumentMoniker": "scripts\\Globals.cs",
-              "ToolTip": "C:\\Users\\Neil\\Documents\\GitHub\\bigCity\\scripts\\Globals.cs",
-              "RelativeToolTip": "scripts\\Globals.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "GameUI.cs",
+              "DocumentMoniker": "C:\\Users\\Neil\\Documents\\GitHub\\bigCity\\scripts\\GameUI.cs",
+              "RelativeDocumentMoniker": "scripts\\GameUI.cs",
+              "ToolTip": "C:\\Users\\Neil\\Documents\\GitHub\\bigCity\\scripts\\GameUI.cs",
+              "RelativeToolTip": "scripts\\GameUI.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-17T12:50:18.486Z",
+              "WhenOpened": "2024-11-18T00:01:14.421Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Card.cs",
-              "DocumentMoniker": "C:\\Users\\Neil\\Documents\\GitHub\\bigCity\\scripts\\Card.cs",
-              "RelativeDocumentMoniker": "scripts\\Card.cs",
-              "ToolTip": "C:\\Users\\Neil\\Documents\\GitHub\\bigCity\\scripts\\Card.cs",
-              "RelativeToolTip": "scripts\\Card.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "CardBase.cs",
+              "DocumentMoniker": "C:\\Users\\Neil\\Documents\\GitHub\\bigCity\\scripts\\CardBase.cs",
+              "RelativeDocumentMoniker": "scripts\\CardBase.cs",
+              "ToolTip": "C:\\Users\\Neil\\Documents\\GitHub\\bigCity\\scripts\\CardBase.cs",
+              "RelativeToolTip": "scripts\\CardBase.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAIwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-17T01:15:00.153Z",
+              "WhenOpened": "2024-11-17T23:43:50.126Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "InputManager.cs",
+              "DocumentMoniker": "C:\\Users\\Neil\\Documents\\GitHub\\bigCity\\scripts\\InputManager.cs",
+              "RelativeDocumentMoniker": "scripts\\InputManager.cs",
+              "ToolTip": "C:\\Users\\Neil\\Documents\\GitHub\\bigCity\\scripts\\InputManager.cs",
+              "RelativeToolTip": "scripts\\InputManager.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAQwB0AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-17T21:19:51.016Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Deck.cs",
+              "DocumentMoniker": "C:\\Users\\Neil\\Documents\\GitHub\\bigCity\\scripts\\Deck.cs",
+              "RelativeDocumentMoniker": "scripts\\Deck.cs",
+              "ToolTip": "C:\\Users\\Neil\\Documents\\GitHub\\bigCity\\scripts\\Deck.cs",
+              "RelativeToolTip": "scripts\\Deck.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAMwCcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-17T22:19:22.877Z"
             },
             {
               "$type": "Document",
@@ -83,10 +110,45 @@
               "RelativeDocumentMoniker": "scripts\\CardManager.cs",
               "ToolTip": "C:\\Users\\Neil\\Documents\\GitHub\\bigCity\\scripts\\CardManager.cs",
               "RelativeToolTip": "scripts\\CardManager.cs",
-              "ViewState": "AgIAAHwAAAAAAAAAAAAmwEoAAAAdAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-16T21:42:34.124Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-16T21:42:34.124Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PlayerHand.cs",
+              "DocumentMoniker": "C:\\Users\\Neil\\Documents\\GitHub\\bigCity\\scripts\\PlayerHand.cs",
+              "RelativeDocumentMoniker": "scripts\\PlayerHand.cs",
+              "ToolTip": "C:\\Users\\Neil\\Documents\\GitHub\\bigCity\\scripts\\PlayerHand.cs",
+              "RelativeToolTip": "scripts\\PlayerHand.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAA9wBAAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-17T21:19:51.038Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CardSlot.cs",
+              "DocumentMoniker": "C:\\Users\\Neil\\Documents\\GitHub\\bigCity\\scripts\\CardSlot.cs",
+              "RelativeDocumentMoniker": "scripts\\CardSlot.cs",
+              "ToolTip": "C:\\Users\\Neil\\Documents\\GitHub\\bigCity\\scripts\\CardSlot.cs",
+              "RelativeToolTip": "scripts\\CardSlot.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-17T21:19:51.04Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Card.cs",
+              "DocumentMoniker": "C:\\Users\\Neil\\Documents\\GitHub\\bigCity\\scripts\\Card.cs",
+              "RelativeDocumentMoniker": "scripts\\Card.cs",
+              "ToolTip": "C:\\Users\\Neil\\Documents\\GitHub\\bigCity\\scripts\\Card.cs",
+              "RelativeToolTip": "scripts\\Card.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-17T01:15:00.153Z"
             }
           ]
         }
