@@ -30,8 +30,10 @@ project/assembly_name="BigCity"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/yamms/plugin.cfg")
+enabled=PackedStringArray("res://addons/BWHIB/plugin.cfg", "res://addons/yamms/plugin.cfg")
 
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
+camera/depth_of_field/depth_of_field_bokeh_shape=0
+camera/depth_of_field/depth_of_field_bokeh_quality=0
