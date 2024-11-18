@@ -13,6 +13,9 @@ public partial class Game : Node
 	public Piles[] cardStack;
 
 	private bool playerCanThrowDice = false;
+	
+	[Export]
+	public Node2D cardManager;
 	public override void _Ready()
 	{
 		mainPlayer = new player();
@@ -47,10 +50,24 @@ public partial class Game : Node
 			new Piles(E_Building.MALL, 4)
 		};
 		((DiceManager)diceManager).AllDiceLanded += Round;
-
-		base._Ready();
+		((CardManager)cardManager).chooseCard += OnChooseCard;
+        base._Ready();
 		
 	}
+
+	public void OnChooseCard(object sender, ChooseCardEventArgs e)
+	{
+		foreach (Piles p in cardStack)
+		{
+			if (p.card == e.building)
+			{
+				mainPlayer.DrawCard(p);
+				break;
+			}
+		}
+
+	}
+
 
 	public void Round(object sender, LandedEventArgs args)
 	{

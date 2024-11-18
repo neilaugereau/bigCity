@@ -13,11 +13,33 @@ public partial class Deck : Node2D
 
 	private float HAND_Y_POSITION;
 	private float centerScreenX;
+	
+	private List<E_Building> nameStruct = new List<E_Building>();
 
 	public override void _Ready()
 	{
 		centerScreenX = GetViewportRect().Size.X / 2;
 		HAND_Y_POSITION = GetViewportRect().Size.Y - (CARD_WIDTH);
+		
+        var dummyCard = new Card { Name = $"Card0" };
+        nameStruct.Add(E_Building.FIELD);
+        playerDeck.Add(dummyCard);
+        
+		var FARMdummyCard = new Card { Name = "FARMCard" };
+		nameStruct.Add(E_Building.FARM);
+		playerDeck.Add(FARMdummyCard);
+		
+		var FORESTdummyCard = new Card { Name = "FORESTCard" };
+		nameStruct.Add(E_Building.FOREST);
+		playerDeck.Add(FORESTdummyCard);
+		
+		var MINEdummyCard = new Card { Name = "MINECard" };
+		nameStruct.Add(E_Building.MINE);
+		playerDeck.Add(MINEdummyCard);
+		
+		var ORCHARDdummyCard = new Card { Name = "ORCHARDCard" };
+		nameStruct.Add(E_Building.ORCHARD);
+		playerDeck.Add(ORCHARDdummyCard);
 
 	}
 
@@ -25,8 +47,6 @@ public partial class Deck : Node2D
 	public void DrawCard()
 	{
 		var cardDrawn = playerDeck[0];
-		playerDeck.RemoveAt(0);
-
 		//if player draw the last card in the deck, disable the deck
 		if(playerDeck.Count == 0)
 		{
@@ -39,6 +59,9 @@ public partial class Deck : Node2D
 
 		// Instantiate and add the cards to the hand
 		var newCard = cardScene.Instantiate<Card>();
+		var cardRenderer = newCard.GetNode<CardRenderer>("CardRenderer");
+		cardRenderer.cardBuilding = nameStruct[0];
+		nameStruct.RemoveAt(0);
 
 		// Add the card to the scene
 		this.GetNode<CardManager>("../CardManager").AddChild(newCard);
@@ -47,6 +70,6 @@ public partial class Deck : Node2D
 		newCard.Name = "Card";
 
 		GetNode<PlayerHand>("../PlayerHand").AddCardToHand(newCard);
-
+		playerDeck.RemoveAt(0);
 	}
 }
