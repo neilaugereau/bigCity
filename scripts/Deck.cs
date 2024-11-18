@@ -7,7 +7,7 @@ public partial class Deck : Node2D
 	// Called when the node enters the scene tree for the first time.
 	List<Card> playerDeck = new List<Card>();
 
-    public override void _Ready()
+	public override void _Ready()
 	{
 	}
 
