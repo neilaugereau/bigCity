@@ -3,8 +3,11 @@ using System;
 using System.Linq;
 public partial class Game : Node
 {
+	[Export] Node3D playerGrid;
+
 	[Export] Control gameUI;
 	[Export] Node diceManager;
+	[Export] Node3D enemyGrid;
 	public player mainPlayer { get; private set; }
 	public player Enemy { get; private set; }
 	public player[] players { get; private set; }
@@ -15,13 +18,15 @@ public partial class Game : Node
 	private bool playerCanThrowDice = false;
 	
 	[Export]
-	public Node2D cardManager;
+	public Node2D cardScene;
 	public override void _Ready()
 	{
+		cardScene.Hide();
 		mainPlayer = new player();
 		Enemy = new player();
 		players = new player[] { mainPlayer, Enemy };
 
+		mainPlayer.PlayerChoiceEvent += PlayerAction;
 		Enemy.PlayerChoiceEvent += EnemyAction;
 
 		((DiceManager)diceManager).AllDiceLanded += Round;
@@ -50,13 +55,16 @@ public partial class Game : Node
 			new Piles(E_Building.MALL, 4)
 		};
 		((DiceManager)diceManager).AllDiceLanded += Round;
-		((CardManager)cardManager).chooseCard += OnChooseCard;
-        base._Ready();
+		((CardManager)(cardScene.GetNode<Node2D>("CardManager"))).chooseCard += OnChooseCard;
+		base._Ready();
 		
 	}
 
 	public void OnChooseCard(object sender, ChooseCardEventArgs e)
 	{
+		if (!((GridSelection)playerGrid).PlaceTileReleaseCard(e.building))
+			return;
+
 		foreach (Piles p in cardStack)
 		{
 			if (p.card == e.building)
@@ -65,6 +73,8 @@ public partial class Game : Node
 				break;
 			}
 		}
+
+		playerCanThrowDice = true;
 
 	}
 
@@ -92,8 +102,11 @@ public partial class Game : Node
 	
 	public void OnPlayerThrowDices(object sender, EventArgs args)
 	{
-		if(mainPlayerIndex == 0)
-			((DiceManager)diceManager).ThrowDices(1);
+		if (mainPlayerIndex != 0)
+			return;
+		((DiceManager)diceManager).ThrowDices(1);
+		playerCanThrowDice = false;
+		players = Shift(players);
 	}
 
 	public player[] Shift(player[] playerArray)
@@ -107,6 +120,11 @@ public partial class Game : Node
 			mainPlayerIndex = players.Length - 1;
 
 		return output;
+	}
+
+	public void PlayerAction(object sender, EventArgs args)
+	{
+		cardScene.Show();
 	}
 
 	public void EnemyAction(object sender, EventArgs args)

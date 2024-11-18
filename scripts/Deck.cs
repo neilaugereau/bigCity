@@ -21,10 +21,10 @@ public partial class Deck : Node2D
 		centerScreenX = GetViewportRect().Size.X / 2;
 		HAND_Y_POSITION = GetViewportRect().Size.Y - (CARD_WIDTH);
 		
-        var dummyCard = new Card { Name = $"Card0" };
-        nameStruct.Add(E_Building.FIELD);
-        playerDeck.Add(dummyCard);
-        
+		var dummyCard = new Card { Name = $"Card0" };
+		nameStruct.Add(E_Building.FIELD);
+		playerDeck.Add(dummyCard);
+		
 		var FARMdummyCard = new Card { Name = "FARMCard" };
 		nameStruct.Add(E_Building.FARM);
 		playerDeck.Add(FARMdummyCard);

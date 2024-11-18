@@ -20,7 +20,7 @@ public partial class GridSelection : Node3D
 	public Vector2 tilePose;
 	private Vector3 lastPosition;
 	public Node floatingTile;
-	private bool isCtrlPressed = false;
+	private bool isPlacing = false;
 	private bool isMiddleMousePressed = false;
 	private float lastMouseX = 0;
 	
@@ -30,11 +30,6 @@ public partial class GridSelection : Node3D
 	public override void _Input(InputEvent @event)
 	{
 		base._Input(@event);
-		if (@event is InputEventKey keyEvent)
-		{
-			if (keyEvent.Keycode == Key.Ctrl && keyEvent.Pressed && !keyEvent.Echo)
-				isCtrlPressed = !isCtrlPressed;
-		}
 
 		/* Rotation 
 		if (isMiddleMousePressed && @event is InputEventMouseMotion mouseButton)
@@ -63,7 +58,7 @@ public partial class GridSelection : Node3D
 				this.Position = new Vector3(Lerp(lastPosition[0], this.Position.X * 2f, 0.5f), Lerp(lastPosition[1], this.Position.Y * 2f, 0.5f), Lerp(lastPosition[2], this.Position.Z * 2f, 0.5f));
 			}
 		}
-		if (isCtrlPressed)
+		if (isPlacing)
 		{
 			PhysicsDirectSpaceState3D spaceState = GetWorld3D().DirectSpaceState;
 			Vector2 mousePos = GetViewport().GetMousePosition();
@@ -83,12 +78,7 @@ public partial class GridSelection : Node3D
 				if (Math.Abs(positionToMove[0]) != Math.Abs(PlaneSize[0] / 2) &&
 					Math.Abs(positionToMove[2]) != Math.Abs(PlaneSize[1] / 2))
 				{
-					if (@event.IsPressed() && @event is InputEventMouseButton )
-					{
-						if (!Globals.gridPositions.ContainsKey(tilePose))
-							PlaceTile(positionToMove, 0,Colors.Black);
-					}
-					else if(@event is InputEventMouseMotion)
+					if(@event is InputEventMouseMotion)
 					{
 						if (!Globals.gridPositions.ContainsKey(tilePose))
 						{
@@ -109,7 +99,35 @@ public partial class GridSelection : Node3D
 		}
 	}
 
-	public void PlaceTile(Vector3 positionToMove,int posY,Color color)
+	public bool PlaceTileReleaseCard(E_Building buildingType)
+	{
+		PhysicsDirectSpaceState3D spaceState = GetWorld3D().DirectSpaceState;
+		Vector2 mousePos = GetViewport().GetMousePosition();
+		Vector3 rayOrigin = camera.ProjectRayOrigin(mousePos);
+		Vector3 rayEnd = rayOrigin + camera.ProjectRayNormal(mousePos) * 200;
+		var rayQuery = new PhysicsRayQueryParameters3D
+		{
+			From = rayOrigin,
+			To = rayEnd
+		};
+		Godot.Collections.Dictionary intersection = spaceState.IntersectRay(rayQuery);
+		if (intersection.ContainsKey("collider"))
+		{
+			Vector3 positionToMove = (Vector3)intersection["position"];
+
+			tilePose = new Vector2(positionToMove[0], positionToMove[2]);
+			if (Math.Abs(positionToMove[0]) != Math.Abs(PlaneSize[0] / 2) &&
+				Math.Abs(positionToMove[2]) != Math.Abs(PlaneSize[1] / 2))
+			{
+				if (!Globals.gridPositions.ContainsKey(tilePose))
+					PlaceTile(positionToMove, 0, Colors.Black, buildingType);
+				else return false;
+			}
+		}
+		return true;
+	}
+
+	public void PlaceTile(Vector3 positionToMove,int posY,Color color, E_Building buildingType)
 	{
 		Vector3 posToMove = positionToMove;
 		posToMove[0] = (float)Math.Round(positionToMove[0] / Spacement) * Spacement;
@@ -117,8 +135,8 @@ public partial class GridSelection : Node3D
 
 		//GD.Print($"({(positionToMove[0])} ; {(positionToMove[2])})");
 		var building = tiles.Instantiate();
-		((MeshInstance3D)building).Mesh = Globals.Building[E_Building.FARM].BuildingMesh;
-		Globals.gridPositions.Add(tilePose, E_Building.FARM);
+		((MeshInstance3D)building).Mesh = Globals.Building[buildingType].BuildingMesh;
+		Globals.gridPositions.Add(tilePose, buildingType);
 		GetTree().GetRoot().AddChild(building);
 		
 		if (building is Node3D buildingNode)
