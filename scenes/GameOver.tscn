@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://ccs8gd3eitxuv"]
+[gd_scene load_steps=4 format=3 uid="uid://bq3cdaprbd0uk"]
 
 [ext_resource type="Theme" uid="uid://d36g08s6peeqh" path="res://UI/default_theme.tres" id="1_n7qga"]
 [ext_resource type="Script" path="res://scripts/UserInterface/GameOverMenu.cs" id="2_osax7"]

@@ -29,8 +29,10 @@ public partial class Game : Node
 		mainPlayer.PlayerChoiceEvent += PlayerAction;
 		Enemy.PlayerChoiceEvent += EnemyAction;
 
-		((DiceManager)diceManager).AllDiceLanded += Round;
 
+		// TODO : change OnPlayerThrowDices
+
+		
 		((GameUI)gameUI).BtnDicePressed += OnPlayerThrowDices;
 		cardStack = new Piles[]
 		{
@@ -54,7 +56,6 @@ public partial class Game : Node
 			new Piles(E_Building.AMUSEMENT_PARK, 4),
 			new Piles(E_Building.MALL, 4)
 		};
-		((DiceManager)diceManager).AllDiceLanded += Round;
 		((CardManager)(cardScene.GetNode<Node2D>("CardManager"))).chooseCard += OnChooseCard;
 		base._Ready();
 		
@@ -78,35 +79,32 @@ public partial class Game : Node
 
 	}
 
-
-	public void Round(object sender, LandedEventArgs args)
+	
+	public void OnPlayerThrowDices(object sender, EventArgs args)
+	{
+		int v = randomDiceValue();
+		Round(sender, v);
+	}
+	
+	public void Round(object sender, int v)
 	{
 		foreach (player p in players)
 		{
-			p.ExecuteCardSpecial(ECardType.Farm,args.Value);
-			p.ExecuteCardSpecial(ECardType.Agricole, args.Value);
-			p.ExecuteCardSpecial(ECardType.Resources, args.Value);
+			p.ExecuteCardSpecial(ECardType.Farm,v);
+			p.ExecuteCardSpecial(ECardType.Agricole, v);
+			p.ExecuteCardSpecial(ECardType.Resources, v);
 		}
 		foreach (player p in players)
 		{
 			if(p== players[0])
 				continue;
-			p.ExecuteCardSpecial(ECardType.Restauration, args.Value);
+			p.ExecuteCardSpecial(ECardType.Restauration, v);
 		}
-		players[0].ExecuteCardSpecial(ECardType.Shop, args.Value);
-		players[0].ExecuteCardSpecial(ECardType.Factory, args.Value);
-		players[0].ExecuteCardSpecial(ECardType.Market, args.Value);
+		players[0].ExecuteCardSpecial(ECardType.Shop, v);
+		players[0].ExecuteCardSpecial(ECardType.Factory, v);
+		players[0].ExecuteCardSpecial(ECardType.Market, v);
 
 		players[0].OnPlayerChoiceEvent();
-	}
-	
-	public void OnPlayerThrowDices(object sender, EventArgs args)
-	{
-		if (mainPlayerIndex != 0)
-			return;
-		((DiceManager)diceManager).ThrowDices(1);
-		playerCanThrowDice = false;
-		players = Shift(players);
 	}
 
 	public player[] Shift(player[] playerArray)
@@ -141,10 +139,14 @@ public partial class Game : Node
 		p.DrawCard(buyablePile[GD.Randi() % buyablePile.Length]);
 
 		players = Shift(players);
-		((DiceManager)diceManager).ThrowDices(1);
 	}
-	// Called every frame. 'delta' is the elapsed time since the previous frame.
-	public override void _Process(double delta)
+	
+	public int randomDiceValue()
 	{
+		Random r = new Random();
+		int rInt = r.Next(0, 6);
+		return rInt;
 	}
 }
+
+
