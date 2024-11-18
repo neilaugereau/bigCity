@@ -224,4 +224,3 @@ func _get_configuration_warnings() -> PackedStringArray:
 		return_value.append("At least one MultiScatterItem is required.")
 		
 	return return_value
-

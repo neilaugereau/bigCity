@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dspk7oo1r0lbj"
+path="res://.godot/imported/BCMine .obj-cbc217730da5ad55474b92c0d8d8f1ee.mesh"
+
+[deps]
+
+files=["res://.godot/imported/BCMine .obj-cbc217730da5ad55474b92c0d8d8f1ee.mesh"]
+
+source_file="res://prefabs/assets/BCMine .obj"
+dest_files=["res://.godot/imported/BCMine .obj-cbc217730da5ad55474b92c0d8d8f1ee.mesh", "res://.godot/imported/BCMine .obj-cbc217730da5ad55474b92c0d8d8f1ee.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

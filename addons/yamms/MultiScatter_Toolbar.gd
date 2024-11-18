@@ -23,4 +23,3 @@
 extends HBoxContainer
 
 @onready var generate_button := $Generate as Button
-
