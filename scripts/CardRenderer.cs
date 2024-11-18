@@ -15,7 +15,12 @@ public partial class CardRenderer : Node2D
 	};
 
 	public E_Building cardBuilding = E_Building.FARM;
-
+	
+	public CardRenderer(E_Building building)
+	{
+		cardBuilding = building;
+	}
+	
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
